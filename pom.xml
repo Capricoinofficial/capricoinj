@@ -2,16 +2,16 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.matthewmitchell</groupId>
-  <artifactId>peercoinj-parent</artifactId>
+  <groupId>com.fuelcoinj</groupId>
+  <artifactId>fuelcoinj-parent</artifactId>
   <version>0.12.3</version>
   <packaging>pom</packaging>
 
   <modules>
-    <module>orchid</module>
+    <module>orchid-tor</module>
     <module>core</module>
-    <!--    <module>examples</module> -->
-    <!--    <module>tools</module>    -->
+    <module>examples</module> 
+    <module>tools</module>   
   </modules>
 
   <parent>
@@ -35,7 +35,7 @@
 
   <issueManagement>
     <system>Github Issues</system>
-    <url>https://github.com/MatthewLM/peercoinj/issues</url>
+    <url>https://github.com/kris-davison/fuelcoinj/issues</url>
   </issueManagement>
 
 

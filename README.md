@@ -1,6 +1,6 @@
-### Welcome to peercoinj
+### Welcome to fuelcoinj
 
-The peercoinj library is a Java implementation of the Peercoin protocol, which allows it to maintain a wallet and send/receive transactions without needing a local copy of Peercoin Core. It comes with full documentation and some example apps showing how to use it. peercoinj uses a central server to download block hashes for verification.
+The fuelcoinj library is a Java implementation of the fuelcoin protocol, which allows it to maintain a wallet and send/receive transactions without needing a local copy of fuelcoin Core. It comes with full documentation and some example apps showing how to use it. fuelcoinj uses a central server to download block hashes for verification.
 
 ### Technologies
 
@@ -8,7 +8,6 @@ The peercoinj library is a Java implementation of the Peercoin protocol, which a
 * [Maven 3+](http://maven.apache.org) - for building the project
 * [Orchid](https://github.com/subgraph/Orchid) - for secure communications over [TOR](https://www.torproject.org)
 * [Google Protocol Buffers](https://code.google.com/p/protobuf/) - for use with serialization and hardware communications
-* [PeercoinAbeExplorer](https://github.com/MatthewLM/PeercoinAbeExplorer) - server code which provides block hashes and acts as block explorer
 
 ### Getting started
 
@@ -38,13 +37,13 @@ These are found in the `examples` module.
 
 #### Forwarding service
 
-This will download the block chain and eventually print a Peercoin address that it has generated.
+This will download the block chain and eventually print a fuelcoin address that it has generated.
 
 If you send coins to that address, it will forward them on to the address you specified.
 
 ```
   cd examples
-  mvn exec:java -Dexec.mainClass=com.peercoin.peercoin.examples.ForwardingService -Dexec.args="<insert a peercoin address here>"
+  mvn exec:java -Dexec.mainClass=com.fuelcoin.examples.ForwardingService -Dexec.args="<insert a fuelcoin address here>"
 ```
 
 Note that this example app *does not use checkpointing*, so the initial chain sync will be pretty slow. You can make an app that starts up and does the initial sync much faster by including a checkpoints file; see the documentation for

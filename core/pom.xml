@@ -20,19 +20,19 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>com.matthewmitchell</groupId>
-        <artifactId>peercoinj-parent</artifactId>
+        <groupId>com.fuelcoinj</groupId>
+        <artifactId>fuelcoinj-parent</artifactId>
         <version>0.12.3</version>
     </parent>
 
-    <artifactId>peercoinj</artifactId>
+    <artifactId>fuelcoinj</artifactId>
 
-    <name>peercoinj</name>
-    <description>A Java Peercoin library</description>
+    <name>fuelcoinj</name>
+    <description>A Java fuelcoin java library</description>
 
     <packaging>jar</packaging>
 
-    <url>https://github.com/MatthewLM/peercoinj</url>
+    <url>https://github.com/kris-davison/fuelcoinj</url>
 
     <licenses>
         <license>
@@ -348,8 +348,8 @@
         </dependency>
         -->
         <dependency>
-            <groupId>com.matthewmitchell</groupId>
-            <artifactId>orchid</artifactId>
+            <groupId>com.fuelcoinj</groupId>
+            <artifactId>fuelcoinj-tor-orchid</artifactId>
             <version>1.0</version>
         </dependency>
     </dependencies>

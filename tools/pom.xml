@@ -19,16 +19,16 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <parent>
-    <groupId>com.matthewmitchell</groupId>
-    <artifactId>peercoinj-parent</artifactId>
+    <groupId>com.fuelcoinj</groupId>
+    <artifactId>fuelcoinj-parent</artifactId>
     <version>0.12.3</version>
   </parent>
   <modelVersion>4.0.0</modelVersion>
 
-  <artifactId>peercoinj-tools</artifactId>
+  <artifactId>fuelcoinj-tools</artifactId>
 
-  <name>peercoinj Tools</name>
-  <description>A collection of useful tools that use the peercoinj library to perform wallet operations</description>
+  <name>fuelcoinj Tools</name>
+  <description>A collection of useful tools that use the fuelcoinj library to perform wallet operations</description>
 
   <build>
       <plugins>
@@ -69,8 +69,8 @@
 
   <dependencies>
     <dependency>
-      <groupId>com.matthewmitchell</groupId>
-      <artifactId>peercoinj</artifactId>
+      <groupId>com.fuelcoinj</groupId>
+      <artifactId>fuelcoinj</artifactId>
       <version>${project.parent.version}</version>
     </dependency>
     <dependency>

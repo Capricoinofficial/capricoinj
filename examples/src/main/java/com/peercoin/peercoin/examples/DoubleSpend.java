@@ -1,14 +1,20 @@
-package com.matthewmitchell.peercoinj.examples;
+package com.peercoin.peercoin.examples;
 
-import com.matthewmitchell.peercoinj.core.*;
-import com.matthewmitchell.peercoinj.kits.WalletAppKit;
-import com.matthewmitchell.peercoinj.params.RegTestParams;
-import com.matthewmitchell.peercoinj.utils.BriefLogFormatter;
-import com.matthewmitchell.peercoinj.utils.Threading;
+import static com.matthewmitchell.peercoinj.core.Coin.CENT;
+import static com.matthewmitchell.peercoinj.core.Coin.COIN;
+import static com.matthewmitchell.peercoinj.core.Coin.SATOSHI;
 
 import java.io.File;
 
-import static com.matthewmitchell.peercoinj.core.Coin.*;
+import com.matthewmitchell.peercoinj.core.AbstractPeerEventListener;
+import com.matthewmitchell.peercoinj.core.Address;
+import com.matthewmitchell.peercoinj.core.Message;
+import com.matthewmitchell.peercoinj.core.Peer;
+import com.matthewmitchell.peercoinj.core.Transaction;
+import com.matthewmitchell.peercoinj.core.Wallet;
+import com.matthewmitchell.peercoinj.kits.WalletAppKit;
+import com.matthewmitchell.peercoinj.utils.BriefLogFormatter;
+import com.matthewmitchell.peercoinj.utils.Threading;
 
 /**
  * This is a little test app that waits for a coin on a local regtest node, then  generates two transactions that double
@@ -18,7 +24,7 @@ import static com.matthewmitchell.peercoinj.core.Coin.*;
 public class DoubleSpend {
     public static void main(String[] args) throws Exception {
         BriefLogFormatter.init();
-        final RegTestParams params = RegTestParams.get();
+        final RegTestParams params = .get();
         WalletAppKit kit = new WalletAppKit(params, new File("."), "doublespend");
         kit.connectToLocalHost();
         kit.setAutoSave(false);

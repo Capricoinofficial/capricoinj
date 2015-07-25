@@ -1,13 +1,17 @@
 package com.matthewmitchell.peercoinj.tools;
 
-import com.matthewmitchell.peercoinj.core.*;
-import com.matthewmitchell.peercoinj.kits.WalletAppKit;
-import com.matthewmitchell.peercoinj.params.MainNetParams;
-import com.matthewmitchell.peercoinj.utils.BriefLogFormatter;
+import java.io.File;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.File;
+import com.matthewmitchell.peercoinj.core.Address;
+import com.matthewmitchell.peercoinj.core.Coin;
+import com.matthewmitchell.peercoinj.core.InsufficientMoneyException;
+import com.matthewmitchell.peercoinj.core.Wallet;
+import com.matthewmitchell.peercoinj.kits.WalletAppKit;
+import com.matthewmitchell.peercoinj.params.MainNetParams;
+import com.matthewmitchell.peercoinj.utils.BriefLogFormatter;
 
 /**
  * A program that sends a transaction with the specified fee and measures how long it takes to confirm.

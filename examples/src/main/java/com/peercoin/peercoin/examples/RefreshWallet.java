@@ -15,15 +15,24 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.examples;
-
-import com.matthewmitchell.peercoinj.core.*;
-import com.matthewmitchell.peercoinj.params.TestNet3Params;
-import com.matthewmitchell.peercoinj.store.BlockStore;
-import com.matthewmitchell.peercoinj.store.MemoryBlockStore;
+package com.peercoin.peercoin.examples;
 
 import java.io.File;
 import java.net.InetAddress;
+
+import com.matthewmitchell.peercoinj.core.AbstractWalletEventListener;
+import com.matthewmitchell.peercoinj.core.BlockChain;
+import com.matthewmitchell.peercoinj.core.Coin;
+import com.matthewmitchell.peercoinj.core.NetworkParameters;
+import com.matthewmitchell.peercoinj.core.PeerAddress;
+import com.matthewmitchell.peercoinj.core.PeerGroup;
+import com.matthewmitchell.peercoinj.core.Transaction;
+import com.matthewmitchell.peercoinj.core.Wallet;
+import com.matthewmitchell.peercoinj.net.discovery.DnsDiscovery;
+import com.matthewmitchell.peercoinj.params.MainNetParams;
+import com.matthewmitchell.peercoinj.store.BlockStore;
+import com.matthewmitchell.peercoinj.store.MemoryBlockStore;
+import com.matthewmitchell.peercoinj.store.ValidHashStore;
 
 /**
  * RefreshWallet loads a wallet, then processes the block chain to update the transaction pools within it.
@@ -34,13 +43,16 @@ public class RefreshWallet {
         Wallet wallet = Wallet.loadFromFile(file);
         System.out.println(wallet.toString());
 
+        ValidHashStore vhs = new ValidHashStore(new File("hashstore"));
+        
         // Set up the components and link them together.
-        final NetworkParameters params = TestNet3Params.get();
+        final NetworkParameters params = MainNetParams.get();
         BlockStore blockStore = new MemoryBlockStore(params);
-        BlockChain chain = new BlockChain(params, wallet, blockStore);
+        BlockChain chain = new BlockChain(params, wallet, blockStore, vhs);
 
         final PeerGroup peerGroup = new PeerGroup(params, chain);
-        peerGroup.addAddress(new PeerAddress(InetAddress.getLocalHost()));
+       // peerGroup.addAddress(new PeerAddress(InetAddress.getLocalHost()));
+        peerGroup.addPeerDiscovery(new DnsDiscovery(params));
         peerGroup.startAsync();
 
         wallet.addEventListener(new AbstractWalletEventListener() {

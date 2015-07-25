@@ -16,11 +16,10 @@
 
 package com.matthewmitchell.peercoinj.params;
 
-import com.matthewmitchell.peercoinj.core.NetworkParameters;
-import com.matthewmitchell.peercoinj.core.Sha256Hash;
-import com.matthewmitchell.peercoinj.core.Utils;
-
 import static com.google.common.base.Preconditions.checkState;
+
+import com.matthewmitchell.peercoinj.core.NetworkParameters;
+import com.matthewmitchell.peercoinj.core.Utils;
 
 /**
  * Parameters for the main production network on which people trade goods and services.
@@ -30,27 +29,37 @@ public class MainNetParams extends NetworkParameters {
         super();
         interval = INTERVAL;
         targetTimespan = TARGET_TIMESPAN;
-        maxTarget = Utils.decodeCompactBits(0x1d00ffffL);
-        dumpedPrivateKeyHeader = 183;
-        addressHeader = 55;
-        p2shHeader = 117;
+        maxTarget = Utils.decodeCompactBits(504365055L);
+        dumpedPrivateKeyHeader = 128 + 35;
+        addressHeader = 35;
+        p2shHeader = 28;
         acceptableAddressCodes = new int[] { addressHeader, p2shHeader };
-        port = 9901;
-        packetMagic= 0xe6e8e9e5L;
-        genesisBlock.setDifficultyTarget(0x1d00ffffL);
-        genesisBlock.setTime(1345084287L);
-        genesisBlock.setNonce(2179302059L);
+        port = 34162;
+        packetMagic= 2711659171L;
+       // genesisBlock = createGenesis(this);
+        genesisBlock.setDifficultyTarget(504365055L);
+        genesisBlock.setTime(1406900180);
+        genesisBlock.setNonce(179517);
         id = ID_MAINNET;
-        spendableCoinbaseDepth = 500;
+        spendableCoinbaseDepth = 100;
         String genesisHash = genesisBlock.getHashAsString();
-        checkState(genesisHash.equals("0000000032fe677166d54963b62a4677d8957e87c508eaa4fd7eb1c880cd27e3"), genesisHash);
+        
+        System.out.println("NOW:"+genesisHash);
+        System.out.println("WAS: 000007493cfc699b263c5b6b6366cc7365fa714aeb6da55ddf14c270ac7d6205");
+        
+        checkState(genesisHash.equals("000007493cfc699b263c5b6b6366cc7365fa714aeb6da55ddf14c270ac7d6205"), genesisHash);
 
-        checkpoints.put(19080, new Sha256Hash("000000000000bca54d9ac17881f94193fd6a270c1bb21c3bf0b37f588a40dbd7"));
-        checkpoints.put(30583, new Sha256Hash("d39d1481a7eecba48932ea5913be58ad3894c7ee6d5a8ba8abeb772c66a6696e"));
-        checkpoints.put(99999, new Sha256Hash("27fd5e1de16a4270eb8c68dee2754a64da6312c7c3a0e99a7e6776246be1ee3f"));
+       // checkpoints.put(19080, new Sha256Hash("000000000000bca54d9ac17881f94193fd6a270c1bb21c3bf0b37f588a40dbd7"));
+       // checkpoints.put(30583, new Sha256Hash("d39d1481a7eecba48932ea5913be58ad3894c7ee6d5a8ba8abeb772c66a6696e"));
+       // checkpoints.put(99999, new Sha256Hash("27fd5e1de16a4270eb8c68dee2754a64da6312c7c3a0e99a7e6776246be1ee3f"));
 
         dnsSeeds = new String[] {
-                "seed.ppcoin.net", "tnseed.ppcoin.net"
+            	"107.191.106.210",         
+            	"192.52.166.157",        
+                "198.105.122.95",  
+                "82.211.31.120",
+                "108.61.185.161", 
+                "108.61.181.185",
         };
     }
 

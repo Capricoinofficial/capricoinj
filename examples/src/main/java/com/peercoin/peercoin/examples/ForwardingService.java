@@ -15,22 +15,26 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.examples;
+package com.peercoin.peercoin.examples;
 
-import com.matthewmitchell.peercoinj.core.*;
-import com.matthewmitchell.peercoinj.crypto.KeyCrypterException;
-import com.matthewmitchell.peercoinj.kits.WalletAppKit;
-import com.matthewmitchell.peercoinj.params.MainNetParams;
-import com.matthewmitchell.peercoinj.params.RegTestParams;
-import com.matthewmitchell.peercoinj.params.TestNet3Params;
-import com.matthewmitchell.peercoinj.utils.BriefLogFormatter;
-import com.google.common.util.concurrent.FutureCallback;
-import com.google.common.util.concurrent.Futures;
-import com.google.common.util.concurrent.MoreExecutors;
+import static com.google.common.base.Preconditions.checkNotNull;
 
 import java.io.File;
 
-import static com.google.common.base.Preconditions.checkNotNull;
+import com.google.common.util.concurrent.FutureCallback;
+import com.google.common.util.concurrent.Futures;
+import com.google.common.util.concurrent.MoreExecutors;
+import com.matthewmitchell.peercoinj.core.AbstractWalletEventListener;
+import com.matthewmitchell.peercoinj.core.Address;
+import com.matthewmitchell.peercoinj.core.Coin;
+import com.matthewmitchell.peercoinj.core.InsufficientMoneyException;
+import com.matthewmitchell.peercoinj.core.NetworkParameters;
+import com.matthewmitchell.peercoinj.core.Transaction;
+import com.matthewmitchell.peercoinj.core.Wallet;
+import com.matthewmitchell.peercoinj.crypto.KeyCrypterException;
+import com.matthewmitchell.peercoinj.kits.WalletAppKit;
+import com.matthewmitchell.peercoinj.params.MainNetParams;
+import com.matthewmitchell.peercoinj.utils.BriefLogFormatter;
 
 /**
  * ForwardingService demonstrates basic usage of the library. It sits on the network and when it receives coins, simply
@@ -43,35 +47,20 @@ public class ForwardingService {
     public static void main(String[] args) throws Exception {
         // This line makes the log output more compact and easily read, especially when using the JDK log adapter.
         BriefLogFormatter.init();
-        if (args.length < 1) {
-            System.err.println("Usage: address-to-send-back-to [regtest|testnet]");
-            return;
-        }
+//        if (args.length < 1) {
+//            System.err.println("Usage: address-to-send-back-to [regtest|testnet]");
+//            return;
+//        }
 
         // Figure out which network we should connect to. Each one gets its own set of files.
-        NetworkParameters params;
-        String filePrefix;
-        if (args.length > 1 && args[1].equals("testnet")) {
-            params = TestNet3Params.get();
-            filePrefix = "forwarding-service-testnet";
-        } else if (args.length > 1 && args[1].equals("regtest")) {
-            params = RegTestParams.get();
-            filePrefix = "forwarding-service-regtest";
-        } else {
-            params = MainNetParams.get();
-            filePrefix = "forwarding-service";
-        }
+        NetworkParameters params = MainNetParams.get();
+        String filePrefix = "forwarding-service";
+//        }
         // Parse the address given as the first parameter.
-        forwardingAddress = new Address(params, args[0]);
+        forwardingAddress = new Address(params, "FGFiHGDj6YxHYtmW6fpN1jLBieYcPmhv14");
 
         // Start up a basic app using a class that automates some boilerplate.
         kit = new WalletAppKit(params, new File("."), filePrefix);
-
-        if (params == RegTestParams.get()) {
-            // Regression test mode is designed for testing and development only, so there's no public network for it.
-            // If you pick this mode, you're expected to be running a local "peercoind -regtest" instance.
-            kit.connectToLocalHost();
-        }
 
         // Download the block chain and wait until it's done.
         kit.startAsync();

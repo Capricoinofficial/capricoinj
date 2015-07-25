@@ -87,19 +87,19 @@ public class Transaction extends ChildMessage implements Serializable {
     public static final int LOCKTIME_THRESHOLD = 500000000; // Tue Nov  5 00:53:20 1985 UTC
 
     /** How many bytes a transaction can be before it won't be relayed anymore. Currently 100kb. */
-    public static final int MAX_STANDARD_TX_SIZE = 100000;
+    public static final int MAX_STANDARD_TX_SIZE = 100 * 1024;
 
     /**
      * If fee is lower than this value (in satoshis), a default reference client will treat it as if there were no fee.
      * Currently this is 10000 satoshis.
      */
-    public static final Coin REFERENCE_DEFAULT_MIN_TX_FEE = Coin.valueOf(10000);
+    public static final Coin REFERENCE_DEFAULT_MIN_TX_FEE = Coin.valueOf(1000L);
 
     /**
      * Any standard (ie pay-to-address) output smaller than this value (in satoshis) will be rejected by the network.
      * Currently it's 10000 satoshis.
      */
-    public static final Coin MIN_OUTPUT_VALUE = Coin.valueOf(10000);
+    public static final Coin MIN_OUTPUT_VALUE = Coin.valueOf(1000);
 
     // These are serialized in both peercoin and java serialization.
     private long version;
@@ -337,6 +337,7 @@ public class Transaction extends ChildMessage implements Serializable {
 
         if (bestChain) {
             TransactionConfidence transactionConfidence = getConfidence();
+            
             // This sets type to BUILDING and depth to one.
             transactionConfidence.setAppearedAtChainHeight(block.getHeight());
         }
@@ -523,7 +524,7 @@ public class Transaction extends ChildMessage implements Serializable {
     protected static int calcLength(byte[] buf, int offset) {
         VarInt varint;
         // jump past version (uint32) and time (uint32)
-        int cursor = offset + 8;
+        int cursor = offset + 4;
 
         int i;
         long scriptLen;
@@ -566,7 +567,7 @@ public class Transaction extends ChildMessage implements Serializable {
 
         version = readUint32();
         time = readUint32();
-        optimalEncodingMessageSize = 8;
+        optimalEncodingMessageSize = 4;
 
         // First come the inputs.
         long numInputs = readVarInt();

@@ -16,16 +16,7 @@
 
 package com.matthewmitchell.peercoinj.core;
 
-import com.matthewmitchell.peercoinj.script.Script;
-import com.matthewmitchell.peercoinj.script.ScriptBuilder;
-import com.google.common.annotations.VisibleForTesting;
-import com.google.common.base.Preconditions;
-import com.google.common.collect.ImmutableList;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import javax.annotation.Nullable;
+import static com.matthewmitchell.peercoinj.core.Utils.doubleDigestTwoBuffers;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -37,8 +28,17 @@ import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
 
-import static com.matthewmitchell.peercoinj.core.Utils.doubleDigest;
-import static com.matthewmitchell.peercoinj.core.Utils.doubleDigestTwoBuffers;
+import javax.annotation.Nullable;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import com.google.common.annotations.VisibleForTesting;
+import com.google.common.base.Preconditions;
+import com.google.common.collect.ImmutableList;
+import com.matthewmitchell.peercoinj.crypto.X11;
+import com.matthewmitchell.peercoinj.script.Script;
+import com.matthewmitchell.peercoinj.script.ScriptBuilder;
 
 /**
  * <p>A block is a group of transactions, and is one of the fundamental data structures of the Peercoin system.
@@ -108,7 +108,7 @@ public class Block extends Message {
         super(params);
         // Set up a few basic things. We are not complete after this though.
         version = 1;
-        difficultyTarget = 0x1d07fff8L;
+        difficultyTarget = 487063544L;
         time = System.currentTimeMillis() / 1000;
         prevBlockHash = Sha256Hash.ZERO_HASH;
 
@@ -184,6 +184,8 @@ public class Block extends Message {
         difficultyTarget = readUint32();
         nonce = readUint32();
 
+        hash = new Sha256Hash(Utils.reverseBytes(X11.x11Digest(payload, offset, cursor)));
+        
         headerParsed = true;
         headerBytesValid = parseRetain;
     }
@@ -194,7 +196,7 @@ public class Block extends Message {
 
         cursor = offset + HEADER_SIZE;
         optimalEncodingMessageSize = HEADER_SIZE;
-        if (payload.length == cursor || payload.length - 1 == cursor) { // Include the -1 case for the null byte which is required for peercoin
+        if (payload.length == cursor ){//|| payload.length - 1 == cursor) { // Include the -1 case for the null byte which is required for peercoin
             // This message is just a header, it has no transactions.
             transactionsParsed = true;
             transactionBytesValid = false;
@@ -219,11 +221,11 @@ public class Block extends Message {
         transactionsParsed = true;
         transactionBytesValid = parseRetain;
         
-		if (cursor != length && !getHashAsString().equals("3cdd9c2facce405f5cc220fb21a10e493041451c463a22e1ff6fe903fc5769fc")) {
-			// Obtain signature
-			int sigLen = (int) readVarInt();
-			blockSig = readBytes(sigLen);
-		}
+//		if (cursor != length && !getHashAsString().equals("3cdd9c2facce405f5cc220fb21a10e493041451c463a22e1ff6fe903fc5769fc")) {
+//			// Obtain signature
+//			int sigLen = (int) readVarInt();
+//			blockSig = readBytes(sigLen);
+//		}
         
     }
 
@@ -240,7 +242,7 @@ public class Block extends Message {
         maybeParseTransactions();
         if (optimalEncodingMessageSize != 0)
             return optimalEncodingMessageSize;
-        optimalEncodingMessageSize = peercoinSerialize().length;
+        optimalEncodingMessageSize = getMessageSize();//peercoinSerialize().length;
         return optimalEncodingMessageSize;
     }
 
@@ -413,11 +415,11 @@ public class Block extends Message {
         }
         
         // Finally write block signature
-       
-       	if (blockSig != null) {	
-            stream.write(new VarInt(blockSig.length).encode());
-            stream.write(blockSig);
-        }
+//       
+//       	if (blockSig != null) {	
+//            stream.write(new VarInt(blockSig.length).encode());
+//            stream.write(blockSig);
+//        }
     }
 
     /**
@@ -518,16 +520,17 @@ public class Block extends Message {
         try {
             ByteArrayOutputStream bos = new UnsafeByteArrayOutputStream(HEADER_SIZE);
             writeHeader(bos);
-            return new Sha256Hash(Utils.reverseBytes(doubleDigest(bos.toByteArray())));
+            return new Sha256Hash(Utils.reverseBytes(X11.x11Digest(bos.toByteArray())));
         } catch (IOException e) {
             throw new RuntimeException(e); // Cannot happen.
         }
     }
 
+    
     /**
      * Returns the hash of the block (which for a valid, solved block should be below the target) in the form seen on
      * the block explorer. If you call this on block 1 in the production chain
-     * you will get "00000000839a8e6886ab5951d76f411475428afc90947ee320161bbf18eb6048".
+     * you will get "000007d91d1254d60e2dd1ae580383070a4ddffa4c64c2eeb4a2f9ecc0414343".
      */
     public String getHashAsString() {
         return getHash().toString();
@@ -767,7 +770,7 @@ public class Block extends Message {
         // Firstly we need to ensure this block does in fact represent real work done. If the difficulty is high
         // enough, it's probably been done by the network.
         maybeParseHeader();
-        checkProofOfWork(true);
+       // checkProofOfWork(true);
         checkTimestamp();
     }
 

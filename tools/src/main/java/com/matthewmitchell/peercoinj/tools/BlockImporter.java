@@ -1,13 +1,24 @@
 package com.matthewmitchell.peercoinj.tools;
 
-import com.matthewmitchell.peercoinj.core.*;
-import com.matthewmitchell.peercoinj.params.MainNetParams;
-import com.matthewmitchell.peercoinj.params.TestNet3Params;
-import com.matthewmitchell.peercoinj.store.*;
-import com.matthewmitchell.peercoinj.utils.BlockFileLoader;
-import com.google.common.base.Preconditions;
-
 import java.io.File;
+
+import com.google.common.base.Preconditions;
+import com.matthewmitchell.peercoinj.core.AbstractBlockChain;
+import com.matthewmitchell.peercoinj.core.Block;
+import com.matthewmitchell.peercoinj.core.BlockChain;
+import com.matthewmitchell.peercoinj.core.FullPrunedBlockChain;
+import com.matthewmitchell.peercoinj.core.NetworkParameters;
+import com.matthewmitchell.peercoinj.core.PrunedException;
+import com.matthewmitchell.peercoinj.core.VerificationException;
+import com.matthewmitchell.peercoinj.params.MainNetParams;
+import com.matthewmitchell.peercoinj.store.BlockStore;
+import com.matthewmitchell.peercoinj.store.BlockStoreException;
+import com.matthewmitchell.peercoinj.store.FullPrunedBlockStore;
+import com.matthewmitchell.peercoinj.store.H2FullPrunedBlockStore;
+import com.matthewmitchell.peercoinj.store.MemoryBlockStore;
+import com.matthewmitchell.peercoinj.store.MemoryFullPrunedBlockStore;
+import com.matthewmitchell.peercoinj.store.SPVBlockStore;
+import com.matthewmitchell.peercoinj.utils.BlockFileLoader;
 
 /** Very thin wrapper around {@link com.matthewmitchell.peercoinj.utils.BlockFileLoader} */
 public class BlockImporter {

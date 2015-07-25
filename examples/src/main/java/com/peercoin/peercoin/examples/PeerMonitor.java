@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.matthewmitchell.peercoinj.examples;
+package com.peercoin.peercoin.examples;
 
 import com.matthewmitchell.peercoinj.core.AbstractPeerEventListener;
 import com.matthewmitchell.peercoinj.core.NetworkParameters;

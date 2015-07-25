@@ -17,20 +17,24 @@
 
 package com.matthewmitchell.peercoinj.core;
 
-import com.matthewmitchell.peercoinj.params.*;
-import com.matthewmitchell.peercoinj.script.Script;
-import com.matthewmitchell.peercoinj.script.ScriptOpCodes;
-import com.google.common.base.Objects;
-
-import javax.annotation.Nullable;
+import static com.matthewmitchell.peercoinj.core.Coin.COIN;
+import static com.matthewmitchell.peercoinj.core.Coin.ZERO;
 
 import java.io.ByteArrayOutputStream;
 import java.io.Serializable;
 import java.math.BigInteger;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
-import static com.google.common.base.Preconditions.checkState;
-import static com.matthewmitchell.peercoinj.core.Coin.*;
+import javax.annotation.Nullable;
+
+import org.spongycastle.util.encoders.Hex;
+
+import com.google.common.base.Objects;
+import com.matthewmitchell.peercoinj.params.MainNetParams;
+import com.matthewmitchell.peercoinj.params.UnitTestParams;
 
 /**
  * <p>NetworkParameters contains the data needed for working with an instantiation of a Peercoin chain.</p>
@@ -44,17 +48,17 @@ public abstract class NetworkParameters implements Serializable {
     /**
      * The protocol version this library implements.
      */
-    public static final int PROTOCOL_VERSION = 60012;
+    public static final int PROTOCOL_VERSION = 60013;
 
     /**
      * The alert signing key.
      */
-    public static final byte[] SATOSHI_KEY = Utils.HEX.decode("04a0a849dd49b113d3179a332dd77715c43be4d0076e2f19e66de23dd707e56630f792f298dfd209bf042bb3561f4af6983f3d81e439737ab0bf7f898fecd21aab");
+    public static final byte[] SATOSHI_KEY = Utils.HEX.decode("04fc9702847840aaf195de8442ebecedf5b095cdbb9bc716bda9110971b28a49e0ead8564ff0db22209e0374782c093bb899692d524e9d6a6956e7c5ecbcd68284");
 
     /** The string returned by getId() for the main, production network where people trade things. */
-    public static final String ID_MAINNET = "org.peercoin.production";
+    public static final String ID_MAINNET = "org.bitcoin.production";
     /** Unit test network. */
-    public static final String ID_UNITTESTNET = "com.matthewmitchell.peercoinj.unittest";
+    public static final String ID_UNITTESTNET = "com.bitcoin.unittest";
 
     /** The string used by the payment protocol to represent the main net. */
     public static final String PAYMENT_PROTOCOL_ID_MAINNET = "main";
@@ -90,34 +94,47 @@ public abstract class NetworkParameters implements Serializable {
         genesisBlock = createGenesis(this);
     }
 
-    private static Block createGenesis(NetworkParameters n) {
-        Block genesisBlock = new Block(n);
-        Transaction t = new Transaction(n);
-        t.setTime(1345083810);
-        try {
-            // A script containing the difficulty bits and the following message:
-            //
-            //   "Matonis 07-AUG-2012 Parallel Currencies And The Roadmap To Monetary Freedom"
-            byte[] bytes = Utils.HEX.decode
-                    ("04ffff001d020f274b4d61746f6e69732030372d4155472d3230313220506172616c6c656c2043757272656e6369657320416e642054686520526f61646d617020546f204d6f6e65746172792046726565646f6d");
-            t.addInput(new TransactionInput(n, t, bytes));
-            ByteArrayOutputStream scriptPubKeyBytes = new ByteArrayOutputStream();
-            t.addOutput(new TransactionOutput(n, t, ZERO, scriptPubKeyBytes.toByteArray()));
-        } catch (Exception e) {
-            // Cannot happen.
-            throw new RuntimeException(e);
-        }
-        genesisBlock.addTransaction(t);
-        
-        String merkleHash = genesisBlock.getMerkleRoot().toString();
-        checkState(merkleHash.equals("3c2d8f85fab4d17aac558cc648a1a58acff0de6deb890c29985690052c5993c2"), merkleHash);
-        
-        return genesisBlock;
+    protected static Block createGenesis(NetworkParameters paramNetworkParameters) {
+    	
+    	
+    	
+//    	 Block genesisBlock = new Block(n);
+//         Transaction t = new Transaction(n);
+//         t.setTime(1406900180);
+//         try {
+//             // A script containing the difficulty bits and the following message:
+//             //
+//             //   "Matonis 07-AUG-2012 Parallel Currencies And The Roadmap To Monetary Freedom"
+//             byte[] bytes = Utils.HEX.decode
+//                     ("04ffff001d020f274b4d61746f6e69732030372d4155472d3230313220506172616c6c656c2043757272656e6369657320416e642054686520526f61646d617020546f204d6f6e65746172792046726565646f6d");
+//             t.addInput(new TransactionInput(n, t, bytes));
+//             ByteArrayOutputStream scriptPubKeyBytes = new ByteArrayOutputStream();
+//             t.addOutput(new TransactionOutput(n, t, ZERO, scriptPubKeyBytes.toByteArray()));
+//         } catch (Exception e) {
+//             // Cannot happen.
+//             throw new RuntimeException(e);
+//         }
+//         genesisBlock.addTransaction(t);
+//         
+//         String merkleHash = genesisBlock.getMerkleRoot().toString();
+//         checkState(merkleHash.equals("3c2d8f85fab4d17aac558cc648a1a58acff0de6deb890c29985690052c5993c2"), merkleHash);
+         
+      //   return genesisBlock;
+    	
+    	List<Transaction> transactions = new ArrayList<Transaction>();
+    	Transaction localTransaction = new Transaction(paramNetworkParameters);
+    	localTransaction.addInput(new TransactionInput(paramNetworkParameters, localTransaction, Hex.decode("00012a1d4672692c2030312041756720323031342031333a33363a323020474d54")));
+    	ByteArrayOutputStream localByteArrayOutputStream = new ByteArrayOutputStream();
+    	localTransaction.addOutput(new TransactionOutput(paramNetworkParameters, localTransaction, ZERO, localByteArrayOutputStream.toByteArray()));
+
+        Block localBlock = new Block(paramNetworkParameters, 1, Sha256Hash.ZERO_HASH, new Sha256Hash("b2394f6f9a037333a4aa95868bafe2ec8dcd2b7a1ba47ddf0722d6e7e027a10b"), 1406900180, 1, 179517, transactions);
+
+        return localBlock;
     }
 
-    public static final int TARGET_TIMESPAN = 7 * 24 * 60 * 60;  // 1 day.
+    public static final int TARGET_TIMESPAN = 1200;//7 * 24 * 60 * 60;  // 1 day.
     public static final int TARGET_SPACING = 10 * 60;  // 10 minutes per block.
-    public static final int INTERVAL = 1; // Every block
+    public static final int INTERVAL = 20; // Every block
     
     /**
      * Blocks with a timestamp after this should enforce BIP 16, aka "Pay to script hash". This BIP changed the
@@ -126,7 +143,7 @@ public abstract class NetworkParameters implements Serializable {
      */
     public static final int BIP16_ENFORCE_TIME = 1333238400;
 
-    public static final long MAX_COINS = 2000000000L;
+    public static final long MAX_COINS = 200000000L;
     public static final Coin MAX_MONEY = COIN.multiply(MAX_COINS);
 
     /** Alias for MainNetParams.get(), use that instead */

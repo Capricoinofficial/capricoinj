@@ -18,9 +18,11 @@ package com.matthewmitchell.peercoinj.core;
 
 import java.io.IOException;
 import java.io.OutputStream;
+import java.util.Arrays;
 
 public class Ping extends Message {
-    private long nonce;
+
+	private long nonce;
     private boolean hasNonce;
     
     public Ping(NetworkParameters params, byte[] payloadBytes) throws ProtocolException {
@@ -74,5 +76,16 @@ public class Ping extends Message {
         return nonce;
     }
 
+    @Override
+	public String toString() {
+		return "Ping [nonce=" + nonce + ", hasNonce=" + hasNonce + ", offset="
+				+ offset + ", cursor=" + cursor + ", length=" + length
+				+ ", payload=" + Arrays.toString(payload) + ", parsed="
+				+ parsed + ", recached=" + recached + ", parseLazy="
+				+ parseLazy + ", parseRetain=" + parseRetain
+				+ ", protocolVersion=" + protocolVersion + ", checksum="
+				+ Arrays.toString(checksum) + ", params=" + params + "]";
+	}
+    
 }
 

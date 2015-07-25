@@ -17,13 +17,7 @@
 
 package com.matthewmitchell.peercoinj.tools;
 
-import com.matthewmitchell.peercoinj.core.*;
-import com.matthewmitchell.peercoinj.params.MainNetParams;
-import com.matthewmitchell.peercoinj.store.BlockStore;
-import com.matthewmitchell.peercoinj.store.MemoryBlockStore;
-import com.matthewmitchell.peercoinj.utils.BriefLogFormatter;
-import com.matthewmitchell.peercoinj.utils.Threading;
-import com.google.common.base.Charsets;
+import static com.google.common.base.Preconditions.checkState;
 
 import java.io.DataOutputStream;
 import java.io.File;
@@ -39,7 +33,20 @@ import java.security.MessageDigest;
 import java.util.Date;
 import java.util.TreeMap;
 
-import static com.google.common.base.Preconditions.checkState;
+import com.google.common.base.Charsets;
+import com.matthewmitchell.peercoinj.core.AbstractBlockChainListener;
+import com.matthewmitchell.peercoinj.core.BlockChain;
+import com.matthewmitchell.peercoinj.core.CheckpointManager;
+import com.matthewmitchell.peercoinj.core.NetworkParameters;
+import com.matthewmitchell.peercoinj.core.PeerGroup;
+import com.matthewmitchell.peercoinj.core.Sha256Hash;
+import com.matthewmitchell.peercoinj.core.StoredBlock;
+import com.matthewmitchell.peercoinj.core.VerificationException;
+import com.matthewmitchell.peercoinj.params.MainNetParams;
+import com.matthewmitchell.peercoinj.store.BlockStore;
+import com.matthewmitchell.peercoinj.store.MemoryBlockStore;
+import com.matthewmitchell.peercoinj.utils.BriefLogFormatter;
+import com.matthewmitchell.peercoinj.utils.Threading;
 
 /**
  * Downloads and verifies a full chain from your local peer, emitting checkpoints at each difficulty transition period

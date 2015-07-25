@@ -16,13 +16,7 @@
 
 package com.matthewmitchell.peercoinj.tools;
 
-import com.matthewmitchell.peercoinj.crypto.TrustStoreLoader;
-import com.matthewmitchell.peercoinj.protocols.payments.PaymentProtocol;
-import com.matthewmitchell.peercoinj.protocols.payments.PaymentProtocolException;
-import com.matthewmitchell.peercoinj.protocols.payments.PaymentSession;
-import com.matthewmitchell.peercoinj.uri.PeercoinURI;
-import com.matthewmitchell.peercoinj.uri.PeercoinURIParseException;
-import org.peercoin.protocols.payments.Protos;
+import static java.lang.String.format;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -34,7 +28,13 @@ import java.security.cert.X509Certificate;
 import java.util.Date;
 import java.util.concurrent.ExecutionException;
 
-import static java.lang.String.format;
+import com.matthewmitchell.peercoinj.crypto.TrustStoreLoader;
+import com.matthewmitchell.peercoinj.paymentchannel.Protos;
+import com.matthewmitchell.peercoinj.protocols.payments.PaymentProtocol;
+import com.matthewmitchell.peercoinj.protocols.payments.PaymentProtocolException;
+import com.matthewmitchell.peercoinj.protocols.payments.PaymentSession;
+import com.matthewmitchell.peercoinj.uri.PeercoinURI;
+import com.matthewmitchell.peercoinj.uri.PeercoinURIParseException;
 
 /** Takes a URL or peercoin URI and prints information about the payment request. */
 public class PaymentProtocolTool {

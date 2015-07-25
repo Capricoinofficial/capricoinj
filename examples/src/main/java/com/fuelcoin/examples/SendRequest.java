@@ -6,9 +6,11 @@ import com.fuelcoinj.core.Address;
 import com.fuelcoinj.core.Coin;
 import com.fuelcoinj.core.InsufficientMoneyException;
 import com.fuelcoinj.core.NetworkParameters;
+import com.fuelcoinj.core.Transaction;
 import com.fuelcoinj.core.Wallet;
 import com.fuelcoinj.core.Wallet.BalanceType;
 import com.fuelcoinj.kits.WalletAppKit;
+import com.fuelcoinj.params.MainNetParams;
 import com.fuelcoinj.params.UnitTestParams;
 import com.google.common.util.concurrent.FutureCallback;
 import com.google.common.util.concurrent.Futures;
@@ -23,21 +25,30 @@ public class SendRequest {
     public static void main(String[] args) throws Exception {
 
         // We use the WalletAppKit that handles all the boilerplate for us. Have a look at the Kit.java example for more details.
-        NetworkParameters params = UnitTestParams.get();
-        WalletAppKit kit = new WalletAppKit(params, new File("."), "sendrequest-example");
+        NetworkParameters params = MainNetParams.get();
+        WalletAppKit kit = new WalletAppKit(params, new File("."), "forwarding-service");
         kit.startAsync();
         kit.awaitRunning();
-
+        kit.wallet().allowSpendingUnconfirmedTransactions();
+               
+        for(Transaction tx : kit.wallet().getPendingTransactions())
+        {
+        	System.out.println("Pending : "+tx.toString(kit.chain()));
+        	
+        }
+        System.out.println("wallet balance is "+kit.wallet().getBalance());
         System.out.println("Send money to: " + kit.wallet().currentReceiveAddress().toString());
-
+        
+        System.exit(0);
+        
         // How much coins do we want to send?
         // The Coin class represents a monetary Peercoin value.
         // We use the parseCoin function to simply get a Coin instance from a simple String.
-        Coin value = Coin.parseCoin("0.09");
+        Coin value = Coin.parseCoin("1.00");
 
         // To which address you want to send the coins?
         // The Address class represents a Peercoin address.
-        Address to = new Address(params, "mupBAFeT63hXfeeT4rnAUcpKHDkz1n4fdw");
+        Address to = new Address(params, "FGFiHGDj6YxHYtmW6fpN1jLBieYcPmhv14");
 
         // There are different ways to create and publish a SendRequest. This is probably the easiest one.
         // Have a look at the code of the SendRequest class to see what's happening and what other options you have: https://peercoinj.github.io/javadoc/0.11/com/google/peercoin/core/Wallet.SendRequest.html

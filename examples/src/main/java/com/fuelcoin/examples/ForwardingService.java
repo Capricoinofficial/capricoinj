@@ -48,10 +48,6 @@ public class ForwardingService {
     public static void main(String[] args) throws Exception {
         // This line makes the log output more compact and easily read, especially when using the JDK log adapter.
         BriefLogFormatter.init();
-//        if (args.length < 1) {
-//            System.err.println("Usage: address-to-send-back-to [regtest|testnet]");
-//            return;
-//        }
 
         // Figure out which network we should connect to. Each one gets its own set of files.
         NetworkParameters params = MainNetParams.get();
@@ -75,7 +71,7 @@ public class ForwardingService {
                 //
                 // The transaction "tx" can either be pending, or included into a block (we didn't see the broadcast).
                 Coin value = tx.getValueSentToMe(w);
-                System.out.println("Received tx for " + value.toFriendlyString() + ": " + tx);
+                System.out.println("Received tx for " + value.toPlainString() + ": " + tx);
                 System.out.println("Transaction will be forwarded after it confirms.");
                 // Wait until it's made it into the block chain (may run immediately if it's already there).
                 //
@@ -83,16 +79,18 @@ public class ForwardingService {
                 // to be double spent, no harm done. Wallet.allowSpendingUnconfirmedTransactions() would have to
                 // be called in onSetupCompleted() above. But we don't do that here to demonstrate the more common
                 // case of waiting for a block.
-                Futures.addCallback(tx.getConfidence().getDepthFuture(1), new FutureCallback<Transaction>() {
+                Futures.addCallback(tx.getConfidence().getDepthFuture(6), new FutureCallback<Transaction>() {
                     @Override
                     public void onSuccess(Transaction result) {
                         // "result" here is the same as "tx" above, but we use it anyway for clarity.
+                    	System.out.println("tx has been confirmed : "+result);
                         forwardCoins(result);
                     }
 
                     @Override
                     public void onFailure(Throwable t) {
                         // This kind of future can't fail, just rethrow in case something weird happens.
+                    	System.out.println("tx has failed to be confirmed : "+t.getMessage());
                         throw new RuntimeException(t);
                     }
                 });
@@ -111,7 +109,7 @@ public class ForwardingService {
     private static void forwardCoins(Transaction tx) {
         try {
             Coin value = tx.getValueSentToMe(kit.wallet());
-            System.out.println("Forwarding " + value.toFriendlyString());
+            System.out.println("Forwarding " + value.toPlainString());
             // Now send the coins back! Send with a small fee attached to ensure rapid confirmation.
             final Coin amountToSend = value.subtract(Transaction.REFERENCE_DEFAULT_MIN_TX_FEE);
             final Wallet.SendResult sendResult = kit.wallet().sendCoins(kit.peerGroup(), forwardingAddress, amountToSend);

@@ -160,7 +160,7 @@ public class PeerGroup extends AbstractExecutionThreadService implements Transac
         }
     };
 
-    private int minBroadcastConnections = 0;
+    private int minBroadcastConnections = 1;
     private final AbstractWalletEventListener walletEventListener = new AbstractWalletEventListener() {
         // Because calculation of the new filter takes place asynchronously, these flags deduplicate requests.
         @GuardedBy("this") private boolean sendIfChangedQueued, dontSendQueued;

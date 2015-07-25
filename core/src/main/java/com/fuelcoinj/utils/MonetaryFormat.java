@@ -47,19 +47,19 @@ import com.fuelcoinj.core.Monetary;
 public final class MonetaryFormat {
 
     /** Standard format for the PPC denomination. */
-    public static final MonetaryFormat PPC = new MonetaryFormat().shift(0).minDecimals(2).repeatOptionalDecimals(2, 2);
+    public static final MonetaryFormat FC2 = new MonetaryFormat().shift(0).minDecimals(2).repeatOptionalDecimals(2, 2);
     /** Standard format for the mPPC denomination. */
-    public static final MonetaryFormat MPPC = new MonetaryFormat().shift(3).minDecimals(2).optionalDecimals(1);
+    public static final MonetaryFormat MFC2 = new MonetaryFormat().shift(3).minDecimals(2).optionalDecimals(1);
     /** Standard format for the µPPC denomination. */
-    public static final MonetaryFormat UPPC = new MonetaryFormat().shift(6).minDecimals(0).optionalDecimals(0);
+    public static final MonetaryFormat UFC2 = new MonetaryFormat().shift(6).minDecimals(0).optionalDecimals(0);
     /** Standard format for fiat amounts. */
     public static final MonetaryFormat FIAT = new MonetaryFormat().shift(0).minDecimals(2).repeatOptionalDecimals(2, 1);
     /** Currency code for base 1 Peercoin. */
-    public static final String CODE_PPC = "PPC";
+    public static final String CODE_FC2 = "FC2";
     /** Currency code for base 1/1000 Peercoin. */
-    public static final String CODE_MPPC = "mPPC";
+    public static final String CODE_MFC2 = "mFC2";
     /** Currency code for base 1/1000000 Peercoin. */
-    public static final String CODE_UPPC = "µPPC";
+    public static final String CODE_UFC2 = "µFC2";
 
     private final char negativeSign;
     private final char positiveSign;
@@ -299,9 +299,9 @@ public final class MonetaryFormat {
         this.shift = 0;
         this.roundingMode = RoundingMode.HALF_UP;
         this.codes = new HashMap<Integer, String>();
-        this.codes.put(0, CODE_PPC);
-        this.codes.put(3, CODE_MPPC);
-        this.codes.put(6, CODE_UPPC);
+        this.codes.put(0, CODE_FC2);
+        this.codes.put(3, CODE_MFC2);
+        this.codes.put(6, CODE_UFC2);
         this.codeSeparator = ' ';
         this.codePrefixed = true;
     }

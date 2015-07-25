@@ -41,7 +41,7 @@ public class MainNetParams extends NetworkParameters {
         genesisBlock.setTime(1406900180);
         genesisBlock.setNonce(179517);
         id = ID_MAINNET;
-        spendableCoinbaseDepth = 100;
+        spendableCoinbaseDepth = 6;
         String genesisHash = genesisBlock.getHashAsString();
         
         System.out.println("NOW:"+genesisHash);

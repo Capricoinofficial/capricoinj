@@ -220,7 +220,7 @@ public final class Coin implements Monetary, Comparable<Coin>, Serializable {
         return this.value;
     }
 
-    private static final MonetaryFormat FRIENDLY_FORMAT = MonetaryFormat.PPC.minDecimals(2).repeatOptionalDecimals(1, 4).postfixCode();
+    private static final MonetaryFormat FRIENDLY_FORMAT = MonetaryFormat.FC2.minDecimals(2).repeatOptionalDecimals(1, 4).postfixCode();
 
     /**
      * Returns the value as a 0.12 type string. More digits after the decimal place will be used
@@ -230,7 +230,7 @@ public final class Coin implements Monetary, Comparable<Coin>, Serializable {
         return FRIENDLY_FORMAT.format(this).toString();
     }
 
-    private static final MonetaryFormat PLAIN_FORMAT = MonetaryFormat.PPC.minDecimals(0).repeatOptionalDecimals(1, 6).noCode();
+    private static final MonetaryFormat PLAIN_FORMAT = MonetaryFormat.FC2.minDecimals(0).repeatOptionalDecimals(1, 6).noCode();
 
     /**
      * <p>

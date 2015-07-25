@@ -94,7 +94,7 @@ public abstract class AbstractBlockChain {
     /**
      * Tracks the top of the best known chain.<p>
      *
-     * Following this one down to the genesis block produces the story of the economy from the creation of Peercoin
+     * Following this one down to the genesis block produces the story of the economy from the creation of fuelcoin
      * until the present day. The chain head can change if a new set of blocks is received that results in a chain of
      * greater work than the one obtained by following this one down. In that case a reorganize is triggered,
      * potentially invalidating transactions in our wallet.

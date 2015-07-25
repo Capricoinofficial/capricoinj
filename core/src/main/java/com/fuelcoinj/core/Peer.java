@@ -49,7 +49,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * <p>A Peer handles the high level communication with a Peercoin node, extending a {@link PeerSocketHandler} which
+ * <p>A Peer handles the high level communication with a fuelcoin node, extending a {@link PeerSocketHandler} which
  * handles low-level message (de)serialization.</p>
  *
  * <p>Note that timeouts are handled by the extended
@@ -137,7 +137,7 @@ public class Peer extends PeerSocketHandler {
         Sha256Hash hash;
         SettableFuture future;
         // If the peer does not support the notfound message, we'll use ping/pong messages to simulate it. This is
-        // a nasty hack that relies on the fact that peercoin-qt is single threaded and processes messages in order.
+        // a nasty hack that relies on the fact that fuelcoin-qt is single threaded and processes messages in order.
         // The nonce field records which pong should clear this request as "not found".
         long nonce;
     }
@@ -1228,7 +1228,7 @@ public class Peer extends PeerSocketHandler {
      * @param secondsSinceEpoch Time in seconds since the epoch or 0 to reset to always downloading block bodies.
      */
     public void setDownloadParameters(long secondsSinceEpoch, boolean useFilteredBlocks) {
-    	// For peercoin we cannot use filtered blocks until the protocol has been upgraded
+    	// For fuelcoin we cannot use filtered blocks until the protocol has been upgraded
         lock.lock();
         try {
             Preconditions.checkNotNull(blockChain);

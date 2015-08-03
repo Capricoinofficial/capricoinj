@@ -19,6 +19,7 @@ package com.fuelcoinj.params;
 import static com.google.common.base.Preconditions.checkState;
 
 import com.fuelcoinj.core.NetworkParameters;
+import com.fuelcoinj.core.Sha256Hash;
 import com.fuelcoinj.core.Utils;
 
 /**
@@ -49,10 +50,14 @@ public class MainNetParams extends NetworkParameters {
         
         checkState(genesisHash.equals("000007493cfc699b263c5b6b6366cc7365fa714aeb6da55ddf14c270ac7d6205"), genesisHash);
 
-       // checkpoints.put(19080, new Sha256Hash("000000000000bca54d9ac17881f94193fd6a270c1bb21c3bf0b37f588a40dbd7"));
-       // checkpoints.put(30583, new Sha256Hash("d39d1481a7eecba48932ea5913be58ad3894c7ee6d5a8ba8abeb772c66a6696e"));
-       // checkpoints.put(99999, new Sha256Hash("27fd5e1de16a4270eb8c68dee2754a64da6312c7c3a0e99a7e6776246be1ee3f"));
-
+       
+        checkpoints.put(100000, new Sha256Hash("11540f150127bf2df932b5a45bf0d8f7a42c4d5405b513b1f66e6c699d739679"));
+        checkpoints.put(200000, new Sha256Hash("fadea2ae32e04c20ed7c1fa31aba44571f19dd475e3943ccbb7663101499d97e"));
+        checkpoints.put(300000, new Sha256Hash("9bf0e74a9944157120ef16aebb82ec9d7169cf42930bc71eae6228e4fb9adccd"));
+        checkpoints.put(400000, new Sha256Hash("1b86df1c9f663c97135f50559e85d29711e0739db0c9c1d863ee66c0e4c7675f"));
+        checkpoints.put(500000, new Sha256Hash("dcbb40f56782e42fb7986cf95970b572cf988fef2cbcfb98e80e516d23e3aabc"));
+        checkpoints.put(575000, new Sha256Hash("0de3e13073edf1e7b6883d57664118acca04349a4f33377ac48527c4dcd16b43"));
+        
         dnsSeeds = new String[] {
             	"107.191.106.210",         
             	"192.52.166.157",        

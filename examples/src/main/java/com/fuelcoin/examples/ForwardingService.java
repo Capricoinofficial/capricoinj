@@ -20,6 +20,7 @@ package com.fuelcoin.examples;
 import static com.google.common.base.Preconditions.checkNotNull;
 
 import java.io.File;
+import java.io.FileInputStream;
 
 import com.fuelcoinj.core.AbstractWalletEventListener;
 import com.fuelcoinj.core.Address;
@@ -54,15 +55,24 @@ public class ForwardingService {
         String filePrefix = "forwarding-service";
 //        }
         // Parse the address given as the first parameter.
-        forwardingAddress = new Address(params, "FGFiHGDj6YxHYtmW6fpN1jLBieYcPmhv14");
+        forwardingAddress = new Address(params, "FBFn7VwHJvrPCi4pSYYVFoxiTHDjUvChkR");
 
         // Start up a basic app using a class that automates some boilerplate.
         kit = new WalletAppKit(params, new File("."), filePrefix);
 
+        File checkpointsFile = new File("checkpoints");
+        
+        if (checkpointsFile.exists()){
+        	System.out.println("here ##############################################################");
+        	kit.setCheckpoints(new FileInputStream(checkpointsFile));
+        }
+
+        
         // Download the block chain and wait until it's done.
         kit.startAsync();
         kit.awaitRunning();
-
+        
+       
         // We want to know when we receive money.
         kit.wallet().addEventListener(new AbstractWalletEventListener() {
             @Override

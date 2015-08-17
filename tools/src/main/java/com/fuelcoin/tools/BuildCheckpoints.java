@@ -41,6 +41,7 @@ import com.fuelcoinj.core.PeerGroup;
 import com.fuelcoinj.core.Sha256Hash;
 import com.fuelcoinj.core.StoredBlock;
 import com.fuelcoinj.core.VerificationException;
+import com.fuelcoinj.net.discovery.DnsDiscovery;
 import com.fuelcoinj.params.MainNetParams;
 import com.fuelcoinj.store.BlockStore;
 import com.fuelcoinj.store.MemoryBlockStore;
@@ -72,7 +73,8 @@ public class BuildCheckpoints {
         ValidHashStore hashstore =  new ValidHashStore(new File("hashstore"));
         final BlockChain chain = new BlockChain(PARAMS, store, hashstore);
         final PeerGroup peerGroup = new PeerGroup(PARAMS, chain);
-        peerGroup.addAddress(InetAddress.getLocalHost());
+       // peerGroup.addAddress(InetAddress.getLocalHost());
+        peerGroup.addPeerDiscovery(new DnsDiscovery(PARAMS));
         long now = new Date().getTime() / 1000;
         peerGroup.setFastCatchupTimeSecs(now);
 

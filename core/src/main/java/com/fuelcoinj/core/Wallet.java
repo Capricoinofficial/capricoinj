@@ -2522,7 +2522,7 @@ public class Wallet extends BaseTaggableObject implements Serializable, BlockCha
             StringBuilder builder = new StringBuilder();
             Coin estimatedBalance = getBalance(BalanceType.ESTIMATED);
             Coin availableBalance = getBalance(BalanceType.AVAILABLE);
-            builder.append(String.format("Wallet containing %s PPC (available: %s PPC) in:%n",
+            builder.append(String.format("Wallet containing %s FC2 (available: %s FC2) in:%n",
                     estimatedBalance.toPlainString(), availableBalance.toPlainString()));
             builder.append(String.format("  %d pending transactions%n", pending.size()));
             builder.append(String.format("  %d unspent transactions%n", unspent.size()));
@@ -3522,7 +3522,7 @@ public class Wallet extends BaseTaggableObject implements Serializable, BlockCha
         int size = tx.peercoinSerialize().length;
         size += estimateBytesForSigning(coinSelection);
         
-        // ppcoin: Always add required fee
+        // FC2: Always add required fee
         if (baseFee.compareTo(Transaction.REFERENCE_DEFAULT_MIN_TX_FEE) < 0)
             baseFee = Transaction.REFERENCE_DEFAULT_MIN_TX_FEE;
         
@@ -4023,7 +4023,7 @@ public class Wallet extends BaseTaggableObject implements Serializable, BlockCha
 
             Coin fees = req.fee == null ? Transaction.REFERENCE_DEFAULT_MIN_TX_FEE : req.fee;
             
-            // ppcoin: We always include the required fee
+            // FC2: We always include the required fee
             if (fees.compareTo(Transaction.REFERENCE_DEFAULT_MIN_TX_FEE) < 0)
                 fees = Transaction.REFERENCE_DEFAULT_MIN_TX_FEE;
             
@@ -4059,7 +4059,7 @@ public class Wallet extends BaseTaggableObject implements Serializable, BlockCha
             if (additionalValueSelected != null)
                 change = change.add(additionalValueSelected);
 
-            // If change is < 0.01 PPC, we will need to discard the change
+            // If change is < 0.01 FC2, we will need to discard the change
             if (!change.equals(Coin.ZERO) && change.compareTo(Transaction.MIN_OUTPUT_VALUE) < 0) {
                 isCategory2 = true;
                 // Want change to go up to the minimum output amount

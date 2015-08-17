@@ -78,11 +78,11 @@ public class FakeTxBuilder {
     }
 
     /**
-     * Transaction[0] is a feeder transaction, supplying PPC to Transaction[1]
+     * Transaction[0] is a feeder transaction, supplying FC2 to Transaction[1]
      */
     public static Transaction[] createFakeTx(NetworkParameters params, Coin value,
                                              Address to, Address from) {
-        // Create fake TXes of sufficient realism to exercise the unit tests. This transaction send PPC from the
+        // Create fake TXes of sufficient realism to exercise the unit tests. This transaction send FC2 from the
         // from address, to the to address with to one to somewhere else to simulate change.
         Transaction t = new Transaction(params);
         TransactionOutput outputToMe = new TransactionOutput(params, t, value, to);

@@ -56,12 +56,12 @@ public final class Coin implements Monetary, Comparable<Coin>, Serializable {
     public static final Coin CENT = COIN.divide(100);
 
     /**
-     * 0.001 Peercoins, also known as 1 mPPC.
+     * 0.001 Peercoins, also known as 1 mFC2
      */
     public static final Coin MILLICOIN = COIN.divide(1000);
 
     /**
-     * 0.000001 Peercoin, also known as 1 µPPC or 1 uPPC.
+     * 0.000001 Peercoin, also known as 1 µFC2 or 1 uFC2.
      */
     public static final Coin MICROCOIN = MILLICOIN.divide(1000);
 
@@ -220,17 +220,21 @@ public final class Coin implements Monetary, Comparable<Coin>, Serializable {
         return this.value;
     }
 
-    private static final MonetaryFormat FRIENDLY_FORMAT = MonetaryFormat.FC2.minDecimals(2).repeatOptionalDecimals(1, 4).postfixCode();
+    //private static final MonetaryFormat FRIENDLY_FORMAT = MonetaryFormat.FC2.minDecimals(2).repeatOptionalDecimals(1, 4).postfixCode();
 
     /**
      * Returns the value as a 0.12 type string. More digits after the decimal place will be used
      * if necessary, but two will always be present.
      */
     public String toFriendlyString() {
-        return FRIENDLY_FORMAT.format(this).toString();
+    	BigDecimal decimal = new BigDecimal(this.value);
+    	decimal = decimal.movePointLeft(8);
+    	return decimal.toPlainString()+ " "+MonetaryFormat.CODE_FC2;
+    	
+       // return FRIENDLY_FORMAT.format(this).toString();
     }
 
-    private static final MonetaryFormat PLAIN_FORMAT = MonetaryFormat.FC2.minDecimals(0).repeatOptionalDecimals(1, 6).noCode();
+   // private static final MonetaryFormat PLAIN_FORMAT = MonetaryFormat.FC2.minDecimals(0).repeatOptionalDecimals(1, 6).noCode();
 
     /**
      * <p>
@@ -240,7 +244,12 @@ public final class Coin implements Monetary, Comparable<Coin>, Serializable {
      * </p>
      */
     public String toPlainString() {
-        return PLAIN_FORMAT.format(this).toString();
+    	
+    	BigDecimal decimal = new BigDecimal(this.value);
+    	decimal = decimal.movePointLeft(8);
+    	return decimal.toPlainString();
+    	
+        //return PLAIN_FORMAT.format(this).toString();
     }
 
     @Override

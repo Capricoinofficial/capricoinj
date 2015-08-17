@@ -93,7 +93,7 @@ public class PeercoinURI {
     public static final String FIELD_ADDRESS = "address";
     public static final String FIELD_PAYMENT_REQUEST_URL = "r";
 
-    public static final String PEERCOIN_SCHEME = "ppcoin";
+    public static final String PEERCOIN_SCHEME = "fc2";
     private static final String ENCODED_SPACE_CHARACTER = "%20";
     private static final String AMPERSAND_SEPARATOR = "&";
     private static final String QUESTION_MARK_SEPARATOR = "?";
@@ -144,10 +144,10 @@ public class PeercoinURI {
         // the & (%26) in Tom and Jerry gets interpreted as a separator and the label then gets parsed
         // as 'Tom ' instead of 'Tom & Jerry')
         String schemeSpecificPart;
-        if (input.startsWith("ppcoin://")) {
-            schemeSpecificPart = input.substring("ppcoin://".length());
-        } else if (input.startsWith("ppcoin:")) {
-            schemeSpecificPart = input.substring("ppcoin:".length());
+        if (input.startsWith("fc2://")) {
+            schemeSpecificPart = input.substring("fc2://".length());
+        } else if (input.startsWith("fc2:")) {
+            schemeSpecificPart = input.substring("fc2:".length());
         } else {
             throw new PeercoinURIParseException("Unsupported URI scheme: " + uri.getScheme());
         }
@@ -263,7 +263,7 @@ public class PeercoinURI {
 
     /**
      * @return The amount name encoded using a pure integer value based at
-     *         10,000,000 units is 1 PPC. May be null if no amount is specified
+     *         10,000,000 units is 1 FC2. May be null if no amount is specified
      */
     public Coin getAmount() {
         return (Coin) parameterMap.get(FIELD_AMOUNT);

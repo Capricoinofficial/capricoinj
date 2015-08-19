@@ -33,7 +33,7 @@ public final class Coin implements Monetary, Comparable<Coin>, Serializable {
      * Number of decimals for one Peercoin. This constant is useful for quick adapting to other coins because a lot of
      * constants derive from it.
      */
-    public static final int SMALLEST_UNIT_EXPONENT = 6;
+    public static final int SMALLEST_UNIT_EXPONENT = 8;
 
     /**
      * The number of satoshis equal to one peercoin.
@@ -220,21 +220,21 @@ public final class Coin implements Monetary, Comparable<Coin>, Serializable {
         return this.value;
     }
 
-    //private static final MonetaryFormat FRIENDLY_FORMAT = MonetaryFormat.FC2.minDecimals(2).repeatOptionalDecimals(1, 4).postfixCode();
+    private static final MonetaryFormat FRIENDLY_FORMAT = MonetaryFormat.FC2.minDecimals(2).repeatOptionalDecimals(1, 4).postfixCode();
 
     /**
      * Returns the value as a 0.12 type string. More digits after the decimal place will be used
      * if necessary, but two will always be present.
      */
     public String toFriendlyString() {
-    	BigDecimal decimal = new BigDecimal(this.value);
-    	decimal = decimal.movePointLeft(8);
-    	return decimal.toPlainString()+ " "+MonetaryFormat.CODE_FC2;
+    	//BigDecimal decimal = new BigDecimal(this.value);
+    	//decimal = decimal.movePointLeft(8);
+    	//return decimal.toPlainString()+ " "+MonetaryFormat.CODE_FC2;
     	
-       // return FRIENDLY_FORMAT.format(this).toString();
+        return FRIENDLY_FORMAT.format(this).toString();
     }
 
-   // private static final MonetaryFormat PLAIN_FORMAT = MonetaryFormat.FC2.minDecimals(0).repeatOptionalDecimals(1, 6).noCode();
+    private static final MonetaryFormat PLAIN_FORMAT = MonetaryFormat.FC2.minDecimals(0).repeatOptionalDecimals(1, 6).noCode();
 
     /**
      * <p>
@@ -245,11 +245,11 @@ public final class Coin implements Monetary, Comparable<Coin>, Serializable {
      */
     public String toPlainString() {
     	
-    	BigDecimal decimal = new BigDecimal(this.value);
-    	decimal = decimal.movePointLeft(8);
-    	return decimal.toPlainString();
+    	//BigDecimal decimal = new BigDecimal(this.value);
+    	//decimal = decimal.movePointLeft(8);
+    	//return decimal.toPlainString();
     	
-        //return PLAIN_FORMAT.format(this).toString();
+        return PLAIN_FORMAT.format(this).toString();
     }
 
     @Override

@@ -47,11 +47,11 @@ import com.fuelcoinj.core.Monetary;
 public final class MonetaryFormat {
 
     /** Standard format for the FC2 denomination. */
-    //public static final MonetaryFormat FC2 = new MonetaryFormat().shift(0).minDecimals(2).repeatOptionalDecimals(2, 2);
+    public static final MonetaryFormat FC2 = new MonetaryFormat().shift(0).minDecimals(2).repeatOptionalDecimals(2, 2);
     /** Standard format for the mFC2 denomination. */
-   // public static final MonetaryFormat MFC2 = new MonetaryFormat().shift(3).minDecimals(2).optionalDecimals(1);
+    public static final MonetaryFormat MFC2 = new MonetaryFormat().shift(3).minDecimals(2).optionalDecimals(1);
     /** Standard format for the µFC2 denomination. */
-   // public static final MonetaryFormat UFC2 = new MonetaryFormat().shift(6).minDecimals(0).optionalDecimals(0);
+    public static final MonetaryFormat UFC2 = new MonetaryFormat().shift(6).minDecimals(0).optionalDecimals(0);
     /** Standard format for fiat amounts. */
     public static final MonetaryFormat FIAT = new MonetaryFormat().shift(0).minDecimals(2).repeatOptionalDecimals(2, 1);
     /** Currency code for base 1 FC2coin. */

@@ -93,7 +93,7 @@ public class PeercoinURI {
     public static final String FIELD_ADDRESS = "address";
     public static final String FIELD_PAYMENT_REQUEST_URL = "r";
 
-    public static final String PEERCOIN_SCHEME = "fc2";
+    public static final String PEERCOIN_SCHEME = "Fuelcoin";
     private static final String ENCODED_SPACE_CHARACTER = "%20";
     private static final String AMPERSAND_SEPARATOR = "&";
     private static final String QUESTION_MARK_SEPARATOR = "?";
@@ -144,10 +144,10 @@ public class PeercoinURI {
         // the & (%26) in Tom and Jerry gets interpreted as a separator and the label then gets parsed
         // as 'Tom ' instead of 'Tom & Jerry')
         String schemeSpecificPart;
-        if (input.startsWith("fc2://")) {
-            schemeSpecificPart = input.substring("fc2://".length());
-        } else if (input.startsWith("fc2:")) {
-            schemeSpecificPart = input.substring("fc2:".length());
+        if (input.startsWith("Fuelcoin://")) {
+            schemeSpecificPart = input.substring("Fuelcoin://".length());
+        } else if (input.startsWith("Fuelcoin:")) {
+            schemeSpecificPart = input.substring("Fuelcoin:".length());
         } else {
             throw new PeercoinURIParseException("Unsupported URI scheme: " + uri.getScheme());
         }

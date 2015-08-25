@@ -55,11 +55,11 @@ public final class MonetaryFormat {
     /** Standard format for fiat amounts. */
     public static final MonetaryFormat FIAT = new MonetaryFormat().shift(0).minDecimals(2).repeatOptionalDecimals(2, 1);
     /** Currency code for base 1 FC2coin. */
-    public static final String CODE_FC2 = "FC2";
+    public static final String CODE_FC2 = "Fuel";
     /** Currency code for base 1/1000 FC2coin. */
-    public static final String CODE_MFC2 = "mFC2";
+    public static final String CODE_MFC2 = "mFuel";
     /** Currency code for base 1/1000000 FC2coin. */
-    public static final String CODE_UFC2 = "µFC2";
+    public static final String CODE_UFC2 = "µFuel";
 
     private final char negativeSign;
     private final char positiveSign;

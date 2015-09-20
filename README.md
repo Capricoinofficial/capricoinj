@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ### Welcome to fuelcoinj
 
 The fuelcoinj library is a Java implementation of the fuelcoin protocol, which allows it to maintain a wallet and send/receive transactions without needing a local copy of fuelcoin Core. It comes with full documentation and some example apps showing how to use it. fuelcoinj uses a central server to download block hashes for verification.
@@ -48,3 +49,6 @@ If you send coins to that address, it will forward them on to the address you sp
 
 Note that this example app *does not use checkpointing*, so the initial chain sync will be pretty slow. You can make an app that starts up and does the initial sync much faster by including a checkpoints file; see the documentation for
 more info on this technique.
+=======
+# capricoinj
+>>>>>>> 899626e738d603bfbdbd3b29bc2610f3bc3bff68

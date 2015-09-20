@@ -1,7 +1,6 @@
-<<<<<<< HEAD
-### Welcome to fuelcoinj
+### Welcome to capricoinj
 
-The fuelcoinj library is a Java implementation of the fuelcoin protocol, which allows it to maintain a wallet and send/receive transactions without needing a local copy of fuelcoin Core. It comes with full documentation and some example apps showing how to use it. fuelcoinj uses a central server to download block hashes for verification.
+The capricoinj library is a Java implementation of the capricoin protocol, which allows it to maintain a wallet and send/receive transactions without needing a local copy of capricoin Core. It comes with full documentation and some example apps showing how to use it. capricoinj uses a central server to download block hashes for verification.
 
 ### Technologies
 
@@ -38,13 +37,13 @@ These are found in the `examples` module.
 
 #### Forwarding service
 
-This will download the block chain and eventually print a fuelcoin address that it has generated.
+This will download the block chain and eventually print a capricoin address that it has generated.
 
 If you send coins to that address, it will forward them on to the address you specified.
 
 ```
   cd examples
-  mvn exec:java -Dexec.mainClass=com.fuelcoin.examples.ForwardingService -Dexec.args="<insert a fuelcoin address here>"
+  mvn exec:java -Dexec.mainClass=com.capricoin.examples.ForwardingService -Dexec.args="<insert a capricoin address here>"
 ```
 
 Note that this example app *does not use checkpointing*, so the initial chain sync will be pretty slow. You can make an app that starts up and does the initial sync much faster by including a checkpoints file; see the documentation for

@@ -20,19 +20,19 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>com.fuelcoinj</groupId>
-        <artifactId>fuelcoinj-parent</artifactId>
+        <groupId>com.capricoinj</groupId>
+        <artifactId>capricoinj-parent</artifactId>
         <version>0.12.3</version>
     </parent>
 
-    <artifactId>fuelcoinj</artifactId>
+    <artifactId>capricoinj</artifactId>
 
-    <name>fuelcoinj</name>
-    <description>A Java fuelcoin java library</description>
+    <name>capricoinj</name>
+    <description>A Java capricoin java library</description>
 
     <packaging>jar</packaging>
 
-    <url>https://github.com/kris-davison/fuelcoinj</url>
+    <url>https://github.com/kris-davison/capricoinj</url>
 
     <licenses>
         <license>
@@ -348,8 +348,8 @@
         </dependency>
         -->
         <dependency>
-            <groupId>com.fuelcoinj</groupId>
-            <artifactId>fuelcoinj-tor-orchid</artifactId>
+            <groupId>com.capricoinj</groupId>
+            <artifactId>capricoinj-tor-orchid</artifactId>
             <version>1.0</version>
         </dependency>
     </dependencies>

@@ -3,3 +3,4 @@ orchid-*.jar
 orchid-*.zip
 build-revision
 lib/xmlrpc-*
+/target/

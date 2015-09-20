@@ -2,8 +2,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.fuelcoinj</groupId>
-  <artifactId>fuelcoinj-parent</artifactId>
+  <groupId>com.capricoinj</groupId>
+  <artifactId>capricoinj-parent</artifactId>
   <version>0.12.3</version>
   <packaging>pom</packaging>
 
@@ -20,7 +20,7 @@
     <version>7</version>
   </parent>
 
-  <name>peercoinj Parent</name>
+  <name>capricoinj Parent</name>
   <description>Provides the common configuration for the PeercoinJ modules</description>
   <url>https://github.com/MatthewLM/peercoinj/</url>
 

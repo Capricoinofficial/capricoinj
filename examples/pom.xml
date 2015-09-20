@@ -19,21 +19,21 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <groupId>com.fuelcoinj</groupId>
-        <artifactId>fuelcoinj-parent</artifactId>
+        <groupId>com.capricoinj</groupId>
+        <artifactId>capricoinj-parent</artifactId>
         <version>0.12.3</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>fuelcoinj-examples</artifactId>
+    <artifactId>capricoinj-examples</artifactId>
 
-    <name>fuelcoinj Examples</name>
-    <description>A collection of examples using the fuelcoinj library</description>
+    <name>capricoinj Examples</name>
+    <description>A collection of examples using the capricoinj library</description>
 
     <dependencies>
         <dependency>
-            <groupId>com.fuelcoinj</groupId>
-            <artifactId>fuelcoinj</artifactId>
+            <groupId>com.capricoinj</groupId>
+            <artifactId>capricoinj</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
         <dependency>

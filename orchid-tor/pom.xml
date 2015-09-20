@@ -4,16 +4,16 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>com.fuelcoinj</groupId>
-        <artifactId>fuelcoinj-parent</artifactId>
+        <groupId>com.capricoinj</groupId>
+        <artifactId>capricoinj-parent</artifactId>
         <version>0.12.3</version>
     </parent>
 
-    <artifactId>fuelcoinj-tor-orchid</artifactId>
+    <artifactId>capricoinj-tor-orchid</artifactId>
     <version>1.0</version>
 
     <name>Orchid</name>
-    <description>fuelcoinj Tor library</description>
+    <description>capricoinj Tor library</description>
 
     <packaging>jar</packaging>
 

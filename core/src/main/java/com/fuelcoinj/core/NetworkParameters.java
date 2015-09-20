@@ -121,13 +121,15 @@ public abstract class NetworkParameters implements Serializable {
          
       //   return genesisBlock;
     	
+    	//2a4672692c203033204a756c20323031352031373a34333a323620474d54
+    	
     	List<Transaction> transactions = new ArrayList<Transaction>();
     	Transaction localTransaction = new Transaction(paramNetworkParameters);
-    	localTransaction.addInput(new TransactionInput(paramNetworkParameters, localTransaction, Hex.decode("00012a1d4672692c2030312041756720323031342031333a33363a323020474d54")));
+    	localTransaction.addInput(new TransactionInput(paramNetworkParameters, localTransaction, Hex.decode("0000002a4672692c203033204a756c20323031352031373a34333a323620474d54")));
     	ByteArrayOutputStream localByteArrayOutputStream = new ByteArrayOutputStream();
     	localTransaction.addOutput(new TransactionOutput(paramNetworkParameters, localTransaction, ZERO, localByteArrayOutputStream.toByteArray()));
 
-        Block localBlock = new Block(paramNetworkParameters, 1, Sha256Hash.ZERO_HASH, new Sha256Hash("b2394f6f9a037333a4aa95868bafe2ec8dcd2b7a1ba47ddf0722d6e7e027a10b"), 1406900180, 1, 179517, transactions);
+        Block localBlock = new Block(paramNetworkParameters, 1, Sha256Hash.ZERO_HASH, new Sha256Hash("7998a66c32290ca3c0dae0370dc824292145978af0f5e04d82bad3a17084336c"), 1435945406, 1, 303451, transactions);
 
         return localBlock;
     }

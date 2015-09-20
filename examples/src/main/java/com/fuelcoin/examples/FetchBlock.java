@@ -21,6 +21,8 @@ import java.io.File;
 import java.net.InetAddress;
 import java.util.concurrent.Future;
 
+import org.spongycastle.util.encoders.Hex;
+
 import com.fuelcoinj.core.Block;
 import com.fuelcoinj.core.BlockChain;
 import com.fuelcoinj.core.NetworkParameters;
@@ -40,8 +42,9 @@ import com.fuelcoinj.utils.BriefLogFormatter;
  */
 //WARNING THIS IS ON THE MAINNET OF FUELCOIN
 public class FetchBlock {
-    public static void main(String[] args) throws Exception {
-        BriefLogFormatter.init();
+    public static void main(String[] args) throws Exception {   	
+    	
+    	BriefLogFormatter.init();
         System.out.println("Connecting to node");
         final NetworkParameters params = MainNetParams.get();
 
@@ -55,7 +58,7 @@ public class FetchBlock {
         peerGroup.waitForPeers(1).get();
         Peer peer = peerGroup.getConnectedPeers().get(0);
 
-        Sha256Hash blockHash = new Sha256Hash(MainNetParams.get().getGenesisBlock().getHashAsString());
+        Sha256Hash blockHash = new Sha256Hash("f608c0ad6db29678f060753c73e59f4076956c16c6251991e5d82b6441961301");
         Future<Block> future = peer.getBlock(blockHash);
         System.out.println("Waiting for node to send us the requested block: " + blockHash);
         Block block = future.get();

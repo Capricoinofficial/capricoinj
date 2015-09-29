@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.jni;
+package com.capricoinj.jni;
 
 import com.google.common.util.concurrent.FutureCallback;
 

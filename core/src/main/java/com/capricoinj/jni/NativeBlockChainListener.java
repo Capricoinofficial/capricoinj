@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.jni;
+package com.capricoinj.jni;
 
-import com.fuelcoinj.core.*;
+import com.capricoinj.core.*;
 
 import java.util.List;
 

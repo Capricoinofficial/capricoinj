@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.fuelcoin.examples;
+package com.capricoinj.examples;
 
 import java.io.File;
 import java.net.SocketAddress;
@@ -23,19 +23,19 @@ import java.util.List;
 
 import org.slf4j.LoggerFactory;
 
-import com.fuelcoinj.core.Coin;
-import com.fuelcoinj.core.NetworkParameters;
-import com.fuelcoinj.core.Sha256Hash;
-import com.fuelcoinj.core.VerificationException;
-import com.fuelcoinj.core.WalletExtension;
-import com.fuelcoinj.kits.WalletAppKit;
-import com.fuelcoinj.params.UnitTestParams;
-import com.fuelcoinj.protocols.channels.PaymentChannelCloseException;
-import com.fuelcoinj.protocols.channels.PaymentChannelServerListener;
-import com.fuelcoinj.protocols.channels.PaymentChannelServerState;
-import com.fuelcoinj.protocols.channels.ServerConnectionEventHandler;
-import com.fuelcoinj.protocols.channels.StoredPaymentChannelServerStates;
-import com.fuelcoinj.utils.BriefLogFormatter;
+import com.capricoinj.core.Coin;
+import com.capricoinj.core.NetworkParameters;
+import com.capricoinj.core.Sha256Hash;
+import com.capricoinj.core.VerificationException;
+import com.capricoinj.core.WalletExtension;
+import com.capricoinj.kits.WalletAppKit;
+import com.capricoinj.params.UnitTestParams;
+import com.capricoinj.protocols.channels.PaymentChannelCloseException;
+import com.capricoinj.protocols.channels.PaymentChannelServerListener;
+import com.capricoinj.protocols.channels.PaymentChannelServerState;
+import com.capricoinj.protocols.channels.ServerConnectionEventHandler;
+import com.capricoinj.protocols.channels.StoredPaymentChannelServerStates;
+import com.capricoinj.utils.BriefLogFormatter;
 import com.google.common.collect.ImmutableList;
 import com.google.common.util.concurrent.ListenableFuture;
 import com.google.protobuf.ByteString;
@@ -43,7 +43,7 @@ import com.google.protobuf.ByteString;
 /**
  * Simple server that listens on port 4242 for incoming payment channels.
  */
-//WARNING THIS HAS NOT BEEN SETUP OR TESTED WITH FUELCOIN
+//WARNING THIS HAS NOT BEEN SETUP OR TESTED WITH CAPRICOIN
 public class ExamplePaymentChannelServer implements PaymentChannelServerListener.HandlerFactory {
     private static final org.slf4j.Logger log = LoggerFactory.getLogger(ExamplePaymentChannelServer.class);
 

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.utils;
+package com.capricoinj.utils;
 
 import static com.google.common.base.Preconditions.checkArgument;
 import static com.google.common.base.Preconditions.checkState;
@@ -30,8 +30,8 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 
-import com.fuelcoinj.core.Coin;
-import com.fuelcoinj.core.Monetary;
+import com.capricoinj.core.Coin;
+import com.capricoinj.core.Monetary;
 
 /**
  * <p>
@@ -46,20 +46,20 @@ import com.fuelcoinj.core.Monetary;
  */
 public final class MonetaryFormat {
 
-    /** Standard format for the FC2 denomination. */
-    public static final MonetaryFormat FC2 = new MonetaryFormat().shift(0).minDecimals(2).repeatOptionalDecimals(2, 2);
-    /** Standard format for the mFC2 denomination. */
-    public static final MonetaryFormat MFC2 = new MonetaryFormat().shift(3).minDecimals(2).optionalDecimals(1);
-    /** Standard format for the µFC2 denomination. */
-    public static final MonetaryFormat UFC2 = new MonetaryFormat().shift(6).minDecimals(0).optionalDecimals(0);
+    /** Standard format for the CPC denomination. */
+    public static final MonetaryFormat CPC = new MonetaryFormat().shift(0).minDecimals(2).repeatOptionalDecimals(2, 2);
+    /** Standard format for the mCPC denomination. */
+    public static final MonetaryFormat MCPC = new MonetaryFormat().shift(3).minDecimals(2).optionalDecimals(1);
+    /** Standard format for the µCPC denomination. */
+    public static final MonetaryFormat UCPC = new MonetaryFormat().shift(6).minDecimals(0).optionalDecimals(0);
     /** Standard format for fiat amounts. */
     public static final MonetaryFormat FIAT = new MonetaryFormat().shift(0).minDecimals(2).repeatOptionalDecimals(2, 1);
-    /** Currency code for base 1 FC2coin. */
-    public static final String CODE_FC2 = "Fuel";
-    /** Currency code for base 1/1000 FC2coin. */
-    public static final String CODE_MFC2 = "mFuel";
-    /** Currency code for base 1/1000000 FC2coin. */
-    public static final String CODE_UFC2 = "µFuel";
+    /** Currency code for base 1 CPCcoin. */
+    public static final String CODE_CPC = "CPC";
+    /** Currency code for base 1/1000 CPCcoin. */
+    public static final String CODE_MCPC = "mCPC";
+    /** Currency code for base 1/1000000 CPCcoin. */
+    public static final String CODE_UCPC = "µCPC";
 
     private final char negativeSign;
     private final char positiveSign;
@@ -190,7 +190,7 @@ public final class MonetaryFormat {
     }
 
     /**
-     * Set number of digits to shift the decimal separator to the right, coming from the standard FC2 notation that was
+     * Set number of digits to shift the decimal separator to the right, coming from the standard CPC notation that was
      * common pre-2014. Note this will change the currency code if enabled.
      */
     public MonetaryFormat shift(int shift) {
@@ -299,9 +299,9 @@ public final class MonetaryFormat {
         this.shift = 0;
         this.roundingMode = RoundingMode.HALF_UP;
         this.codes = new HashMap<Integer, String>();
-        this.codes.put(0, CODE_FC2);
-        this.codes.put(3, CODE_MFC2);
-        this.codes.put(6, CODE_UFC2);
+        this.codes.put(0, CODE_CPC);
+        this.codes.put(3, CODE_MCPC);
+        this.codes.put(6, CODE_UCPC);
         this.codeSeparator = ' ';
         this.codePrefixed = true;
     }
@@ -402,7 +402,7 @@ public final class MonetaryFormat {
     }
 
     /**
-     * Parse a human readable coin value to a {@link com.fuelcoinj.core.Coin} instance.
+     * Parse a human readable coin value to a {@link com.capricoinj.core.Coin} instance.
      * 
      * @throws NumberFormatException
      *             if the string cannot be parsed for some reason

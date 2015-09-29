@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.net;
+package com.capricoinj.net;
 
 import java.io.IOException;
 import java.net.SocketAddress;

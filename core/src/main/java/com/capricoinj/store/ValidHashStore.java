@@ -15,13 +15,13 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.store;
+package com.capricoinj.store;
 
 
-import com.fuelcoinj.core.AbstractBlockChain;
-import com.fuelcoinj.core.Sha256Hash;
-import com.fuelcoinj.core.StoredBlock;
-import com.fuelcoinj.core.Utils;
+import com.capricoinj.core.AbstractBlockChain;
+import com.capricoinj.core.Sha256Hash;
+import com.capricoinj.core.StoredBlock;
+import com.capricoinj.core.Utils;
 import com.google.common.base.Objects;
 
 import static com.google.common.base.Preconditions.checkNotNull;

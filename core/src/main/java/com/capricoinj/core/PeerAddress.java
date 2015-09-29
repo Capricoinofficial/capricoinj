@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.core;
+package com.capricoinj.core;
 
-import com.fuelcoinj.params.MainNetParams;
+import com.capricoinj.params.MainNetParams;
 import com.google.common.net.InetAddresses;
 
 import java.io.IOException;
@@ -26,8 +26,8 @@ import java.net.InetAddress;
 import java.net.InetSocketAddress;
 import java.net.UnknownHostException;
 
-import static com.fuelcoinj.core.Utils.uint32ToByteStreamLE;
-import static com.fuelcoinj.core.Utils.uint64ToByteStreamLE;
+import static com.capricoinj.core.Utils.uint32ToByteStreamLE;
+import static com.capricoinj.core.Utils.uint64ToByteStreamLE;
 import static com.google.common.base.Preconditions.checkNotNull;
 
 /**

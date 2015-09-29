@@ -15,16 +15,16 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.wallet;
+package com.capricoinj.wallet;
 
-import com.fuelcoinj.core.Coin;
-import com.fuelcoinj.core.NetworkParameters;
-import com.fuelcoinj.core.Transaction;
-import com.fuelcoinj.core.TransactionConfidence;
-import com.fuelcoinj.core.TransactionInput;
-import com.fuelcoinj.core.TransactionOutput;
-import com.fuelcoinj.core.Wallet;
-import com.fuelcoinj.script.ScriptChunk;
+import com.capricoinj.core.Coin;
+import com.capricoinj.core.NetworkParameters;
+import com.capricoinj.core.Transaction;
+import com.capricoinj.core.TransactionConfidence;
+import com.capricoinj.core.TransactionInput;
+import com.capricoinj.core.TransactionOutput;
+import com.capricoinj.core.Wallet;
+import com.capricoinj.script.ScriptChunk;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -101,7 +101,7 @@ public class DefaultRiskAnalysis implements RiskAnalysis {
 
     /**
      * The reason a transaction is considered non-standard, returned by
-     * {@link #isStandard(com.fuelcoinj.core.Transaction)}.
+     * {@link #isStandard(com.capricoinj.core.Transaction)}.
      */
     public enum RuleViolation {
         NONE,

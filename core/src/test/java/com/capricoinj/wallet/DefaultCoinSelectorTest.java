@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.wallet;
+package com.capricoinj.wallet;
 
-import com.fuelcoinj.core.*;
-import com.fuelcoinj.params.MainNetParams;
-import com.fuelcoinj.params.UnitTestParams;
-import com.fuelcoinj.testing.FakeTxBuilder;
-import com.fuelcoinj.testing.TestWithWallet;
-import com.fuelcoinj.wallet.CoinSelection;
-import com.fuelcoinj.wallet.DefaultCoinSelector;
+import com.capricoinj.core.*;
+import com.capricoinj.params.MainNetParams;
+import com.capricoinj.params.UnitTestParams;
+import com.capricoinj.testing.FakeTxBuilder;
+import com.capricoinj.testing.TestWithWallet;
+import com.capricoinj.wallet.CoinSelection;
+import com.capricoinj.wallet.DefaultCoinSelector;
 
 import org.junit.After;
 import org.junit.Before;
@@ -31,7 +31,7 @@ import org.junit.Test;
 import java.net.InetAddress;
 import java.util.ArrayList;
 
-import static com.fuelcoinj.core.Coin.*;
+import static com.capricoinj.core.Coin.*;
 import static com.google.common.base.Preconditions.checkNotNull;
 import static org.junit.Assert.*;
 

@@ -1,18 +1,18 @@
-package com.fuelcoin.examples;
+package com.capricoinj.examples;
 
 import java.io.File;
 import java.util.List;
 
-import com.fuelcoinj.core.AbstractWalletEventListener;
-import com.fuelcoinj.core.Coin;
-import com.fuelcoinj.core.ECKey;
-import com.fuelcoinj.core.NetworkParameters;
-import com.fuelcoinj.core.Transaction;
-import com.fuelcoinj.core.TransactionConfidence;
-import com.fuelcoinj.core.Wallet;
-import com.fuelcoinj.kits.WalletAppKit;
-import com.fuelcoinj.params.UnitTestParams;
-import com.fuelcoinj.script.Script;
+import com.capricoinj.core.AbstractWalletEventListener;
+import com.capricoinj.core.Coin;
+import com.capricoinj.core.ECKey;
+import com.capricoinj.core.NetworkParameters;
+import com.capricoinj.core.Transaction;
+import com.capricoinj.core.TransactionConfidence;
+import com.capricoinj.core.Wallet;
+import com.capricoinj.kits.WalletAppKit;
+import com.capricoinj.params.UnitTestParams;
+import com.capricoinj.script.Script;
 
 /**
  * The following example shows how to use the by peercoinj provided WalletAppKit.
@@ -20,7 +20,7 @@ import com.fuelcoinj.script.Script;
  * 
  * In this example we also define a WalletEventListener class with implementors that are called when the wallet changes (for example sending/receiving money)
  */
-//WARNING THIS HAS NOT BEEN SETUP OR TESTED WITH FUELCOIN
+//WARNING THIS HAS NOT BEEN SETUP OR TESTED WITH CAPRICOIN
 public class Kit {
 
     public static void main(String[] args) {

@@ -15,10 +15,10 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.core;
+package com.capricoinj.core;
 
-import static com.fuelcoinj.core.Coin.COIN;
-import static com.fuelcoinj.core.Coin.ZERO;
+import static com.capricoinj.core.Coin.COIN;
+import static com.capricoinj.core.Coin.ZERO;
 
 import java.io.ByteArrayOutputStream;
 import java.io.Serializable;
@@ -32,8 +32,8 @@ import javax.annotation.Nullable;
 
 import org.spongycastle.util.encoders.Hex;
 
-import com.fuelcoinj.params.MainNetParams;
-import com.fuelcoinj.params.UnitTestParams;
+import com.capricoinj.params.MainNetParams;
+import com.capricoinj.params.UnitTestParams;
 import com.google.common.base.Objects;
 
 /**
@@ -255,7 +255,7 @@ public abstract class NetworkParameters implements Serializable {
     }
 
     /**
-     * First byte of a base58 encoded address. See {@link com.fuelcoinj.core.Address}. This is the same as acceptableAddressCodes[0] and
+     * First byte of a base58 encoded address. See {@link com.capricoinj.core.Address}. This is the same as acceptableAddressCodes[0] and
      * is the one used for "normal" addresses. Other types of address may be encountered with version codes found in
      * the acceptableAddressCodes array.
      */
@@ -270,7 +270,7 @@ public abstract class NetworkParameters implements Serializable {
         return p2shHeader;
     }
 
-    /** First byte of a base58 encoded dumped private key. See {@link com.fuelcoinj.core.DumpedPrivateKey}. */
+    /** First byte of a base58 encoded dumped private key. See {@link com.capricoinj.core.DumpedPrivateKey}. */
     public int getDumpedPrivateKeyHeader() {
         return dumpedPrivateKeyHeader;
     }
@@ -311,7 +311,7 @@ public abstract class NetworkParameters implements Serializable {
     }
 
     /**
-     * The key used to sign {@link com.fuelcoinj.core.AlertMessage}s. You can use {@link com.fuelcoinj.core.ECKey#verify(byte[], byte[], byte[])} to verify
+     * The key used to sign {@link com.capricoinj.core.AlertMessage}s. You can use {@link com.capricoinj.core.ECKey#verify(byte[], byte[], byte[])} to verify
      * signatures using it.
      */
     public byte[] getAlertSigningKey() {

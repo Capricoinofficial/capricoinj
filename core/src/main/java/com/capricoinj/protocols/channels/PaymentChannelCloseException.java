@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.protocols.channels;
+package com.capricoinj.protocols.channels;
 
 /**
  * Used to indicate that a channel was closed before it was expected to be closed.

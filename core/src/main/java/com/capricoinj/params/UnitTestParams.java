@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.params;
+package com.capricoinj.params;
 
-import com.fuelcoinj.core.Block;
-import com.fuelcoinj.core.NetworkParameters;
+import com.capricoinj.core.Block;
+import com.capricoinj.core.NetworkParameters;
 
 import java.math.BigInteger;
 
 /**
  * Network parameters used by the peercoinj unit tests (and potentially your own). This lets you solve a block using
- * {@link com.fuelcoinj.core.Block#solve()} by setting difficulty to the easiest possible.
+ * {@link com.capricoinj.core.Block#solve()} by setting difficulty to the easiest possible.
  */
 public class UnitTestParams extends NetworkParameters {
     public UnitTestParams() {

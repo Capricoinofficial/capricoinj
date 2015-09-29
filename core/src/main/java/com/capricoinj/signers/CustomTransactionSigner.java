@@ -13,14 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.fuelcoinj.signers;
+package com.capricoinj.signers;
 
-import com.fuelcoinj.core.*;
-import com.fuelcoinj.crypto.ChildNumber;
-import com.fuelcoinj.crypto.TransactionSignature;
-import com.fuelcoinj.script.Script;
-import com.fuelcoinj.wallet.KeyBag;
-import com.fuelcoinj.wallet.RedeemData;
+import com.capricoinj.core.*;
+import com.capricoinj.crypto.ChildNumber;
+import com.capricoinj.crypto.TransactionSignature;
+import com.capricoinj.script.Script;
+import com.capricoinj.wallet.KeyBag;
+import com.capricoinj.wallet.RedeemData;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -32,7 +32,7 @@ import static com.google.common.base.Preconditions.checkNotNull;
 /**
  * <p>This signer may be used as a template for creating custom multisig transaction signers.</p>
  * <p>
- * Concrete implementations have to implement {@link #getSignature(com.fuelcoinj.core.Sha256Hash, java.util.List)}
+ * Concrete implementations have to implement {@link #getSignature(com.capricoinj.core.Sha256Hash, java.util.List)}
  * method returning a signature and a public key of the keypair used to created that signature.
  * It's up to custom implementation where to locate signatures: it may be a network connection,
  * some local API or something else.

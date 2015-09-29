@@ -13,10 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.fuelcoinj.testing;
+package com.capricoinj.testing;
 
-import com.fuelcoinj.signers.TransactionSigner;
-import com.fuelcoinj.wallet.KeyBag;
+import com.capricoinj.signers.TransactionSigner;
+import com.capricoinj.wallet.KeyBag;
 
 public class NopTransactionSigner implements TransactionSigner {
     private boolean isReady;

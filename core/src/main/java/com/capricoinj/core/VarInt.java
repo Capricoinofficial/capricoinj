@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.core;
+package com.capricoinj.core;
 
-import static com.fuelcoinj.core.Utils.isLessThanOrEqualToUnsigned;
-import static com.fuelcoinj.core.Utils.isLessThanUnsigned;
+import static com.capricoinj.core.Utils.isLessThanOrEqualToUnsigned;
+import static com.capricoinj.core.Utils.isLessThanUnsigned;
 
 /**
  * A variable-length encoded integer using Satoshis encoding.

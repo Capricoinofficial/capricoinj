@@ -15,9 +15,9 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.net.discovery;
+package com.capricoinj.net.discovery;
 
-import com.fuelcoinj.core.NetworkParameters;
+import com.capricoinj.core.NetworkParameters;
 import com.google.common.collect.Lists;
 
 import org.slf4j.Logger;

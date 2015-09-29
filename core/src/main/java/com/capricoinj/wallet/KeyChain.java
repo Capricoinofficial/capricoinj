@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.wallet;
+package com.capricoinj.wallet;
 
-import com.fuelcoinj.core.BloomFilter;
-import com.fuelcoinj.core.ECKey;
+import com.capricoinj.core.BloomFilter;
+import com.capricoinj.core.ECKey;
 
 import java.util.List;
 import java.util.concurrent.Executor;
 
 /**
- * <p>A KeyChain is a class that stores a collection of keys for a {@link com.fuelcoinj.core.Wallet}. Key chains
+ * <p>A KeyChain is a class that stores a collection of keys for a {@link com.capricoinj.core.Wallet}. Key chains
  * are expected to be able to look up keys given a hash (i.e. address) or pubkey bytes, and provide keys on request
  * for a given purpose. They can inform event listeners about new keys being added.</p>
  *
@@ -87,7 +87,7 @@ public interface KeyChain {
      * <p>This is used to generate a {@link BloomFilter} which can be {@link BloomFilter#merge(BloomFilter)}d with
      * another. It could also be used if you have a specific target for the filter's size.</p>
      *
-     * <p>See the docs for {@link com.fuelcoinj.core.BloomFilter#BloomFilter(int, double, long)} for a brief
+     * <p>See the docs for {@link com.capricoinj.core.BloomFilter#BloomFilter(int, double, long)} for a brief
      * explanation of anonymity when using bloom filters, and for the meaning of these parameters.</p>
      */
     public BloomFilter getFilter(int size, double falsePositiveRate, long tweak);

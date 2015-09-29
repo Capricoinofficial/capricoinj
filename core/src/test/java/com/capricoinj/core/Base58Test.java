@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.core;
+package com.capricoinj.core;
 
 import junit.framework.TestCase;
 
 import org.junit.Test;
 
-import com.fuelcoinj.core.AddressFormatException;
-import com.fuelcoinj.core.Base58;
+import com.capricoinj.core.AddressFormatException;
+import com.capricoinj.core.Base58;
 
 import java.math.BigInteger;
 import java.util.Arrays;

@@ -29,8 +29,8 @@ import java.util.Arrays;
 
 import org.spongycastle.util.encoders.Hex;
 
-import com.fuelcoinj.core.Sha256Hash;
-import com.fuelcoinj.core.Utils;
+import com.capricoinj.core.Sha256Hash;
+import com.capricoinj.core.Utils;
 import com.google.common.io.ByteStreams;
 
 /**

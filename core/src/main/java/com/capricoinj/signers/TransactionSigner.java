@@ -13,12 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.fuelcoinj.signers;
+package com.capricoinj.signers;
 
-import com.fuelcoinj.core.Transaction;
-import com.fuelcoinj.crypto.ChildNumber;
-import com.fuelcoinj.script.Script;
-import com.fuelcoinj.wallet.KeyBag;
+import com.capricoinj.core.Transaction;
+import com.capricoinj.crypto.ChildNumber;
+import com.capricoinj.script.Script;
+import com.capricoinj.wallet.KeyBag;
 
 import java.util.HashMap;
 import java.util.List;
@@ -28,7 +28,7 @@ import java.util.Map;
  * <p>Implementations of this interface are intended to sign inputs of the given transaction. Given transaction may already
  * be partially signed or somehow altered by other signers.</p>
  * <p>To make use of the signer, you need to add it into the  wallet by
- * calling {@link com.fuelcoinj.core.Wallet#addTransactionSigner(TransactionSigner)}. Signer will be serialized
+ * calling {@link com.capricoinj.core.Wallet#addTransactionSigner(TransactionSigner)}. Signer will be serialized
  * along with the wallet data. In order for a wallet to recreate signer after deserialization, each signer
  * should have no-args constructor</p>
  */

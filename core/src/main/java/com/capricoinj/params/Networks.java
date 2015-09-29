@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.params;
+package com.capricoinj.params;
 
-import com.fuelcoinj.core.NetworkParameters;
+import com.capricoinj.core.NetworkParameters;
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Lists;
 

@@ -1,4 +1,4 @@
-package com.fuelcoinj.wallet;
+package com.capricoinj.wallet;
 
 /**
  * Indicates that an attempt was made to use HD wallet features on a wallet that was deserialized from an old,

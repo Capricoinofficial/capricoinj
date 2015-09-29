@@ -15,24 +15,24 @@
  * limitations under the License.
  */
 
-package com.fuelcoin.examples;
+package com.capricoinj.examples;
 
 import java.io.File;
 import java.math.BigInteger;
 import java.net.InetAddress;
 
-import com.fuelcoinj.core.Address;
-import com.fuelcoinj.core.Base58;
-import com.fuelcoinj.core.BlockChain;
-import com.fuelcoinj.core.DumpedPrivateKey;
-import com.fuelcoinj.core.ECKey;
-import com.fuelcoinj.core.NetworkParameters;
-import com.fuelcoinj.core.PeerAddress;
-import com.fuelcoinj.core.PeerGroup;
-import com.fuelcoinj.core.Wallet;
-import com.fuelcoinj.params.MainNetParams;
-import com.fuelcoinj.store.MemoryBlockStore;
-import com.fuelcoinj.store.ValidHashStore;
+import com.capricoinj.core.Address;
+import com.capricoinj.core.Base58;
+import com.capricoinj.core.BlockChain;
+import com.capricoinj.core.DumpedPrivateKey;
+import com.capricoinj.core.ECKey;
+import com.capricoinj.core.NetworkParameters;
+import com.capricoinj.core.PeerAddress;
+import com.capricoinj.core.PeerGroup;
+import com.capricoinj.core.Wallet;
+import com.capricoinj.params.MainNetParams;
+import com.capricoinj.store.MemoryBlockStore;
+import com.capricoinj.store.ValidHashStore;
 
 /**
  * This example shows how to solve the challenge Hal posted here:<p>
@@ -43,7 +43,7 @@ import com.fuelcoinj.store.ValidHashStore;
  * in which a private key with some coins associated with it is published. The goal is to import the private key,
  * claim the coins and then send them to a different address.
  */
-//WARNING THIS HAS NOT BEEN SETUP OR TESTED WITH FUELCOIN
+//WARNING THIS HAS NOT BEEN SETUP OR TESTED WITH CAPRICOIN
 public class PrivateKeys {
     public static void main(String[] args) throws Exception {
         // TODO: Assumes main network not testnet. Make it selectable.

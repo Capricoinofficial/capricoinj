@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.core;
+package com.capricoinj.core;
 
-import com.fuelcoinj.utils.MonetaryFormat;
+import com.capricoinj.utils.MonetaryFormat;
 import com.google.common.math.LongMath;
 
 import java.io.Serializable;
@@ -56,12 +56,12 @@ public final class Coin implements Monetary, Comparable<Coin>, Serializable {
     public static final Coin CENT = COIN.divide(100);
 
     /**
-     * 0.001 Peercoins, also known as 1 mFC2
+     * 0.001 Peercoins, also known as 1 mCPC
      */
     public static final Coin MILLICOIN = COIN.divide(1000);
 
     /**
-     * 0.000001 Peercoin, also known as 1 µFC2 or 1 uFC2.
+     * 0.000001 Peercoin, also known as 1 µCPC or 1 uCPC.
      */
     public static final Coin MICROCOIN = MILLICOIN.divide(1000);
 
@@ -84,7 +84,7 @@ public final class Coin implements Monetary, Comparable<Coin>, Serializable {
 
     private Coin(final long satoshis) {
         checkArgument(-MAX_SATOSHIS <= satoshis && satoshis <= MAX_SATOSHIS,
-            "%s satoshis exceeds maximum possible quantity of Fuelcoin.", satoshis);
+            "%s satoshis exceeds maximum possible quantity of Capricoin.", satoshis);
         this.value = satoshis;
     }
 
@@ -220,7 +220,7 @@ public final class Coin implements Monetary, Comparable<Coin>, Serializable {
         return this.value;
     }
 
-    private static final MonetaryFormat FRIENDLY_FORMAT = MonetaryFormat.FC2.minDecimals(2).repeatOptionalDecimals(1, 4).postfixCode();
+    private static final MonetaryFormat FRIENDLY_FORMAT = MonetaryFormat.CPC.minDecimals(2).repeatOptionalDecimals(1, 4).postfixCode();
 
     /**
      * Returns the value as a 0.12 type string. More digits after the decimal place will be used
@@ -229,12 +229,12 @@ public final class Coin implements Monetary, Comparable<Coin>, Serializable {
     public String toFriendlyString() {
     	//BigDecimal decimal = new BigDecimal(this.value);
     	//decimal = decimal.movePointLeft(8);
-    	//return decimal.toPlainString()+ " "+MonetaryFormat.CODE_FC2;
+    	//return decimal.toPlainString()+ " "+MonetaryFormat.CODE_CPC;
     	
         return FRIENDLY_FORMAT.format(this).toString();
     }
 
-    private static final MonetaryFormat PLAIN_FORMAT = MonetaryFormat.FC2.minDecimals(0).repeatOptionalDecimals(1, 6).noCode();
+    private static final MonetaryFormat PLAIN_FORMAT = MonetaryFormat.CPC.minDecimals(0).repeatOptionalDecimals(1, 6).noCode();
 
     /**
      * <p>

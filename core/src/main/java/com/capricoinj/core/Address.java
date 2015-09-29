@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.core;
+package com.capricoinj.core;
 
-import com.fuelcoinj.params.Networks;
-import com.fuelcoinj.script.Script;
+import com.capricoinj.params.Networks;
+import com.capricoinj.script.Script;
 
 import javax.annotation.Nullable;
 

@@ -1,6 +1,6 @@
-package com.fuelcoinj.wallet;
+package com.capricoinj.wallet;
 
-import com.fuelcoinj.core.Transaction;
+import com.capricoinj.core.Transaction;
 
 /**
  * This coin selector will select any transaction at all, regardless of where it came from or whether it was

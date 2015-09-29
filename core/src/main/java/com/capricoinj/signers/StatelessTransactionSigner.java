@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.fuelcoinj.signers;
+package com.capricoinj.signers;
 
 /**
  * A signer that doesn't have any state to be serialized.

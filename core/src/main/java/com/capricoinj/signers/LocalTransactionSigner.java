@@ -13,23 +13,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.fuelcoinj.signers;
+package com.capricoinj.signers;
 
-import com.fuelcoinj.core.ECKey;
-import com.fuelcoinj.core.ScriptException;
-import com.fuelcoinj.core.Transaction;
-import com.fuelcoinj.core.TransactionInput;
-import com.fuelcoinj.crypto.DeterministicKey;
-import com.fuelcoinj.crypto.TransactionSignature;
-import com.fuelcoinj.script.Script;
-import com.fuelcoinj.wallet.KeyBag;
-import com.fuelcoinj.wallet.RedeemData;
+import com.capricoinj.core.ECKey;
+import com.capricoinj.core.ScriptException;
+import com.capricoinj.core.Transaction;
+import com.capricoinj.core.TransactionInput;
+import com.capricoinj.crypto.DeterministicKey;
+import com.capricoinj.crypto.TransactionSignature;
+import com.capricoinj.script.Script;
+import com.capricoinj.wallet.KeyBag;
+import com.capricoinj.wallet.RedeemData;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * <p>{@link TransactionSigner} implementation for signing inputs using keys from provided {@link com.fuelcoinj.wallet.KeyBag}.</p>
+ * <p>{@link TransactionSigner} implementation for signing inputs using keys from provided {@link com.capricoinj.wallet.KeyBag}.</p>
  * <p>This signer doesn't create input scripts for tx inputs. Instead it expects inputs to contain scripts with
  * empty sigs and replaces one of the empty sigs with calculated signature.
  * </p>
@@ -38,7 +38,7 @@ import org.slf4j.LoggerFactory;
  * {@link ProposedTransaction} object that will be also passed then to the next signer in chain. This allows other
  * signers to use correct signing key for P2SH inputs, because all the keys involved in a single P2SH address have
  * the same derivation path.</p>
- * <p>This signer always uses {@link com.fuelcoinj.core.Transaction.SigHash#ALL} signing mode.</p>
+ * <p>This signer always uses {@link com.capricoinj.core.Transaction.SigHash#ALL} signing mode.</p>
  */
 public class LocalTransactionSigner extends StatelessTransactionSigner {
     private static final Logger log = LoggerFactory.getLogger(LocalTransactionSigner.class);

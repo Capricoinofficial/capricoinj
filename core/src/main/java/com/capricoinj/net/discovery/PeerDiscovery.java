@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.net.discovery;
+package com.capricoinj.net.discovery;
 
 import java.net.InetSocketAddress;
 import java.util.concurrent.TimeUnit;

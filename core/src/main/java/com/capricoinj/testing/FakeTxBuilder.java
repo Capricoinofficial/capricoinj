@@ -14,17 +14,17 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.testing;
+package com.capricoinj.testing;
 
-import com.fuelcoinj.core.*;
-import com.fuelcoinj.store.BlockStore;
-import com.fuelcoinj.store.BlockStoreException;
+import com.capricoinj.core.*;
+import com.capricoinj.store.BlockStore;
+import com.capricoinj.store.BlockStoreException;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 
-import static com.fuelcoinj.core.Coin.*;
+import static com.capricoinj.core.Coin.*;
 
 public class FakeTxBuilder {
     /**
@@ -78,11 +78,11 @@ public class FakeTxBuilder {
     }
 
     /**
-     * Transaction[0] is a feeder transaction, supplying FC2 to Transaction[1]
+     * Transaction[0] is a feeder transaction, supplying CPC to Transaction[1]
      */
     public static Transaction[] createFakeTx(NetworkParameters params, Coin value,
                                              Address to, Address from) {
-        // Create fake TXes of sufficient realism to exercise the unit tests. This transaction send FC2 from the
+        // Create fake TXes of sufficient realism to exercise the unit tests. This transaction send CPC from the
         // from address, to the to address with to one to somewhere else to simulate change.
         Transaction t = new Transaction(params);
         TransactionOutput outputToMe = new TransactionOutput(params, t, value, to);

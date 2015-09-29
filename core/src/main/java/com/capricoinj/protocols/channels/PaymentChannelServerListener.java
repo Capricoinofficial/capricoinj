@@ -15,16 +15,16 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.protocols.channels;
+package com.capricoinj.protocols.channels;
 
-import com.fuelcoinj.core.Coin;
-import com.fuelcoinj.core.Sha256Hash;
-import com.fuelcoinj.core.TransactionBroadcaster;
-import com.fuelcoinj.core.Wallet;
-import com.fuelcoinj.net.NioServer;
-import com.fuelcoinj.net.ProtobufParser;
-import com.fuelcoinj.net.StreamParserFactory;
-import com.fuelcoinj.paymentchannel.Protos;
+import com.capricoinj.core.Coin;
+import com.capricoinj.core.Sha256Hash;
+import com.capricoinj.core.TransactionBroadcaster;
+import com.capricoinj.core.Wallet;
+import com.capricoinj.net.NioServer;
+import com.capricoinj.net.ProtobufParser;
+import com.capricoinj.net.StreamParserFactory;
+import com.capricoinj.paymentchannel.Protos;
 import com.google.common.util.concurrent.ListenableFuture;
 import com.google.protobuf.ByteString;
 

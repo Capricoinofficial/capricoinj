@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.jni;
+package com.capricoinj.jni;
 
-import com.fuelcoinj.core.Coin;
-import com.fuelcoinj.core.ECKey;
-import com.fuelcoinj.core.Transaction;
-import com.fuelcoinj.core.Wallet;
-import com.fuelcoinj.core.WalletEventListener;
-import com.fuelcoinj.script.Script;
+import com.capricoinj.core.Coin;
+import com.capricoinj.core.ECKey;
+import com.capricoinj.core.Transaction;
+import com.capricoinj.core.Wallet;
+import com.capricoinj.core.WalletEventListener;
+import com.capricoinj.script.Script;
 
 import java.math.BigInteger;
 import java.util.List;

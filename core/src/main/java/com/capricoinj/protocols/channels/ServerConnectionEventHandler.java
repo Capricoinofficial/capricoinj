@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.protocols.channels;
+package com.capricoinj.protocols.channels;
 
-import com.fuelcoinj.core.Coin;
-import com.fuelcoinj.core.Sha256Hash;
-import com.fuelcoinj.net.ProtobufParser;
-import com.fuelcoinj.paymentchannel.Protos;
+import com.capricoinj.core.Coin;
+import com.capricoinj.core.Sha256Hash;
+import com.capricoinj.net.ProtobufParser;
+import com.capricoinj.paymentchannel.Protos;
 import com.google.common.util.concurrent.ListenableFuture;
 import com.google.protobuf.ByteString;
 
@@ -42,8 +42,8 @@ public abstract class ServerConnectionEventHandler {
      * <p>Note that this does <i>NOT</i> actually broadcast the most recent payment transaction, which will be triggered
      * automatically when the channel times out by the {@link StoredPaymentChannelServerStates}, or manually by calling
      * {@link StoredPaymentChannelServerStates#closeChannel(StoredServerChannel)} with the channel returned by
-     * {@link StoredPaymentChannelServerStates#getChannel(com.fuelcoinj.core.Sha256Hash)} with the id provided in
-     * {@link ServerConnectionEventHandler#channelOpen(com.fuelcoinj.core.Sha256Hash)}</p>
+     * {@link StoredPaymentChannelServerStates#getChannel(com.capricoinj.core.Sha256Hash)} with the id provided in
+     * {@link ServerConnectionEventHandler#channelOpen(com.capricoinj.core.Sha256Hash)}</p>
      */
     @SuppressWarnings("unchecked")
     // The warning 'unchecked call to write(MessageType)' being suppressed here comes from the build()

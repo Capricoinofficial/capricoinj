@@ -1,30 +1,30 @@
-package com.fuelcoin.tools;
+package com.capricoinj.tools;
 
 import java.io.File;
 import java.io.IOException;
 
-import com.fuelcoinj.core.AbstractBlockChain;
-import com.fuelcoinj.core.Block;
-import com.fuelcoinj.core.BlockChain;
-import com.fuelcoinj.core.FullPrunedBlockChain;
-import com.fuelcoinj.core.NetworkParameters;
-import com.fuelcoinj.core.PrunedException;
-import com.fuelcoinj.core.VerificationException;
-import com.fuelcoinj.params.MainNetParams;
-import com.fuelcoinj.params.UnitTestParams;
-import com.fuelcoinj.store.BlockStore;
-import com.fuelcoinj.store.BlockStoreException;
-import com.fuelcoinj.store.FullPrunedBlockStore;
-import com.fuelcoinj.store.H2FullPrunedBlockStore;
-import com.fuelcoinj.store.MemoryBlockStore;
-import com.fuelcoinj.store.MemoryFullPrunedBlockStore;
-import com.fuelcoinj.store.SPVBlockStore;
-import com.fuelcoinj.store.ValidHashStore;
-import com.fuelcoinj.utils.BlockFileLoader;
+import com.capricoinj.core.AbstractBlockChain;
+import com.capricoinj.core.Block;
+import com.capricoinj.core.BlockChain;
+import com.capricoinj.core.FullPrunedBlockChain;
+import com.capricoinj.core.NetworkParameters;
+import com.capricoinj.core.PrunedException;
+import com.capricoinj.core.VerificationException;
+import com.capricoinj.params.MainNetParams;
+import com.capricoinj.params.UnitTestParams;
+import com.capricoinj.store.BlockStore;
+import com.capricoinj.store.BlockStoreException;
+import com.capricoinj.store.FullPrunedBlockStore;
+import com.capricoinj.store.H2FullPrunedBlockStore;
+import com.capricoinj.store.MemoryBlockStore;
+import com.capricoinj.store.MemoryFullPrunedBlockStore;
+import com.capricoinj.store.SPVBlockStore;
+import com.capricoinj.store.ValidHashStore;
+import com.capricoinj.utils.BlockFileLoader;
 import com.google.common.base.Preconditions;
 
-/** Very thin wrapper around {@link com.fuelcoinj.utils.BlockFileLoader} */
-//WARNING THIS HAS NOT BEEN SETUP OR TESTED WITH FUELCOIN
+/** Very thin wrapper around {@link com.capricoinj.utils.BlockFileLoader} */
+//WARNING THIS HAS NOT BEEN SETUP OR TESTED WITH CAPRICOIN
 public class BlockImporter {
     public static void main(String[] args) throws BlockStoreException, VerificationException, PrunedException, IOException {
         System.out.println("USAGE: BlockImporter (prod|test) (H2|Disk|MemFull|Mem|SPV) [blockStore]");

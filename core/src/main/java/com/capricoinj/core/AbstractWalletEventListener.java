@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.core;
+package com.capricoinj.core;
 
-import com.fuelcoinj.script.Script;
-import com.fuelcoinj.wallet.AbstractKeyChainEventListener;
+import com.capricoinj.script.Script;
+import com.capricoinj.wallet.AbstractKeyChainEventListener;
 
 import java.util.List;
 

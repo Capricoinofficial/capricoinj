@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.store;
+package com.capricoinj.store;
 
-import com.fuelcoinj.core.Sha256Hash;
-import com.fuelcoinj.core.StoredBlock;
-import com.fuelcoinj.core.StoredTransactionOutput;
-import com.fuelcoinj.core.StoredUndoableBlock;
+import com.capricoinj.core.Sha256Hash;
+import com.capricoinj.core.StoredBlock;
+import com.capricoinj.core.StoredTransactionOutput;
+import com.capricoinj.core.StoredUndoableBlock;
 
 /**
  * <p>An implementor of FullPrunedBlockStore saves StoredBlock objects to some storage mechanism.</p>

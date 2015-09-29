@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.store;
+package com.capricoinj.store;
 
-import com.fuelcoinj.core.Sha256Hash;
-import com.fuelcoinj.core.StoredBlock;
+import com.capricoinj.core.Sha256Hash;
+import com.capricoinj.core.StoredBlock;
 
 /**
  * An implementor of BlockStore saves StoredBlock objects to disk. Different implementations store them in
@@ -45,8 +45,8 @@ public interface BlockStore {
 
     /**
      * Returns the {@link StoredBlock} that represents the top of the chain of greatest total work. Note that this
-     * can be arbitrarily expensive, you probably should use {@link com.fuelcoinj.core.BlockChain#getChainHead()}
-     * or perhaps {@link com.fuelcoinj.core.BlockChain#getBestChainHeight()} which will run in constant time and
+     * can be arbitrarily expensive, you probably should use {@link com.capricoinj.core.BlockChain#getChainHead()}
+     * or perhaps {@link com.capricoinj.core.BlockChain#getBestChainHeight()} which will run in constant time and
      * not take any heavyweight locks.
      */
     StoredBlock getChainHead() throws BlockStoreException;

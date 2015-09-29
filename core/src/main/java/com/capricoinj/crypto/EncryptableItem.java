@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.crypto;
+package com.capricoinj.crypto;
 
-import com.fuelcoinj.wallet.Protos;
+import com.capricoinj.wallet.Protos;
 
 import javax.annotation.Nullable;
 
 /**
  * Provides a uniform way to access something that can be optionally encrypted with a
- * {@link com.fuelcoinj.crypto.KeyCrypter}, yielding an {@link com.fuelcoinj.crypto.EncryptedData}, and
+ * {@link com.capricoinj.crypto.KeyCrypter}, yielding an {@link com.capricoinj.crypto.EncryptedData}, and
  * which can have a creation time associated with it.
  */
 public interface EncryptableItem {

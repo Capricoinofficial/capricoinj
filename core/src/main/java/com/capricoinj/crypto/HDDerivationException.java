@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.crypto;
+package com.capricoinj.crypto;
 
 public class HDDerivationException extends RuntimeException {
     public HDDerivationException(String message) {

@@ -1,4 +1,4 @@
-package com.fuelcoinj.utils;
+package com.capricoinj.utils;
 
 import com.google.common.collect.Maps;
 import com.google.protobuf.ByteString;

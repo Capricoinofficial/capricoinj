@@ -15,15 +15,15 @@
  * limitations under the License.
  */
 
-package com.fuelcoin.examples;
+package com.capricoinj.examples;
 
-import com.fuelcoinj.core.AbstractPeerEventListener;
-import com.fuelcoinj.core.NetworkParameters;
-import com.fuelcoinj.core.Peer;
-import com.fuelcoinj.core.PeerGroup;
-import com.fuelcoinj.net.discovery.DnsDiscovery;
-import com.fuelcoinj.params.MainNetParams;
-import com.fuelcoinj.utils.BriefLogFormatter;
+import com.capricoinj.core.AbstractPeerEventListener;
+import com.capricoinj.core.NetworkParameters;
+import com.capricoinj.core.Peer;
+import com.capricoinj.core.PeerGroup;
+import com.capricoinj.net.discovery.DnsDiscovery;
+import com.capricoinj.params.MainNetParams;
+import com.capricoinj.utils.BriefLogFormatter;
 import com.google.common.collect.Lists;
 
 import javax.swing.*;
@@ -43,7 +43,7 @@ import java.util.List;
 /**
  * Shows connected peers in a table view, so you can watch as they come and go.
  */
-//WARNING THIS IS ON THE MAINNET OF FUELCOIN
+//WARNING THIS IS ON THE MAINNET OF CAPRICOIN
 public class PeerMonitor {
     private NetworkParameters params;
     private PeerGroup peerGroup;

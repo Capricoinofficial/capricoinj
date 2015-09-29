@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.crypto;
+package com.capricoinj.crypto;
 
 import javax.annotation.Nonnull;
 import java.io.File;

@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.core;
+package com.capricoinj.core;
 
-import com.fuelcoinj.net.AbstractTimeoutHandler;
-import com.fuelcoinj.net.MessageWriteTarget;
-import com.fuelcoinj.net.StreamParser;
-import com.fuelcoinj.utils.Threading;
+import com.capricoinj.net.AbstractTimeoutHandler;
+import com.capricoinj.net.MessageWriteTarget;
+import com.capricoinj.net.StreamParser;
+import com.capricoinj.utils.Threading;
 import com.google.common.annotations.VisibleForTesting;
 
 import org.slf4j.Logger;
@@ -38,7 +38,7 @@ import static com.google.common.base.Preconditions.*;
 
 /**
  * Handles high-level message (de)serialization for peers, acting as the bridge between the
- * {@link com.fuelcoinj.net} classes and {@link Peer}.
+ * {@link com.capricoinj.net} classes and {@link Peer}.
  */
 public abstract class PeerSocketHandler extends AbstractTimeoutHandler implements StreamParser {
     private static final Logger log = LoggerFactory.getLogger(PeerSocketHandler.class);
@@ -192,8 +192,8 @@ public abstract class PeerSocketHandler extends AbstractTimeoutHandler implement
 
     /**
      * Sets the {@link MessageWriteTarget} used to write messages to the peer. This should almost never be called, it is
-     * called automatically by {@link com.fuelcoinj.net.NioClient} or
-     * {@link com.fuelcoinj.net.NioClientManager} once the socket finishes initialization.
+     * called automatically by {@link com.capricoinj.net.NioClient} or
+     * {@link com.capricoinj.net.NioClientManager} once the socket finishes initialization.
      */
     @Override
     public void setWriteTarget(MessageWriteTarget writeTarget) {

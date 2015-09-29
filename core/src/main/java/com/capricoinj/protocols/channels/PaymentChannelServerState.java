@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.protocols.channels;
+package com.capricoinj.protocols.channels;
 
-import com.fuelcoinj.core.*;
-import com.fuelcoinj.crypto.TransactionSignature;
-import com.fuelcoinj.script.Script;
-import com.fuelcoinj.script.ScriptBuilder;
+import com.capricoinj.core.*;
+import com.capricoinj.crypto.TransactionSignature;
+import com.capricoinj.script.Script;
+import com.capricoinj.script.ScriptBuilder;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Lists;
 import com.google.common.util.concurrent.FutureCallback;

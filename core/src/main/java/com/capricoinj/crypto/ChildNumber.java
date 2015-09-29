@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.crypto;
+package com.capricoinj.crypto;
 
 /**
  * <p>This is just a wrapper for the i (child number) as per BIP 32 with a boolean getter for the most significant bit

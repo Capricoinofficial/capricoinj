@@ -14,18 +14,18 @@
  * limitations under the License.
  */
 
-package com.fuelcoin.examples;
+package com.capricoinj.examples;
 
-import com.fuelcoinj.core.AbstractPeerEventListener;
-import com.fuelcoinj.core.NetworkParameters;
-import com.fuelcoinj.core.Peer;
-import com.fuelcoinj.core.PeerAddress;
-import com.fuelcoinj.core.VersionMessage;
-import com.fuelcoinj.net.NioClientManager;
-import com.fuelcoinj.net.discovery.DnsDiscovery;
-import com.fuelcoinj.net.discovery.PeerDiscoveryException;
-import com.fuelcoinj.params.MainNetParams;
-import com.fuelcoinj.utils.BriefLogFormatter;
+import com.capricoinj.core.AbstractPeerEventListener;
+import com.capricoinj.core.NetworkParameters;
+import com.capricoinj.core.Peer;
+import com.capricoinj.core.PeerAddress;
+import com.capricoinj.core.VersionMessage;
+import com.capricoinj.net.NioClientManager;
+import com.capricoinj.net.discovery.DnsDiscovery;
+import com.capricoinj.net.discovery.PeerDiscoveryException;
+import com.capricoinj.params.MainNetParams;
+import com.capricoinj.utils.BriefLogFormatter;
 import com.google.common.collect.Lists;
 import com.google.common.util.concurrent.Futures;
 import com.google.common.util.concurrent.ListenableFuture;
@@ -40,7 +40,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * Prints a list of IP addresses obtained from DNS.
  */
-//WARNING THIS HAS NOT BEEN SETUP OR TESTED WITH FUELCOIN
+//WARNING THIS HAS NOT BEEN SETUP OR TESTED WITH CAPRICOIN
 public class PrintPeers {
     private static InetSocketAddress[] dnsPeers;
 

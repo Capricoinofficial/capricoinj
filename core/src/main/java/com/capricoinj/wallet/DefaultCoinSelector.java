@@ -1,11 +1,11 @@
-package com.fuelcoinj.wallet;
+package com.capricoinj.wallet;
 
-import com.fuelcoinj.core.Coin;
-import com.fuelcoinj.core.NetworkParameters;
-import com.fuelcoinj.core.Transaction;
-import com.fuelcoinj.core.TransactionConfidence;
-import com.fuelcoinj.core.TransactionOutput;
-import com.fuelcoinj.params.UnitTestParams;
+import com.capricoinj.core.Coin;
+import com.capricoinj.core.NetworkParameters;
+import com.capricoinj.core.Transaction;
+import com.capricoinj.core.TransactionConfidence;
+import com.capricoinj.core.TransactionOutput;
+import com.capricoinj.params.UnitTestParams;
 import com.google.common.annotations.VisibleForTesting;
 
 import java.math.BigInteger;

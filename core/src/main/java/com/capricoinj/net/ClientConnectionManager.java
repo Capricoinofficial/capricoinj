@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.net;
+package com.capricoinj.net;
 
 import com.google.common.util.concurrent.Service;
 

@@ -1,6 +1,6 @@
-package com.fuelcoinj.protocols.channels;
+package com.capricoinj.protocols.channels;
 
-import com.fuelcoinj.core.Coin;
+import com.capricoinj.core.Coin;
 import com.google.protobuf.ByteString;
 
 import javax.annotation.Nullable;

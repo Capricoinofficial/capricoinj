@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.core;
+package com.capricoinj.core;
 
-import com.fuelcoinj.core.VarInt;
+import com.capricoinj.core.VarInt;
 
 import junit.framework.TestCase;
 

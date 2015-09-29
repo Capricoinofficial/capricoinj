@@ -14,21 +14,21 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.utils;
+package com.capricoinj.utils;
 
-import static com.fuelcoinj.core.Coin.CENT;
-import static com.fuelcoinj.core.Coin.COIN;
-import static com.fuelcoinj.core.Coin.SATOSHI;
-import static com.fuelcoinj.core.Coin.ZERO;
+import static com.capricoinj.core.Coin.CENT;
+import static com.capricoinj.core.Coin.COIN;
+import static com.capricoinj.core.Coin.SATOSHI;
+import static com.capricoinj.core.Coin.ZERO;
 import static org.junit.Assert.assertEquals;
 
 import java.util.Locale;
 
 import org.junit.Test;
 
-import com.fuelcoinj.core.Coin;
-import com.fuelcoinj.utils.Fiat;
-import com.fuelcoinj.utils.MonetaryFormat;
+import com.capricoinj.core.Coin;
+import com.capricoinj.utils.Fiat;
+import com.capricoinj.utils.MonetaryFormat;
 
 public class MonetaryFormatTest {
 

@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.core;
+package com.capricoinj.core;
 
 import static com.google.common.base.Preconditions.checkArgument;
 
-import com.fuelcoinj.store.BlockStore;
-import com.fuelcoinj.store.BlockStoreException;
-import com.fuelcoinj.store.ValidHashStore;
+import com.capricoinj.store.BlockStore;
+import com.capricoinj.store.BlockStoreException;
+import com.capricoinj.store.ValidHashStore;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -40,8 +40,8 @@ public class BlockChain extends AbstractBlockChain {
      * one from scratch, or you can deserialize a saved wallet from disk using {@link Wallet#loadFromFile(java.io.File)}
      * </p>
      *
-     * <p>For the store, you should use {@link com.fuelcoinj.store.SPVBlockStore} or you could also try a
-     * {@link com.fuelcoinj.store.MemoryBlockStore} if you want to hold all headers in RAM and don't care about
+     * <p>For the store, you should use {@link com.capricoinj.store.SPVBlockStore} or you could also try a
+     * {@link com.capricoinj.store.MemoryBlockStore} if you want to hold all headers in RAM and don't care about
      * disk serialization (this is rare).</p>
      */
     public BlockChain(NetworkParameters params, Wallet wallet, BlockStore blockStore, ValidHashStore validHashStore) throws BlockStoreException {

@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.wallet;
+package com.capricoinj.wallet;
 
-import com.fuelcoinj.crypto.KeyCrypter;
-import com.fuelcoinj.crypto.KeyCrypterException;
+import com.capricoinj.crypto.KeyCrypter;
+import com.capricoinj.crypto.KeyCrypterException;
 
 import org.spongycastle.crypto.params.KeyParameter;
 
@@ -29,8 +29,8 @@ import javax.annotation.Nullable;
 public interface EncryptableKeyChain extends KeyChain {
     /**
      * Takes the given password, which should be strong, derives a key from it and then invokes
-     * {@link #toEncrypted(com.fuelcoinj.crypto.KeyCrypter, org.spongycastle.crypto.params.KeyParameter)} with
-     * {@link com.fuelcoinj.crypto.KeyCrypterScrypt} as the crypter.
+     * {@link #toEncrypted(com.capricoinj.crypto.KeyCrypter, org.spongycastle.crypto.params.KeyParameter)} with
+     * {@link com.capricoinj.crypto.KeyCrypterScrypt} as the crypter.
      *
      * @return The derived key, in case you wish to cache it for future use.
      */
@@ -51,7 +51,7 @@ public interface EncryptableKeyChain extends KeyChain {
     /**
      * Decrypt the key chain with the given AES key and whatever {@link KeyCrypter} is already set. Note that if you
      * just want to spend money from an encrypted wallet, don't decrypt the whole thing first. Instead, set the
-     * {@link com.fuelcoinj.core.Wallet.SendRequest#aesKey} field before asking the wallet to build the send.
+     * {@link com.capricoinj.core.Wallet.SendRequest#aesKey} field before asking the wallet to build the send.
      *
      * @param aesKey AES key to use (normally created using KeyCrypter#deriveKey and cached as it is time consuming to
      *               create from a password)

@@ -1,7 +1,7 @@
-package com.fuelcoinj.jni;
+package com.capricoinj.jni;
 
-import com.fuelcoinj.protocols.channels.PaymentChannelServerListener;
-import com.fuelcoinj.protocols.channels.ServerConnectionEventHandler;
+import com.capricoinj.protocols.channels.PaymentChannelServerListener;
+import com.capricoinj.protocols.channels.ServerConnectionEventHandler;
 
 import javax.annotation.Nullable;
 

@@ -15,18 +15,18 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.core;
+package com.capricoinj.core;
 
-import com.fuelcoinj.core.Address;
-import com.fuelcoinj.core.BloomFilter;
-import com.fuelcoinj.params.MainNetParams;
-import com.fuelcoinj.wallet.KeyChainGroup;
+import com.capricoinj.core.Address;
+import com.capricoinj.core.BloomFilter;
+import com.capricoinj.params.MainNetParams;
+import com.capricoinj.wallet.KeyChainGroup;
 
 import org.junit.Test;
 
 import java.util.Arrays;
 
-import static com.fuelcoinj.core.Utils.HEX;
+import static com.capricoinj.core.Utils.HEX;
 import static org.junit.Assert.*;
 
 public class BloomFilterTest {

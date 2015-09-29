@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.core;
+package com.capricoinj.core;
 
-import com.fuelcoinj.store.BlockStore;
-import com.fuelcoinj.store.BlockStoreException;
+import com.capricoinj.store.BlockStore;
+import com.capricoinj.store.BlockStoreException;
 
 import java.io.*;
 import java.math.BigInteger;

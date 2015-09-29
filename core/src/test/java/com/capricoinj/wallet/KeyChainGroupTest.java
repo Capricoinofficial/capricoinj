@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.wallet;
+package com.capricoinj.wallet;
 
-import com.fuelcoinj.core.*;
-import com.fuelcoinj.crypto.*;
-import com.fuelcoinj.params.MainNetParams;
-import com.fuelcoinj.utils.BriefLogFormatter;
-import com.fuelcoinj.utils.Threading;
-import com.fuelcoinj.wallet.*;
+import com.capricoinj.core.*;
+import com.capricoinj.crypto.*;
+import com.capricoinj.params.MainNetParams;
+import com.capricoinj.utils.BriefLogFormatter;
+import com.capricoinj.utils.Threading;
+import com.capricoinj.wallet.*;
 import com.google.common.collect.ImmutableList;
 
 import org.junit.Before;

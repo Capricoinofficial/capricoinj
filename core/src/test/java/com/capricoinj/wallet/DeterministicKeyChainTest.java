@@ -14,19 +14,19 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.wallet;
+package com.capricoinj.wallet;
 
-import com.fuelcoinj.core.*;
-import com.fuelcoinj.crypto.DeterministicHierarchy;
-import com.fuelcoinj.crypto.DeterministicKey;
-import com.fuelcoinj.params.UnitTestParams;
-import com.fuelcoinj.store.UnreadableWalletException;
-import com.fuelcoinj.utils.BriefLogFormatter;
-import com.fuelcoinj.utils.Threading;
-import com.fuelcoinj.wallet.AbstractKeyChainEventListener;
-import com.fuelcoinj.wallet.DeterministicKeyChain;
-import com.fuelcoinj.wallet.KeyChain;
-import com.fuelcoinj.wallet.Protos;
+import com.capricoinj.core.*;
+import com.capricoinj.crypto.DeterministicHierarchy;
+import com.capricoinj.crypto.DeterministicKey;
+import com.capricoinj.params.UnitTestParams;
+import com.capricoinj.store.UnreadableWalletException;
+import com.capricoinj.utils.BriefLogFormatter;
+import com.capricoinj.utils.Threading;
+import com.capricoinj.wallet.AbstractKeyChainEventListener;
+import com.capricoinj.wallet.DeterministicKeyChain;
+import com.capricoinj.wallet.KeyChain;
+import com.capricoinj.wallet.Protos;
 import com.google.common.collect.Lists;
 
 import org.junit.Before;

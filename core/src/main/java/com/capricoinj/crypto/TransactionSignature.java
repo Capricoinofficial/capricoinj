@@ -14,18 +14,18 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.crypto;
+package com.capricoinj.crypto;
 
-import com.fuelcoinj.core.ECKey;
-import com.fuelcoinj.core.Transaction;
-import com.fuelcoinj.core.VerificationException;
+import com.capricoinj.core.ECKey;
+import com.capricoinj.core.Transaction;
+import com.capricoinj.core.VerificationException;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.math.BigInteger;
 
 /**
- * A TransactionSignature wraps an {@link com.fuelcoinj.core.ECKey.ECDSASignature} and adds methods for handling
+ * A TransactionSignature wraps an {@link com.capricoinj.core.ECKey.ECDSASignature} and adds methods for handling
  * the additional SIGHASH mode byte that is used.
  */
 public class TransactionSignature extends ECKey.ECDSASignature {

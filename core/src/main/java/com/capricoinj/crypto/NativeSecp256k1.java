@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.crypto;
+package com.capricoinj.crypto;
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;

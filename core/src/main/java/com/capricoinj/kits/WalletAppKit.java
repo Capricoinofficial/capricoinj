@@ -14,19 +14,19 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.kits;
+package com.capricoinj.kits;
 
-import com.fuelcoinj.core.*;
-import com.fuelcoinj.net.discovery.DnsDiscovery;
-import com.fuelcoinj.protocols.channels.StoredPaymentChannelClientStates;
-import com.fuelcoinj.protocols.channels.StoredPaymentChannelServerStates;
-import com.fuelcoinj.store.BlockStoreException;
-import com.fuelcoinj.store.SPVBlockStore;
-import com.fuelcoinj.store.ValidHashStore;
-import com.fuelcoinj.store.WalletProtobufSerializer;
-import com.fuelcoinj.wallet.DeterministicSeed;
-import com.fuelcoinj.wallet.KeyChainGroup;
-import com.fuelcoinj.wallet.Protos;
+import com.capricoinj.core.*;
+import com.capricoinj.net.discovery.DnsDiscovery;
+import com.capricoinj.protocols.channels.StoredPaymentChannelClientStates;
+import com.capricoinj.protocols.channels.StoredPaymentChannelServerStates;
+import com.capricoinj.store.BlockStoreException;
+import com.capricoinj.store.SPVBlockStore;
+import com.capricoinj.store.ValidHashStore;
+import com.capricoinj.store.WalletProtobufSerializer;
+import com.capricoinj.wallet.DeterministicSeed;
+import com.capricoinj.wallet.KeyChainGroup;
+import com.capricoinj.wallet.Protos;
 import com.google.common.collect.ImmutableList;
 import com.google.common.util.concurrent.AbstractIdleService;
 import com.google.common.util.concurrent.MoreExecutors;

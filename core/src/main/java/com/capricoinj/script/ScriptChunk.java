@@ -15,9 +15,9 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.script;
+package com.capricoinj.script;
 
-import com.fuelcoinj.core.Utils;
+import com.capricoinj.core.Utils;
 
 import javax.annotation.Nullable;
 
@@ -25,7 +25,7 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.util.Arrays;
 
-import static com.fuelcoinj.script.ScriptOpCodes.*;
+import static com.capricoinj.script.ScriptOpCodes.*;
 import static com.google.common.base.Preconditions.checkNotNull;
 import static com.google.common.base.Preconditions.checkState;
 

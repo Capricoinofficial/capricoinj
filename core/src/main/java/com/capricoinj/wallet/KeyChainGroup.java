@@ -15,17 +15,17 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.wallet;
+package com.capricoinj.wallet;
 
-import com.fuelcoinj.core.*;
-import com.fuelcoinj.crypto.ChildNumber;
-import com.fuelcoinj.crypto.DeterministicKey;
-import com.fuelcoinj.crypto.KeyCrypter;
-import com.fuelcoinj.script.Script;
-import com.fuelcoinj.script.ScriptBuilder;
-import com.fuelcoinj.store.UnreadableWalletException;
-import com.fuelcoinj.utils.ListenerRegistration;
-import com.fuelcoinj.utils.Threading;
+import com.capricoinj.core.*;
+import com.capricoinj.crypto.ChildNumber;
+import com.capricoinj.crypto.DeterministicKey;
+import com.capricoinj.crypto.KeyCrypter;
+import com.capricoinj.script.Script;
+import com.capricoinj.script.ScriptBuilder;
+import com.capricoinj.store.UnreadableWalletException;
+import com.capricoinj.utils.ListenerRegistration;
+import com.capricoinj.utils.Threading;
 import com.google.common.base.Joiner;
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.ImmutableList;
@@ -46,7 +46,7 @@ import java.util.concurrent.Executor;
 import static com.google.common.base.Preconditions.*;
 
 /**
- * <p>A KeyChainGroup is used by the {@link com.fuelcoinj.core.Wallet} and
+ * <p>A KeyChainGroup is used by the {@link com.capricoinj.core.Wallet} and
  * manages: a {@link BasicKeyChain} object (which will normally be empty), and zero or more
  * {@link DeterministicKeyChain}s. A deterministic key chain will be created lazily/on demand
  * when a fresh or current key is requested, possibly being initialized from the private key bytes of the earliest non
@@ -603,9 +603,9 @@ public class KeyChainGroup implements KeyBag {
 
     /**
      * Encrypt the keys in the group using the KeyCrypter and the AES key. A good default KeyCrypter to use is
-     * {@link com.fuelcoinj.crypto.KeyCrypterScrypt}.
+     * {@link com.capricoinj.crypto.KeyCrypterScrypt}.
      *
-     * @throws com.fuelcoinj.crypto.KeyCrypterException Thrown if the wallet encryption fails for some reason,
+     * @throws com.capricoinj.crypto.KeyCrypterException Thrown if the wallet encryption fails for some reason,
      *         leaving the group unchanged.
      * @throws DeterministicUpgradeRequiredException Thrown if there are random keys but no HD chain.
      */
@@ -630,9 +630,9 @@ public class KeyChainGroup implements KeyBag {
 
     /**
      * Decrypt the keys in the group using the previously given key crypter and the AES key. A good default
-     * KeyCrypter to use is {@link com.fuelcoinj.crypto.KeyCrypterScrypt}.
+     * KeyCrypter to use is {@link com.capricoinj.crypto.KeyCrypterScrypt}.
      *
-     * @throws com.fuelcoinj.crypto.KeyCrypterException Thrown if the wallet decryption fails for some reason, leaving the group unchanged.
+     * @throws com.capricoinj.crypto.KeyCrypterException Thrown if the wallet decryption fails for some reason, leaving the group unchanged.
      */
     public void decrypt(KeyParameter aesKey) {
         // This code must be exception safe.

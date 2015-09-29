@@ -1,28 +1,28 @@
-package com.fuelcoin.examples;
+package com.capricoinj.examples;
 
-import static com.fuelcoinj.core.Coin.CENT;
-import static com.fuelcoinj.core.Coin.COIN;
-import static com.fuelcoinj.core.Coin.SATOSHI;
+import static com.capricoinj.core.Coin.CENT;
+import static com.capricoinj.core.Coin.COIN;
+import static com.capricoinj.core.Coin.SATOSHI;
 
 import java.io.File;
 
-import com.fuelcoinj.core.AbstractPeerEventListener;
-import com.fuelcoinj.core.Address;
-import com.fuelcoinj.core.Message;
-import com.fuelcoinj.core.Peer;
-import com.fuelcoinj.core.Transaction;
-import com.fuelcoinj.core.Wallet;
-import com.fuelcoinj.kits.WalletAppKit;
-import com.fuelcoinj.params.UnitTestParams;
-import com.fuelcoinj.utils.BriefLogFormatter;
-import com.fuelcoinj.utils.Threading;
+import com.capricoinj.core.AbstractPeerEventListener;
+import com.capricoinj.core.Address;
+import com.capricoinj.core.Message;
+import com.capricoinj.core.Peer;
+import com.capricoinj.core.Transaction;
+import com.capricoinj.core.Wallet;
+import com.capricoinj.kits.WalletAppKit;
+import com.capricoinj.params.UnitTestParams;
+import com.capricoinj.utils.BriefLogFormatter;
+import com.capricoinj.utils.Threading;
 
 /**
  * This is a little test app that waits for a coin on a local regtest node, then  generates two transactions that double
  * spend the same output and sends them. It's useful for testing double spend codepaths but is otherwise not something
  * you would normally want to do.
  */
-//WARNING THIS HAS NOT BEEN SETUP OR TESTED WITH FUELCOIN
+//WARNING THIS HAS NOT BEEN SETUP OR TESTED WITH CAPRICOIN
 public class DoubleSpend {
     public static void main(String[] args) throws Exception {
         BriefLogFormatter.init();

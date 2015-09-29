@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.fuelcoinj.core;
+package com.capricoinj.core;
 
 import javax.annotation.Nullable;
 

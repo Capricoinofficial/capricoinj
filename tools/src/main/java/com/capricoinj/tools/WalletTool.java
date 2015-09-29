@@ -15,9 +15,9 @@
  * limitations under the License.
  */
 
-package com.fuelcoin.tools;
+package com.capricoinj.tools;
 
-import static com.fuelcoinj.core.Coin.parseCoin;
+import static com.capricoinj.core.Coin.parseCoin;
 import static com.google.common.base.Preconditions.checkNotNull;
 
 import java.io.BufferedInputStream;
@@ -50,54 +50,54 @@ import org.slf4j.LoggerFactory;
 import org.spongycastle.crypto.params.KeyParameter;
 import org.spongycastle.util.encoders.Hex;
 
-import com.fuelcoinj.core.AbstractBlockChain;
-import com.fuelcoinj.core.AbstractPeerEventListener;
-import com.fuelcoinj.core.AbstractWalletEventListener;
-import com.fuelcoinj.core.Address;
-import com.fuelcoinj.core.AddressFormatException;
-import com.fuelcoinj.core.Block;
-import com.fuelcoinj.core.BlockChain;
-import com.fuelcoinj.core.Coin;
-import com.fuelcoinj.core.DownloadListener;
-import com.fuelcoinj.core.DumpedPrivateKey;
-import com.fuelcoinj.core.ECKey;
-import com.fuelcoinj.core.FullPrunedBlockChain;
-import com.fuelcoinj.core.InsufficientMoneyException;
-import com.fuelcoinj.core.NetworkParameters;
-import com.fuelcoinj.core.Peer;
-import com.fuelcoinj.core.PeerAddress;
-import com.fuelcoinj.core.PeerGroup;
-import com.fuelcoinj.core.ScriptException;
-import com.fuelcoinj.core.Transaction;
-import com.fuelcoinj.core.Utils;
-import com.fuelcoinj.core.VerificationException;
-import com.fuelcoinj.core.Wallet;
-import com.fuelcoinj.core.WrongNetworkException;
-import com.fuelcoinj.core.Wallet.BalanceType;
-import com.fuelcoinj.crypto.DeterministicKey;
-import com.fuelcoinj.crypto.KeyCrypterException;
-import com.fuelcoinj.crypto.MnemonicCode;
-import com.fuelcoinj.crypto.MnemonicException;
-import com.fuelcoinj.net.discovery.DnsDiscovery;
-import com.fuelcoinj.params.MainNetParams;
-import com.fuelcoinj.params.UnitTestParams;
-import com.fuelcoinj.protocols.payments.PaymentProtocol;
-import com.fuelcoinj.protocols.payments.PaymentProtocolException;
-import com.fuelcoinj.protocols.payments.PaymentSession;
-import com.fuelcoinj.store.BlockStore;
-import com.fuelcoinj.store.BlockStoreException;
-import com.fuelcoinj.store.FullPrunedBlockStore;
-import com.fuelcoinj.store.H2FullPrunedBlockStore;
-import com.fuelcoinj.store.SPVBlockStore;
-import com.fuelcoinj.store.ValidHashStore;
-import com.fuelcoinj.store.WalletProtobufSerializer;
-import com.fuelcoinj.uri.PeercoinURI;
-import com.fuelcoinj.uri.PeercoinURIParseException;
-import com.fuelcoinj.utils.BriefLogFormatter;
-import com.fuelcoinj.wallet.DeterministicSeed;
-import com.fuelcoinj.wallet.DeterministicUpgradeRequiredException;
-import com.fuelcoinj.wallet.DeterministicUpgradeRequiresPassword;
-import com.fuelcoinj.wallet.Protos;
+import com.capricoinj.core.AbstractBlockChain;
+import com.capricoinj.core.AbstractPeerEventListener;
+import com.capricoinj.core.AbstractWalletEventListener;
+import com.capricoinj.core.Address;
+import com.capricoinj.core.AddressFormatException;
+import com.capricoinj.core.Block;
+import com.capricoinj.core.BlockChain;
+import com.capricoinj.core.Coin;
+import com.capricoinj.core.DownloadListener;
+import com.capricoinj.core.DumpedPrivateKey;
+import com.capricoinj.core.ECKey;
+import com.capricoinj.core.FullPrunedBlockChain;
+import com.capricoinj.core.InsufficientMoneyException;
+import com.capricoinj.core.NetworkParameters;
+import com.capricoinj.core.Peer;
+import com.capricoinj.core.PeerAddress;
+import com.capricoinj.core.PeerGroup;
+import com.capricoinj.core.ScriptException;
+import com.capricoinj.core.Transaction;
+import com.capricoinj.core.Utils;
+import com.capricoinj.core.VerificationException;
+import com.capricoinj.core.Wallet;
+import com.capricoinj.core.WrongNetworkException;
+import com.capricoinj.core.Wallet.BalanceType;
+import com.capricoinj.crypto.DeterministicKey;
+import com.capricoinj.crypto.KeyCrypterException;
+import com.capricoinj.crypto.MnemonicCode;
+import com.capricoinj.crypto.MnemonicException;
+import com.capricoinj.net.discovery.DnsDiscovery;
+import com.capricoinj.params.MainNetParams;
+import com.capricoinj.params.UnitTestParams;
+import com.capricoinj.protocols.payments.PaymentProtocol;
+import com.capricoinj.protocols.payments.PaymentProtocolException;
+import com.capricoinj.protocols.payments.PaymentSession;
+import com.capricoinj.store.BlockStore;
+import com.capricoinj.store.BlockStoreException;
+import com.capricoinj.store.FullPrunedBlockStore;
+import com.capricoinj.store.H2FullPrunedBlockStore;
+import com.capricoinj.store.SPVBlockStore;
+import com.capricoinj.store.ValidHashStore;
+import com.capricoinj.store.WalletProtobufSerializer;
+import com.capricoinj.uri.PeercoinURI;
+import com.capricoinj.uri.PeercoinURIParseException;
+import com.capricoinj.utils.BriefLogFormatter;
+import com.capricoinj.wallet.DeterministicSeed;
+import com.capricoinj.wallet.DeterministicUpgradeRequiredException;
+import com.capricoinj.wallet.DeterministicUpgradeRequiresPassword;
+import com.capricoinj.wallet.Protos;
 import com.google.common.base.Charsets;
 import com.google.common.base.Splitter;
 import com.google.common.collect.ImmutableList;
@@ -107,7 +107,7 @@ import com.google.common.util.concurrent.ListenableFuture;
 import com.google.protobuf.ByteString;
 import com.subgraph.orchid.TorClient;
 
-//WARNING THIS HAS NOT BEEN SETUP OR TESTED WITH FUELCOIN
+//WARNING THIS HAS NOT BEEN SETUP OR TESTED WITH CAPRICOIN
 /**
  * A command line tool for manipulating wallets and working with Peercoin.
  */
@@ -129,7 +129,7 @@ public class WalletTool {
     private static File chainFileName;
     private static ValidationMode mode;
     private static String password;
-    private static com.fuelcoinj.protocols.payments.Protos.PaymentRequest paymentRequest;
+    private static com.capricoinj.protocols.payments.Protos.PaymentRequest paymentRequest;
     private static OptionSpec<Integer> lookaheadSize;
 
     public static class Condition {
@@ -667,7 +667,7 @@ public class WalletTool {
                 System.exit(1);
             }
             try {
-                paymentRequest = com.fuelcoinj.protocols.payments.Protos.PaymentRequest.newBuilder().mergeFrom(stream).build();
+                paymentRequest = com.capricoinj.protocols.payments.Protos.PaymentRequest.newBuilder().mergeFrom(stream).build();
             } catch(IOException e) {
                 System.err.println("Failed to parse payment request from file " + e.getMessage());
                 System.exit(1);

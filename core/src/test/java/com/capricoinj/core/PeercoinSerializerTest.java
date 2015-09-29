@@ -14,18 +14,18 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.core;
+package com.capricoinj.core;
 
 
-import com.fuelcoinj.core.AddressMessage;
-import com.fuelcoinj.core.Block;
-import com.fuelcoinj.core.HeadersMessage;
-import com.fuelcoinj.core.Message;
-import com.fuelcoinj.core.PeerAddress;
-import com.fuelcoinj.core.PeercoinSerializer;
-import com.fuelcoinj.core.ProtocolException;
-import com.fuelcoinj.core.Transaction;
-import com.fuelcoinj.params.MainNetParams;
+import com.capricoinj.core.AddressMessage;
+import com.capricoinj.core.Block;
+import com.capricoinj.core.HeadersMessage;
+import com.capricoinj.core.Message;
+import com.capricoinj.core.PeerAddress;
+import com.capricoinj.core.PeercoinSerializer;
+import com.capricoinj.core.ProtocolException;
+import com.capricoinj.core.Transaction;
+import com.capricoinj.params.MainNetParams;
 
 import org.junit.Test;
 
@@ -34,7 +34,7 @@ import java.nio.BufferUnderflowException;
 import java.nio.ByteBuffer;
 import java.util.Arrays;
 
-import static com.fuelcoinj.core.Utils.HEX;
+import static com.capricoinj.core.Utils.HEX;
 import static org.junit.Assert.*;
 
 public class PeercoinSerializerTest {

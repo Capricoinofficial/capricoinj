@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.wallet;
+package com.capricoinj.wallet;
 
-import com.fuelcoinj.core.Transaction;
-import com.fuelcoinj.core.Wallet;
+import com.capricoinj.core.Transaction;
+import com.capricoinj.core.Wallet;
 
 import java.util.List;
 

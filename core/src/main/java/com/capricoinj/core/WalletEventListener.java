@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.core;
+package com.capricoinj.core;
 
-import com.fuelcoinj.script.Script;
-import com.fuelcoinj.wallet.KeyChainEventListener;
+import com.capricoinj.script.Script;
+import com.capricoinj.wallet.KeyChainEventListener;
 
 import java.util.List;
 
@@ -31,7 +31,7 @@ public interface WalletEventListener extends KeyChainEventListener {
      * was broadcast across the network or because a block was received. If a transaction is seen when it was broadcast,
      * onCoinsReceived won't be called again when a block containing it is received. If you want to know when such a
      * transaction receives its first confirmation, register a {@link TransactionConfidence} event listener using
-     * the object retrieved via {@link com.fuelcoinj.core.Transaction#getConfidence()}. It's safe to modify the
+     * the object retrieved via {@link com.capricoinj.core.Transaction#getConfidence()}. It's safe to modify the
      * wallet in this callback, for example, by spending the transaction just received.
      *
      * @param wallet      The wallet object that received the coins

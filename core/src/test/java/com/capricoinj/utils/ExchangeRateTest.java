@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.utils;
+package com.capricoinj.utils;
 
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-import com.fuelcoinj.core.Coin;
-import com.fuelcoinj.utils.ExchangeRate;
-import com.fuelcoinj.utils.Fiat;
+import com.capricoinj.core.Coin;
+import com.capricoinj.utils.ExchangeRate;
+import com.capricoinj.utils.Fiat;
 
 public class ExchangeRateTest {
 

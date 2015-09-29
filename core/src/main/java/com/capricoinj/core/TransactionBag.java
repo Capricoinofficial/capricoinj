@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.core;
+package com.capricoinj.core;
 
-import com.fuelcoinj.script.Script;
-import com.fuelcoinj.wallet.WalletTransaction;
+import com.capricoinj.script.Script;
+import com.capricoinj.wallet.WalletTransaction;
 
 import java.util.Map;
 
 /**
- * This interface is used to abstract the {@link com.fuelcoinj.core.Wallet} and the {@link com.fuelcoinj.core.Transaction}
+ * This interface is used to abstract the {@link com.capricoinj.core.Wallet} and the {@link com.capricoinj.core.Transaction}
  */
 public interface TransactionBag {
     /** Returns true if this wallet contains a public key which hashes to the given hash. */

@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.core;
+package com.capricoinj.core;
 
-import com.fuelcoinj.script.Script;
-import com.fuelcoinj.wallet.KeyBag;
-import com.fuelcoinj.wallet.RedeemData;
+import com.capricoinj.script.Script;
+import com.capricoinj.wallet.KeyBag;
+import com.capricoinj.wallet.RedeemData;
 
 import javax.annotation.Nullable;
 
@@ -137,7 +137,7 @@ public class TransactionOutPoint extends ChildMessage implements Serializable {
 
     /**
      * Returns the ECKey identified in the connected output, for either pay-to-address scripts or pay-to-key scripts.
-     * For P2SH scripts you can use {@link #getConnectedRedeemData(com.fuelcoinj.wallet.KeyBag)} and then get the
+     * For P2SH scripts you can use {@link #getConnectedRedeemData(com.capricoinj.wallet.KeyBag)} and then get the
      * key from RedeemData.
      * If the script form cannot be understood, throws ScriptException.
      *

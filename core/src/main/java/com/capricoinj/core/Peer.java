@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.core;
+package com.capricoinj.core;
 
-import com.fuelcoinj.net.AbstractTimeoutHandler;
-import com.fuelcoinj.store.BlockStore;
-import com.fuelcoinj.store.BlockStoreException;
-import com.fuelcoinj.utils.ListenerRegistration;
-import com.fuelcoinj.utils.Threading;
+import com.capricoinj.net.AbstractTimeoutHandler;
+import com.capricoinj.store.BlockStore;
+import com.capricoinj.store.BlockStoreException;
+import com.capricoinj.utils.ListenerRegistration;
+import com.capricoinj.utils.Threading;
 import com.google.common.base.Objects;
 import com.google.common.base.Preconditions;
 
@@ -49,12 +49,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * <p>A Peer handles the high level communication with a fuelcoin node, extending a {@link PeerSocketHandler} which
+ * <p>A Peer handles the high level communication with a capricoin node, extending a {@link PeerSocketHandler} which
  * handles low-level message (de)serialization.</p>
  *
  * <p>Note that timeouts are handled by the extended
- * {@link com.fuelcoinj.net.AbstractTimeoutHandler} and timeout is automatically disabled (using
- * {@link com.fuelcoinj.net.AbstractTimeoutHandler#setTimeoutEnabled(boolean)}) once the version
+ * {@link com.capricoinj.net.AbstractTimeoutHandler} and timeout is automatically disabled (using
+ * {@link com.capricoinj.net.AbstractTimeoutHandler#setTimeoutEnabled(boolean)}) once the version
  * handshake completes.</p>
  */
 public class Peer extends PeerSocketHandler {
@@ -137,7 +137,7 @@ public class Peer extends PeerSocketHandler {
         Sha256Hash hash;
         SettableFuture future;
         // If the peer does not support the notfound message, we'll use ping/pong messages to simulate it. This is
-        // a nasty hack that relies on the fact that fuelcoin-qt is single threaded and processes messages in order.
+        // a nasty hack that relies on the fact that capricoin-qt is single threaded and processes messages in order.
         // The nonce field records which pong should clear this request as "not found".
         long nonce;
     }
@@ -162,9 +162,9 @@ public class Peer extends PeerSocketHandler {
      *
      * <p>Note that this does <b>NOT</b> make a connection to the given remoteAddress, it only creates a handler for a
      * connection. If you want to create a one-off connection, create a Peer and pass it to
-     * {@link com.fuelcoinj.net.NioClientManager#openConnection(java.net.SocketAddress, com.fuelcoinj.net.StreamParser)}
+     * {@link com.capricoinj.net.NioClientManager#openConnection(java.net.SocketAddress, com.capricoinj.net.StreamParser)}
      * or
-     * {@link com.fuelcoinj.net.NioClient#NioClient(java.net.SocketAddress, com.fuelcoinj.net.StreamParser, int)}.</p>
+     * {@link com.capricoinj.net.NioClient#NioClient(java.net.SocketAddress, com.capricoinj.net.StreamParser, int)}.</p>
      *
      * <p>The remoteAddress provided should match the remote address of the peer which is being connected to, and is
      * used to keep track of which peers relayed transactions and offer more descriptive logging.</p>
@@ -180,9 +180,9 @@ public class Peer extends PeerSocketHandler {
      *
      * <p>Note that this does <b>NOT</b> make a connection to the given remoteAddress, it only creates a handler for a
      * connection. If you want to create a one-off connection, create a Peer and pass it to
-     * {@link com.fuelcoinj.net.NioClientManager#openConnection(java.net.SocketAddress, com.fuelcoinj.net.StreamParser)}
+     * {@link com.capricoinj.net.NioClientManager#openConnection(java.net.SocketAddress, com.capricoinj.net.StreamParser)}
      * or
-     * {@link com.fuelcoinj.net.NioClient#NioClient(java.net.SocketAddress, com.fuelcoinj.net.StreamParser, int)}.</p>
+     * {@link com.capricoinj.net.NioClient#NioClient(java.net.SocketAddress, com.capricoinj.net.StreamParser, int)}.</p>
      *
      * <p>The remoteAddress provided should match the remote address of the peer which is being connected to, and is
      * used to keep track of which peers relayed transactions and offer more descriptive logging.</p>
@@ -204,9 +204,9 @@ public class Peer extends PeerSocketHandler {
      *
      * <p>Note that this does <b>NOT</b> make a connection to the given remoteAddress, it only creates a handler for a
      * connection. If you want to create a one-off connection, create a Peer and pass it to
-     * {@link com.fuelcoinj.net.NioClientManager#openConnection(java.net.SocketAddress, com.fuelcoinj.net.StreamParser)}
+     * {@link com.capricoinj.net.NioClientManager#openConnection(java.net.SocketAddress, com.capricoinj.net.StreamParser)}
      * or
-     * {@link com.fuelcoinj.net.NioClient#NioClient(java.net.SocketAddress, com.fuelcoinj.net.StreamParser, int)}.</p>
+     * {@link com.capricoinj.net.NioClient#NioClient(java.net.SocketAddress, com.capricoinj.net.StreamParser, int)}.</p>
      *
      * <p>The remoteAddress provided should match the remote address of the peer which is being connected to, and is
      * used to keep track of which peers relayed transactions and offer more descriptive logging.</p>
@@ -237,9 +237,9 @@ public class Peer extends PeerSocketHandler {
      *
      * <p>Note that this does <b>NOT</b> make a connection to the given remoteAddress, it only creates a handler for a
      * connection. If you want to create a one-off connection, create a Peer and pass it to
-     * {@link com.fuelcoinj.net.NioClientManager#openConnection(java.net.SocketAddress, com.fuelcoinj.net.StreamParser)}
+     * {@link com.capricoinj.net.NioClientManager#openConnection(java.net.SocketAddress, com.capricoinj.net.StreamParser)}
      * or
-     * {@link com.fuelcoinj.net.NioClient#NioClient(java.net.SocketAddress, com.fuelcoinj.net.StreamParser, int)}.</p>
+     * {@link com.capricoinj.net.NioClient#NioClient(java.net.SocketAddress, com.capricoinj.net.StreamParser, int)}.</p>
      *
      * <p>The remoteAddress provided should match the remote address of the peer which is being connected to, and is
      * used to keep track of which peers relayed transactions and offer more descriptive logging.</p>
@@ -1228,7 +1228,7 @@ public class Peer extends PeerSocketHandler {
      * @param secondsSinceEpoch Time in seconds since the epoch or 0 to reset to always downloading block bodies.
      */
     public void setDownloadParameters(long secondsSinceEpoch, boolean useFilteredBlocks) {
-    	// For fuelcoin we cannot use filtered blocks until the protocol has been upgraded
+    	// For capricoin we cannot use filtered blocks until the protocol has been upgraded
         lock.lock();
         try {
             Preconditions.checkNotNull(blockChain);
@@ -1485,7 +1485,7 @@ public class Peer extends PeerSocketHandler {
     /**
      * Sends the peer a ping message and returns a future that will be invoked when the pong is received back.
      * The future provides a number which is the number of milliseconds elapsed between the ping and the pong.
-     * Once the pong is received the value returned by {@link com.fuelcoinj.core.Peer#getLastPingTime()} is
+     * Once the pong is received the value returned by {@link com.capricoinj.core.Peer#getLastPingTime()} is
      * updated.
      * @throws ProtocolException if the peer version is too low to support measurable pings.
      */
@@ -1504,7 +1504,7 @@ public class Peer extends PeerSocketHandler {
     }
 
     /**
-     * Returns the elapsed time of the last ping/pong cycle. If {@link com.fuelcoinj.core.Peer#ping()} has never
+     * Returns the elapsed time of the last ping/pong cycle. If {@link com.capricoinj.core.Peer#ping()} has never
      * been called or we did not hear back the "pong" message yet, returns {@link Long#MAX_VALUE}.
      */
     public long getLastPingTime() {
@@ -1519,7 +1519,7 @@ public class Peer extends PeerSocketHandler {
     }
 
     /**
-     * Returns a moving average of the last N ping/pong cycles. If {@link com.fuelcoinj.core.Peer#ping()} has never
+     * Returns a moving average of the last N ping/pong cycles. If {@link com.capricoinj.core.Peer#ping()} has never
      * been called or we did not hear back the "pong" message yet, returns {@link Long#MAX_VALUE}. The moving average
      * window is 5 buckets.
      */

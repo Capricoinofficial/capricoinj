@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.testing;
+package com.capricoinj.testing;
 
-import com.fuelcoinj.core.Transaction;
-import com.fuelcoinj.core.TransactionBroadcaster;
-import com.fuelcoinj.core.VerificationException;
-import com.fuelcoinj.core.Wallet;
-import com.fuelcoinj.utils.Threading;
+import com.capricoinj.core.Transaction;
+import com.capricoinj.core.TransactionBroadcaster;
+import com.capricoinj.core.VerificationException;
+import com.capricoinj.core.Wallet;
+import com.capricoinj.utils.Threading;
 import com.google.common.util.concurrent.FutureCallback;
 import com.google.common.util.concurrent.Futures;
 import com.google.common.util.concurrent.SettableFuture;

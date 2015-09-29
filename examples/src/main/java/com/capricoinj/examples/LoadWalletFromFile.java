@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package com.fuelcoin.examples;
+package com.capricoinj.examples;
 
-import com.fuelcoinj.core.Wallet;
+import com.capricoinj.core.Wallet;
 
 import java.io.File;
 
 /**
  * LoadWalletFromFile loads a serialized wallet and prints information about what it contains.
  */
-//WARNING THIS HAS NOT BEEN SETUP OR TESTED WITH FUELCOIN
+//WARNING THIS HAS NOT BEEN SETUP OR TESTED WITH CAPRICOIN
 public class LoadWalletFromFile {
     public static void main(String[] args) throws Exception {
         if (args.length != 1) {

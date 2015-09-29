@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.utils;
+package com.capricoinj.utils;
 
 import static com.google.common.base.Preconditions.checkArgument;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
 
-import com.fuelcoinj.core.Monetary;
+import com.capricoinj.core.Monetary;
 import com.google.common.math.LongMath;
 
 /**

@@ -15,20 +15,20 @@
  */
 
 
-package com.fuelcoinj.core;
+package com.capricoinj.core;
 
-import com.fuelcoinj.crypto.DRMWorkaround;
-import com.fuelcoinj.net.BlockingClientManager;
-import com.fuelcoinj.net.ClientConnectionManager;
-import com.fuelcoinj.net.FilterMerger;
-import com.fuelcoinj.net.NioClientManager;
-import com.fuelcoinj.net.discovery.PeerDiscovery;
-import com.fuelcoinj.net.discovery.PeerDiscoveryException;
-import com.fuelcoinj.net.discovery.TorDiscovery;
-import com.fuelcoinj.script.Script;
-import com.fuelcoinj.utils.ExponentialBackoff;
-import com.fuelcoinj.utils.ListenerRegistration;
-import com.fuelcoinj.utils.Threading;
+import com.capricoinj.crypto.DRMWorkaround;
+import com.capricoinj.net.BlockingClientManager;
+import com.capricoinj.net.ClientConnectionManager;
+import com.capricoinj.net.FilterMerger;
+import com.capricoinj.net.NioClientManager;
+import com.capricoinj.net.discovery.PeerDiscovery;
+import com.capricoinj.net.discovery.PeerDiscoveryException;
+import com.capricoinj.net.discovery.TorDiscovery;
+import com.capricoinj.script.Script;
+import com.capricoinj.utils.ExponentialBackoff;
+import com.capricoinj.utils.ListenerRegistration;
+import com.capricoinj.utils.Threading;
 import com.google.common.annotations.VisibleForTesting;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.ImmutableList;
@@ -1081,7 +1081,7 @@ public class PeerGroup extends AbstractExecutionThreadService implements Transac
      * 
      * @param address destination IP and port.
      * @return The newly created Peer object or null if the peer could not be connected.
-     *         Use {@link com.fuelcoinj.core.Peer#getConnectionOpenFuture()} if you
+     *         Use {@link com.capricoinj.core.Peer#getConnectionOpenFuture()} if you
      *         want a future which completes when the connection is open.
      */
     @Nullable
@@ -1462,7 +1462,7 @@ public class PeerGroup extends AbstractExecutionThreadService implements Transac
 
     /**
      * Returns a future that is triggered when the number of connected peers is equal to the given number of connected
-     * peers. By using this with {@link com.fuelcoinj.core.PeerGroup#getMaxConnections()} you can wait until the
+     * peers. By using this with {@link com.capricoinj.core.PeerGroup#getMaxConnections()} you can wait until the
      * network is fully online. To block immediately, just call get() on the result.
      *
      * @param numPeers How many peers to wait for.
@@ -1519,7 +1519,7 @@ public class PeerGroup extends AbstractExecutionThreadService implements Transac
      * enough, {@link PeerGroup#broadcastTransaction(Transaction)} will wait until the minimum number is reached so
      * propagation across the network can be observed. If no value has been set using
      * {@link PeerGroup#setMinBroadcastConnections(int)} a default of half of whatever
-     * {@link com.fuelcoinj.core.PeerGroup#getMaxConnections()} returns is used.
+     * {@link com.capricoinj.core.PeerGroup#getMaxConnections()} returns is used.
      */
     public int getMinBroadcastConnections() {
         lock.lock();
@@ -1538,7 +1538,7 @@ public class PeerGroup extends AbstractExecutionThreadService implements Transac
     }
 
     /**
-     * See {@link com.fuelcoinj.core.PeerGroup#getMinBroadcastConnections()}.
+     * See {@link com.capricoinj.core.PeerGroup#getMinBroadcastConnections()}.
      */
     public void setMinBroadcastConnections(int value) {
         lock.lock();
@@ -1621,7 +1621,7 @@ public class PeerGroup extends AbstractExecutionThreadService implements Transac
 
     /**
      * Returns the period between pings for an individual peer. Setting this lower means more accurate and timely ping
-     * times are available via {@link com.fuelcoinj.core.Peer#getLastPingTime()} but it increases load on the
+     * times are available via {@link com.capricoinj.core.Peer#getLastPingTime()} but it increases load on the
      * remote node. It defaults to 5000.
      */
     public long getPingIntervalMsec() {
@@ -1635,10 +1635,10 @@ public class PeerGroup extends AbstractExecutionThreadService implements Transac
 
     /**
      * Sets the period between pings for an individual peer. Setting this lower means more accurate and timely ping
-     * times are available via {@link com.fuelcoinj.core.Peer#getLastPingTime()} but it increases load on the
+     * times are available via {@link com.capricoinj.core.Peer#getLastPingTime()} but it increases load on the
      * remote node. It defaults to {@link PeerGroup#DEFAULT_PING_INTERVAL_MSEC}.
      * Setting the value to be <= 0 disables pinging entirely, although you can still request one yourself
-     * using {@link com.fuelcoinj.core.Peer#ping()}.
+     * using {@link com.capricoinj.core.Peer#ping()}.
      */
     public void setPingIntervalMsec(long pingIntervalMsec) {
         lock.lock();

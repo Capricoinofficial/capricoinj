@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.script;
+package com.capricoinj.script;
 
-import com.fuelcoinj.core.Address;
-import com.fuelcoinj.core.ECKey;
-import com.fuelcoinj.core.Utils;
-import com.fuelcoinj.crypto.TransactionSignature;
+import com.capricoinj.core.Address;
+import com.capricoinj.core.ECKey;
+import com.capricoinj.core.Utils;
+import com.capricoinj.crypto.TransactionSignature;
 import com.google.common.collect.Lists;
 
 import javax.annotation.Nullable;
@@ -29,13 +29,13 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-import static com.fuelcoinj.script.ScriptOpCodes.*;
+import static com.capricoinj.script.ScriptOpCodes.*;
 import static com.google.common.base.Preconditions.checkArgument;
 import static com.google.common.base.Preconditions.checkState;
 
 /**
  * <p>Tools for the construction of commonly used script types. You don't normally need this as it's hidden behind
- * convenience methods on {@link com.fuelcoinj.core.Transaction}, but they are useful when working with the
+ * convenience methods on {@link com.capricoinj.core.Transaction}, but they are useful when working with the
  * protocol at a lower level.</p>
  */
 public class ScriptBuilder {

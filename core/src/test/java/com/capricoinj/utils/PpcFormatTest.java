@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.utils;
+package com.capricoinj.utils;
 
-import com.fuelcoinj.core.Coin;
-import com.fuelcoinj.utils.PpcAutoFormat;
-import com.fuelcoinj.utils.PpcFixedFormat;
-import com.fuelcoinj.utils.PpcFormat;
+import com.capricoinj.core.Coin;
+import com.capricoinj.utils.PpcAutoFormat;
+import com.capricoinj.utils.PpcFixedFormat;
+import com.capricoinj.utils.PpcFormat;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -33,12 +33,12 @@ import java.util.HashSet;
 import java.util.Locale;
 import java.util.Set;
 
-import static com.fuelcoinj.core.Coin.*;
-import static com.fuelcoinj.core.NetworkParameters.MAX_MONEY;
-import static com.fuelcoinj.utils.PpcAutoFormat.Style.CODE;
-import static com.fuelcoinj.utils.PpcAutoFormat.Style.SYMBOL;
-import static com.fuelcoinj.utils.PpcFixedFormat.REPEATING_DOUBLETS;
-import static com.fuelcoinj.utils.PpcFixedFormat.REPEATING_TRIPLETS;
+import static com.capricoinj.core.Coin.*;
+import static com.capricoinj.core.NetworkParameters.MAX_MONEY;
+import static com.capricoinj.utils.PpcAutoFormat.Style.CODE;
+import static com.capricoinj.utils.PpcAutoFormat.Style.SYMBOL;
+import static com.capricoinj.utils.PpcFixedFormat.REPEATING_DOUBLETS;
+import static com.capricoinj.utils.PpcFixedFormat.REPEATING_TRIPLETS;
 import static java.text.NumberFormat.Field.DECIMAL_SEPARATOR;
 import static java.util.Locale.*;
 import static org.junit.Assert.*;

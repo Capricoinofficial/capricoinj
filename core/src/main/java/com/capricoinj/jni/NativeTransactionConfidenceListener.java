@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.jni;
+package com.capricoinj.jni;
 
-import com.fuelcoinj.core.Transaction;
-import com.fuelcoinj.core.TransactionConfidence;
+import com.capricoinj.core.Transaction;
+import com.capricoinj.core.TransactionConfidence;
 
 /**
  * An event listener that relays events to a native C++ object. A pointer to that object is stored in

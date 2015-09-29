@@ -14,17 +14,17 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.core;
+package com.capricoinj.core;
 
-import com.fuelcoinj.core.PeerAddress;
-import com.fuelcoinj.core.Utils;
-import com.fuelcoinj.params.MainNetParams;
+import com.capricoinj.core.PeerAddress;
+import com.capricoinj.core.Utils;
+import com.capricoinj.params.MainNetParams;
 
 import org.junit.Test;
 
 import java.net.InetAddress;
 
-import static com.fuelcoinj.core.Utils.HEX;
+import static com.capricoinj.core.Utils.HEX;
 import static org.junit.Assert.assertEquals;
 
 public class PeerAddressTest

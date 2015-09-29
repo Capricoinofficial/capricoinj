@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.protocols.payments;
+package com.capricoinj.protocols.payments;
 
 import java.security.cert.X509Certificate;
 import java.util.List;

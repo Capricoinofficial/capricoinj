@@ -15,21 +15,21 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.crypto;
+package com.capricoinj.crypto;
 
-import com.fuelcoinj.core.ECKey;
-import com.fuelcoinj.core.Sha256Hash;
-import com.fuelcoinj.crypto.ChildNumber;
-import com.fuelcoinj.crypto.DeterministicKey;
-import com.fuelcoinj.crypto.HDKeyDerivation;
-import com.fuelcoinj.crypto.HDUtils;
-import com.fuelcoinj.crypto.KeyCrypter;
-import com.fuelcoinj.crypto.KeyCrypterScrypt;
+import com.capricoinj.core.ECKey;
+import com.capricoinj.core.Sha256Hash;
+import com.capricoinj.crypto.ChildNumber;
+import com.capricoinj.crypto.DeterministicKey;
+import com.capricoinj.crypto.HDKeyDerivation;
+import com.capricoinj.crypto.HDUtils;
+import com.capricoinj.crypto.KeyCrypter;
+import com.capricoinj.crypto.KeyCrypterScrypt;
 
 import org.junit.Test;
 import org.spongycastle.crypto.params.KeyParameter;
 
-import static com.fuelcoinj.core.Utils.HEX;
+import static com.capricoinj.core.Utils.HEX;
 import static org.junit.Assert.*;
 
 /**

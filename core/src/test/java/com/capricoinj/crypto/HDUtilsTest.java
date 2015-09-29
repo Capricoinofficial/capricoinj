@@ -15,16 +15,16 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.crypto;
+package com.capricoinj.crypto;
 
-import com.fuelcoinj.crypto.ChildNumber;
-import com.fuelcoinj.crypto.HDUtils;
+import com.capricoinj.crypto.ChildNumber;
+import com.capricoinj.crypto.HDUtils;
 import com.google.common.collect.ImmutableList;
 
 import org.junit.Assert;
 import org.junit.Test;
 
-import static com.fuelcoinj.core.Utils.HEX;
+import static com.capricoinj.core.Utils.HEX;
 
 import java.util.List;
 

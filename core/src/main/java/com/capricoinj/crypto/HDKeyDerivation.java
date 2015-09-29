@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.crypto;
+package com.capricoinj.crypto;
 
-import com.fuelcoinj.core.ECKey;
-import com.fuelcoinj.core.Utils;
+import com.capricoinj.core.ECKey;
+import com.capricoinj.core.Utils;
 import com.google.common.collect.ImmutableList;
 
 import org.spongycastle.crypto.macs.HMac;

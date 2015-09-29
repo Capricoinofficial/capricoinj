@@ -15,27 +15,27 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.core;
+package com.capricoinj.core;
 
-import com.fuelcoinj.core.TransactionConfidence.ConfidenceType;
-import com.fuelcoinj.crypto.*;
-import com.fuelcoinj.params.UnitTestParams;
-import com.fuelcoinj.protocols.payments.Protos.PaymentDetails;
-import com.fuelcoinj.script.Script;
-import com.fuelcoinj.script.ScriptBuilder;
-import com.fuelcoinj.script.ScriptChunk;
-import com.fuelcoinj.signers.LocalTransactionSigner;
-import com.fuelcoinj.signers.MissingSigResolutionSigner;
-import com.fuelcoinj.signers.TransactionSigner;
-import com.fuelcoinj.store.UnreadableWalletException;
-import com.fuelcoinj.store.WalletProtobufSerializer;
-import com.fuelcoinj.utils.BaseTaggableObject;
-import com.fuelcoinj.utils.ExchangeRate;
-import com.fuelcoinj.utils.ListenerRegistration;
-import com.fuelcoinj.utils.Threading;
-import com.fuelcoinj.wallet.*;
-import com.fuelcoinj.wallet.Protos.Wallet.EncryptionType;
-import com.fuelcoinj.wallet.WalletTransaction.Pool;
+import com.capricoinj.core.TransactionConfidence.ConfidenceType;
+import com.capricoinj.crypto.*;
+import com.capricoinj.params.UnitTestParams;
+import com.capricoinj.protocols.payments.Protos.PaymentDetails;
+import com.capricoinj.script.Script;
+import com.capricoinj.script.ScriptBuilder;
+import com.capricoinj.script.ScriptChunk;
+import com.capricoinj.signers.LocalTransactionSigner;
+import com.capricoinj.signers.MissingSigResolutionSigner;
+import com.capricoinj.signers.TransactionSigner;
+import com.capricoinj.store.UnreadableWalletException;
+import com.capricoinj.store.WalletProtobufSerializer;
+import com.capricoinj.utils.BaseTaggableObject;
+import com.capricoinj.utils.ExchangeRate;
+import com.capricoinj.utils.ListenerRegistration;
+import com.capricoinj.utils.Threading;
+import com.capricoinj.wallet.*;
+import com.capricoinj.wallet.Protos.Wallet.EncryptionType;
+import com.capricoinj.wallet.WalletTransaction.Pool;
 import com.google.common.annotations.VisibleForTesting;
 import com.google.common.base.Objects;
 import com.google.common.base.Objects.ToStringHelper;
@@ -103,7 +103,7 @@ import static com.google.common.base.Preconditions.*;
  * that simplifies this for you although you're still responsible for manually triggering a save when your app is about
  * to quit because the auto-save feature waits a moment before actually committing to disk to avoid IO thrashing when
  * the wallet is changing very fast (eg due to a block chain sync). See
- * {@link Wallet#autosaveToFile(java.io.File, long, java.util.concurrent.TimeUnit, com.fuelcoinj.wallet.WalletFiles.Listener)}
+ * {@link Wallet#autosaveToFile(java.io.File, long, java.util.concurrent.TimeUnit, com.capricoinj.wallet.WalletFiles.Listener)}
  * for more information about this.</p>
  */
 public class Wallet extends BaseTaggableObject implements Serializable, BlockChainListener, PeerFilterProvider, KeyBag, TransactionBag {
@@ -346,7 +346,7 @@ public class Wallet extends BaseTaggableObject implements Serializable, BlockCha
     /**
      * Returns a key that hasn't been seen in a transaction yet, and which is suitable for displaying in a wallet
      * user interface as "a convenient key to receive funds on" when the purpose parameter is
-     * {@link com.fuelcoinj.wallet.KeyChain.KeyPurpose#RECEIVE_FUNDS}. The returned key is stable until
+     * {@link com.capricoinj.wallet.KeyChain.KeyPurpose#RECEIVE_FUNDS}. The returned key is stable until
      * it's actually seen in a pending or confirmed transaction, at which point this method will start returning
      * a different key (for each purpose independently).
      */
@@ -361,15 +361,15 @@ public class Wallet extends BaseTaggableObject implements Serializable, BlockCha
     }
 
     /**
-     * An alias for calling {@link #currentKey(com.fuelcoinj.wallet.KeyChain.KeyPurpose)} with
-     * {@link com.fuelcoinj.wallet.KeyChain.KeyPurpose#RECEIVE_FUNDS} as the parameter.
+     * An alias for calling {@link #currentKey(com.capricoinj.wallet.KeyChain.KeyPurpose)} with
+     * {@link com.capricoinj.wallet.KeyChain.KeyPurpose#RECEIVE_FUNDS} as the parameter.
      */
     public DeterministicKey currentReceiveKey() {
         return currentKey(KeyChain.KeyPurpose.RECEIVE_FUNDS);
     }
 
     /**
-     * Returns address for a {@link #currentKey(com.fuelcoinj.wallet.KeyChain.KeyPurpose)}
+     * Returns address for a {@link #currentKey(com.capricoinj.wallet.KeyChain.KeyPurpose)}
      */
     public Address currentAddress(KeyChain.KeyPurpose purpose) {
         keychainLock.lock();
@@ -382,8 +382,8 @@ public class Wallet extends BaseTaggableObject implements Serializable, BlockCha
     }
 
     /**
-     * An alias for calling {@link #currentAddress(com.fuelcoinj.wallet.KeyChain.KeyPurpose)} with
-     * {@link com.fuelcoinj.wallet.KeyChain.KeyPurpose#RECEIVE_FUNDS} as the parameter.
+     * An alias for calling {@link #currentAddress(com.capricoinj.wallet.KeyChain.KeyPurpose)} with
+     * {@link com.capricoinj.wallet.KeyChain.KeyPurpose#RECEIVE_FUNDS} as the parameter.
      */
     public Address currentReceiveAddress() {
         return currentAddress(KeyChain.KeyPurpose.RECEIVE_FUNDS);
@@ -392,8 +392,8 @@ public class Wallet extends BaseTaggableObject implements Serializable, BlockCha
     /**
      * Returns a key that has not been returned by this method before (fresh). You can think of this as being
      * a newly created key, although the notion of "create" is not really valid for a
-     * {@link com.fuelcoinj.wallet.DeterministicKeyChain}. When the parameter is
-     * {@link com.fuelcoinj.wallet.KeyChain.KeyPurpose#RECEIVE_FUNDS} the returned key is suitable for being put
+     * {@link com.capricoinj.wallet.DeterministicKeyChain}. When the parameter is
+     * {@link com.capricoinj.wallet.KeyChain.KeyPurpose#RECEIVE_FUNDS} the returned key is suitable for being put
      * into a receive coins wizard type UI. You should use this when the user is definitely going to hand this key out
      * to someone who wishes to send money.
      */
@@ -404,8 +404,8 @@ public class Wallet extends BaseTaggableObject implements Serializable, BlockCha
     /**
      * Returns a key/s that has not been returned by this method before (fresh). You can think of this as being
      * a newly created key/s, although the notion of "create" is not really valid for a
-     * {@link com.fuelcoinj.wallet.DeterministicKeyChain}. When the parameter is
-     * {@link com.fuelcoinj.wallet.KeyChain.KeyPurpose#RECEIVE_FUNDS} the returned key is suitable for being put
+     * {@link com.capricoinj.wallet.DeterministicKeyChain}. When the parameter is
+     * {@link com.capricoinj.wallet.KeyChain.KeyPurpose#RECEIVE_FUNDS} the returned key is suitable for being put
      * into a receive coins wizard type UI. You should use this when the user is definitely going to hand this key/s out
      * to someone who wishes to send money.
      */
@@ -425,15 +425,15 @@ public class Wallet extends BaseTaggableObject implements Serializable, BlockCha
     }
 
     /**
-     * An alias for calling {@link #freshKey(com.fuelcoinj.wallet.KeyChain.KeyPurpose)} with
-     * {@link com.fuelcoinj.wallet.KeyChain.KeyPurpose#RECEIVE_FUNDS} as the parameter.
+     * An alias for calling {@link #freshKey(com.capricoinj.wallet.KeyChain.KeyPurpose)} with
+     * {@link com.capricoinj.wallet.KeyChain.KeyPurpose#RECEIVE_FUNDS} as the parameter.
      */
     public DeterministicKey freshReceiveKey() {
         return freshKey(KeyChain.KeyPurpose.RECEIVE_FUNDS);
     }
 
     /**
-     * Returns address for a {@link #freshKey(com.fuelcoinj.wallet.KeyChain.KeyPurpose)}
+     * Returns address for a {@link #freshKey(com.capricoinj.wallet.KeyChain.KeyPurpose)}
      */
     public Address freshAddress(KeyChain.KeyPurpose purpose) {
         Address key;
@@ -448,8 +448,8 @@ public class Wallet extends BaseTaggableObject implements Serializable, BlockCha
     }
 
     /**
-     * An alias for calling {@link #freshAddress(com.fuelcoinj.wallet.KeyChain.KeyPurpose)} with
-     * {@link com.fuelcoinj.wallet.KeyChain.KeyPurpose#RECEIVE_FUNDS} as the parameter.
+     * An alias for calling {@link #freshAddress(com.capricoinj.wallet.KeyChain.KeyPurpose)} with
+     * {@link com.capricoinj.wallet.KeyChain.KeyPurpose#RECEIVE_FUNDS} as the parameter.
      */
     public Address freshReceiveAddress() {
         return freshAddress(KeyChain.KeyPurpose.RECEIVE_FUNDS);
@@ -589,7 +589,7 @@ public class Wallet extends BaseTaggableObject implements Serializable, BlockCha
 
     /**
      * Imports the given keys to the wallet.
-     * If {@link Wallet#autosaveToFile(java.io.File, long, java.util.concurrent.TimeUnit, com.fuelcoinj.wallet.WalletFiles.Listener)}
+     * If {@link Wallet#autosaveToFile(java.io.File, long, java.util.concurrent.TimeUnit, com.capricoinj.wallet.WalletFiles.Listener)}
      * has been called, triggers an auto save bypassing the normal coalescing delay and event handlers.
      * Returns the number of keys added, after duplicates are ignored. The onKeyAdded event will be called for each key
      * in the list that was not already present.
@@ -666,7 +666,7 @@ public class Wallet extends BaseTaggableObject implements Serializable, BlockCha
         }
     }
 
-    /** See {@link com.fuelcoinj.wallet.DeterministicKeyChain#setLookaheadSize(int)} for more info on this. */
+    /** See {@link com.capricoinj.wallet.DeterministicKeyChain#setLookaheadSize(int)} for more info on this. */
     public void setKeychainLookaheadSize(int lookaheadSize) {
         keychainLock.lock();
         try {
@@ -676,7 +676,7 @@ public class Wallet extends BaseTaggableObject implements Serializable, BlockCha
         }
     }
 
-    /** See {@link com.fuelcoinj.wallet.DeterministicKeyChain#setLookaheadSize(int)} for more info on this. */
+    /** See {@link com.capricoinj.wallet.DeterministicKeyChain#setLookaheadSize(int)} for more info on this. */
     public int getKeychainLookaheadSize() {
         keychainLock.lock();
         try {
@@ -686,7 +686,7 @@ public class Wallet extends BaseTaggableObject implements Serializable, BlockCha
         }
     }
 
-    /** See {@link com.fuelcoinj.wallet.DeterministicKeyChain#setLookaheadThreshold(int)} for more info on this. */
+    /** See {@link com.capricoinj.wallet.DeterministicKeyChain#setLookaheadThreshold(int)} for more info on this. */
     public void setKeychainLookaheadThreshold(int num) {
         keychainLock.lock();
         try {
@@ -697,7 +697,7 @@ public class Wallet extends BaseTaggableObject implements Serializable, BlockCha
         }
     }
 
-    /** See {@link com.fuelcoinj.wallet.DeterministicKeyChain#setLookaheadThreshold(int)} for more info on this. */
+    /** See {@link com.capricoinj.wallet.DeterministicKeyChain#setLookaheadThreshold(int)} for more info on this. */
     public int getKeychainLookaheadThreshold() {
         keychainLock.lock();
         try {
@@ -895,7 +895,7 @@ public class Wallet extends BaseTaggableObject implements Serializable, BlockCha
 
     /**
      * Marks all keys used in the transaction output as used in the wallet.
-     * See {@link com.fuelcoinj.wallet.DeterministicKeyChain#markKeyAsUsed(DeterministicKey)} for more info on this.
+     * See {@link com.capricoinj.wallet.DeterministicKeyChain#markKeyAsUsed(DeterministicKey)} for more info on this.
      */
     private void markKeysAsUsed(Transaction tx) {
         keychainLock.lock();
@@ -925,7 +925,7 @@ public class Wallet extends BaseTaggableObject implements Serializable, BlockCha
 
     /**
      * Returns the immutable seed for the current active HD chain.
-     * @throws com.fuelcoinj.core.ECKey.MissingPrivateKeyException if the seed is unavailable (watching wallet)
+     * @throws com.capricoinj.core.ECKey.MissingPrivateKeyException if the seed is unavailable (watching wallet)
      */
     public DeterministicSeed getKeyChainSeed() {
         keychainLock.lock();
@@ -954,7 +954,7 @@ public class Wallet extends BaseTaggableObject implements Serializable, BlockCha
     }
 
     /**
-     * Convenience wrapper around {@link Wallet#encrypt(com.fuelcoinj.crypto.KeyCrypter,
+     * Convenience wrapper around {@link Wallet#encrypt(com.capricoinj.crypto.KeyCrypter,
      * org.spongycastle.crypto.params.KeyParameter)} which uses the default Scrypt key derivation algorithm and
      * parameters to derive a key from the given password.
      */
@@ -971,7 +971,7 @@ public class Wallet extends BaseTaggableObject implements Serializable, BlockCha
 
     /**
      * Encrypt the wallet using the KeyCrypter and the AES key. A good default KeyCrypter to use is
-     * {@link com.fuelcoinj.crypto.KeyCrypterScrypt}.
+     * {@link com.capricoinj.crypto.KeyCrypterScrypt}.
      *
      * @param keyCrypter The KeyCrypter that specifies how to encrypt/ decrypt a key
      * @param aesKey AES key to use (normally created using KeyCrypter#deriveKey and cached as it is time consuming to create from a password)
@@ -1249,7 +1249,7 @@ public class Wallet extends BaseTaggableObject implements Serializable, BlockCha
     /**
      * <p>
      * Disables auto-saving, after it had been enabled with
-     * {@link Wallet#autosaveToFile(java.io.File, long, java.util.concurrent.TimeUnit, com.fuelcoinj.wallet.WalletFiles.Listener)}
+     * {@link Wallet#autosaveToFile(java.io.File, long, java.util.concurrent.TimeUnit, com.capricoinj.wallet.WalletFiles.Listener)}
      * before. This method blocks until finished.
      * </p>
      */
@@ -2522,7 +2522,7 @@ public class Wallet extends BaseTaggableObject implements Serializable, BlockCha
             StringBuilder builder = new StringBuilder();
             Coin estimatedBalance = getBalance(BalanceType.ESTIMATED);
             Coin availableBalance = getBalance(BalanceType.AVAILABLE);
-            builder.append(String.format("Wallet containing %s Fuel (available: %s Fuel) in:%n",
+            builder.append(String.format("Wallet containing %s CPC (available: %s CPC) in:%n",
                     estimatedBalance.toPlainString(), availableBalance.toPlainString()));
             builder.append(String.format("  %d pending transactions%n", pending.size()));
             builder.append(String.format("  %d unspent transactions%n", unspent.size()));
@@ -2622,7 +2622,7 @@ public class Wallet extends BaseTaggableObject implements Serializable, BlockCha
 
     /**
      * Returns the earliest creation time of keys or watched scripts in this wallet, in seconds since the epoch, ie the min
-     * of {@link com.fuelcoinj.core.ECKey#getCreationTimeSeconds()}. This can return zero if at least one key does
+     * of {@link com.capricoinj.core.ECKey#getCreationTimeSeconds()}. This can return zero if at least one key does
      * not have that data (was created before key timestamping was implemented). <p>
      *
      * This method is most often used in conjunction with {@link PeerGroup#setFastCatchupTimeSecs(long)} in order to
@@ -2879,7 +2879,7 @@ public class Wallet extends BaseTaggableObject implements Serializable, BlockCha
      * money to fail! Finally please be aware that any listeners on the future will run either on the calling thread
      * if it completes immediately, or eventually on a background thread if the balance is not yet at the right
      * level. If you do something that means you know the balance should be sufficient to trigger the future,
-     * you can use {@link com.fuelcoinj.utils.Threading#waitForUserCode()} to block until the future had a
+     * you can use {@link com.capricoinj.utils.Threading#waitForUserCode()} to block until the future had a
      * chance to be updated.</p>
      */
     public ListenableFuture<Coin> getBalanceFuture(final Coin value, final BalanceType type) {
@@ -2991,7 +2991,7 @@ public class Wallet extends BaseTaggableObject implements Serializable, BlockCha
 
         /**
          * When emptyWallet is set, all coins selected by the coin selector are sent to the first output in tx
-         * (its value is ignored and set to {@link com.fuelcoinj.core.Wallet#getBalance()} - the fees required
+         * (its value is ignored and set to {@link com.capricoinj.core.Wallet#getBalance()} - the fees required
          * for the transaction). Any additional outputs are removed.
          */
         public boolean emptyWallet = false;
@@ -3054,7 +3054,7 @@ public class Wallet extends BaseTaggableObject implements Serializable, BlockCha
         public KeyParameter aesKey = null;
 
         /**
-         * If not null, the {@link com.fuelcoinj.wallet.CoinSelector} to use instead of the wallets default. Coin selectors are
+         * If not null, the {@link com.capricoinj.wallet.CoinSelector} to use instead of the wallets default. Coin selectors are
          * responsible for choosing which transaction outputs (coins) in a wallet to use given the desired send value
          * amount.
          */
@@ -3522,7 +3522,7 @@ public class Wallet extends BaseTaggableObject implements Serializable, BlockCha
         int size = tx.peercoinSerialize().length;
         size += estimateBytesForSigning(coinSelection);
         
-        // FC2: Always add required fee
+        // CPC: Always add required fee
         if (baseFee.compareTo(Transaction.REFERENCE_DEFAULT_MIN_TX_FEE) < 0)
             baseFee = Transaction.REFERENCE_DEFAULT_MIN_TX_FEE;
         
@@ -4023,7 +4023,7 @@ public class Wallet extends BaseTaggableObject implements Serializable, BlockCha
 
             Coin fees = req.fee == null ? Transaction.REFERENCE_DEFAULT_MIN_TX_FEE : req.fee;
             
-            // FC2: We always include the required fee
+            // CPC: We always include the required fee
             if (fees.compareTo(Transaction.REFERENCE_DEFAULT_MIN_TX_FEE) < 0)
                 fees = Transaction.REFERENCE_DEFAULT_MIN_TX_FEE;
             
@@ -4059,7 +4059,7 @@ public class Wallet extends BaseTaggableObject implements Serializable, BlockCha
             if (additionalValueSelected != null)
                 change = change.add(additionalValueSelected);
 
-            // If change is < 0.01 FC2, we will need to discard the change
+            // If change is < 0.01 CPC, we will need to discard the change
             if (!change.equals(Coin.ZERO) && change.compareTo(Transaction.MIN_OUTPUT_VALUE) < 0) {
                 isCategory2 = true;
                 // Want change to go up to the minimum output amount
@@ -4208,7 +4208,7 @@ public class Wallet extends BaseTaggableObject implements Serializable, BlockCha
      * re-organisation of the wallet contents on the block chain. For instance, in future the wallet may choose to
      * optimise itself to reduce fees or improve privacy.</p>
      */
-    public void setTransactionBroadcaster(@Nullable com.fuelcoinj.core.TransactionBroadcaster broadcaster) {
+    public void setTransactionBroadcaster(@Nullable com.capricoinj.core.TransactionBroadcaster broadcaster) {
         Transaction[] toBroadcast = {};
         lock.lock();
         try {
@@ -4297,7 +4297,7 @@ public class Wallet extends BaseTaggableObject implements Serializable, BlockCha
      * @param aesKey the users password, if any.
      * @param signAndSend if true, send the transactions via the tx broadcaster and return them, if false just return them.
      * @return A list of transactions that the wallet just made/will make for internal maintenance. Might be empty.
-     * @throws com.fuelcoinj.wallet.DeterministicUpgradeRequiresPassword if key rotation requires the users password.
+     * @throws com.capricoinj.wallet.DeterministicUpgradeRequiresPassword if key rotation requires the users password.
      */
     public ListenableFuture<List<Transaction>> doMaintenance(@Nullable KeyParameter aesKey, boolean signAndSend) throws DeterministicUpgradeRequiresPassword {
         List<Transaction> txns;
@@ -4431,7 +4431,7 @@ public class Wallet extends BaseTaggableObject implements Serializable, BlockCha
 
     /**
      * Returns the wallet lock under which most operations happen. This is here to satisfy the
-     * {@link com.fuelcoinj.core.PeerFilterProvider} interface and generally should not be used directly by apps.
+     * {@link com.capricoinj.core.PeerFilterProvider} interface and generally should not be used directly by apps.
      * In particular, do <b>not</b> hold this lock if you're display a send confirm screen to the user or for any other
      * long length of time, as it may cause processing holdups elsewhere. Instead, for the "confirm payment screen"
      * use case you should complete a candidate transaction, present it to the user (e.g. for fee purposes) and then

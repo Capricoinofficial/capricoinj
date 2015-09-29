@@ -21,7 +21,7 @@
  * 
  */
 
-package com.fuelcoinj.crypto;
+package com.capricoinj.crypto;
 
 import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;

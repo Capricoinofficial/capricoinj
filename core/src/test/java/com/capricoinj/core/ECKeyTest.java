@@ -15,24 +15,24 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.core;
+package com.capricoinj.core;
 
-import com.fuelcoinj.core.Address;
-import com.fuelcoinj.core.DumpedPrivateKey;
-import com.fuelcoinj.core.ECKey;
-import com.fuelcoinj.core.NetworkParameters;
-import com.fuelcoinj.core.Sha256Hash;
-import com.fuelcoinj.core.Transaction;
-import com.fuelcoinj.core.Utils;
-import com.fuelcoinj.crypto.EncryptedData;
-import com.fuelcoinj.crypto.KeyCrypter;
-import com.fuelcoinj.crypto.KeyCrypterScrypt;
-import com.fuelcoinj.crypto.TransactionSignature;
-import com.fuelcoinj.params.MainNetParams;
-import com.fuelcoinj.params.UnitTestParams;
-import com.fuelcoinj.utils.BriefLogFormatter;
-import com.fuelcoinj.wallet.Protos;
-import com.fuelcoinj.wallet.Protos.ScryptParameters;
+import com.capricoinj.core.Address;
+import com.capricoinj.core.DumpedPrivateKey;
+import com.capricoinj.core.ECKey;
+import com.capricoinj.core.NetworkParameters;
+import com.capricoinj.core.Sha256Hash;
+import com.capricoinj.core.Transaction;
+import com.capricoinj.core.Utils;
+import com.capricoinj.crypto.EncryptedData;
+import com.capricoinj.crypto.KeyCrypter;
+import com.capricoinj.crypto.KeyCrypterScrypt;
+import com.capricoinj.crypto.TransactionSignature;
+import com.capricoinj.params.MainNetParams;
+import com.capricoinj.params.UnitTestParams;
+import com.capricoinj.utils.BriefLogFormatter;
+import com.capricoinj.wallet.Protos;
+import com.capricoinj.wallet.Protos.ScryptParameters;
 import com.google.common.collect.Lists;
 import com.google.common.util.concurrent.Futures;
 import com.google.common.util.concurrent.ListenableFuture;
@@ -56,8 +56,8 @@ import java.util.Random;
 import java.util.concurrent.Callable;
 import java.util.concurrent.Executors;
 
-import static com.fuelcoinj.core.Utils.HEX;
-import static com.fuelcoinj.core.Utils.reverseBytes;
+import static com.capricoinj.core.Utils.HEX;
+import static com.capricoinj.core.Utils.reverseBytes;
 import static com.google.common.base.Preconditions.checkNotNull;
 import static org.junit.Assert.*;
 

@@ -15,13 +15,13 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.core;
+package com.capricoinj.core;
 
-import com.fuelcoinj.script.Script;
-import com.fuelcoinj.script.Script.VerifyFlag;
-import com.fuelcoinj.store.BlockStoreException;
-import com.fuelcoinj.store.FullPrunedBlockStore;
-import com.fuelcoinj.store.ValidHashStore;
+import com.capricoinj.script.Script;
+import com.capricoinj.script.Script.VerifyFlag;
+import com.capricoinj.store.BlockStoreException;
+import com.capricoinj.store.FullPrunedBlockStore;
+import com.capricoinj.store.ValidHashStore;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

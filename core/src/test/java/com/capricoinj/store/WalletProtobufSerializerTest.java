@@ -15,24 +15,24 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.store;
+package com.capricoinj.store;
 
 
-import com.fuelcoinj.core.*;
-import com.fuelcoinj.core.TransactionConfidence.ConfidenceType;
-import com.fuelcoinj.crypto.DeterministicKey;
-import com.fuelcoinj.params.MainNetParams;
-import com.fuelcoinj.params.UnitTestParams;
-import com.fuelcoinj.script.ScriptBuilder;
-import com.fuelcoinj.store.MemoryBlockStore;
-import com.fuelcoinj.store.UnreadableWalletException;
-import com.fuelcoinj.store.WalletProtobufSerializer;
-import com.fuelcoinj.testing.FakeTxBuilder;
-import com.fuelcoinj.utils.BriefLogFormatter;
-import com.fuelcoinj.utils.Threading;
-import com.fuelcoinj.wallet.DeterministicKeyChain;
-import com.fuelcoinj.wallet.KeyChain;
-import com.fuelcoinj.wallet.Protos;
+import com.capricoinj.core.*;
+import com.capricoinj.core.TransactionConfidence.ConfidenceType;
+import com.capricoinj.crypto.DeterministicKey;
+import com.capricoinj.params.MainNetParams;
+import com.capricoinj.params.UnitTestParams;
+import com.capricoinj.script.ScriptBuilder;
+import com.capricoinj.store.MemoryBlockStore;
+import com.capricoinj.store.UnreadableWalletException;
+import com.capricoinj.store.WalletProtobufSerializer;
+import com.capricoinj.testing.FakeTxBuilder;
+import com.capricoinj.utils.BriefLogFormatter;
+import com.capricoinj.utils.Threading;
+import com.capricoinj.wallet.DeterministicKeyChain;
+import com.capricoinj.wallet.KeyChain;
+import com.capricoinj.wallet.Protos;
 import com.google.common.collect.ImmutableList;
 import com.google.protobuf.ByteString;
 
@@ -49,8 +49,8 @@ import java.util.Date;
 import java.util.Iterator;
 import java.util.Set;
 
-import static com.fuelcoinj.core.Coin.*;
-import static com.fuelcoinj.testing.FakeTxBuilder.createFakeTx;
+import static com.capricoinj.core.Coin.*;
+import static com.capricoinj.testing.FakeTxBuilder.createFakeTx;
 import static org.junit.Assert.*;
 
 public class WalletProtobufSerializerTest {

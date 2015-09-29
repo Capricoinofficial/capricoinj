@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.net.discovery;
+package com.capricoinj.net.discovery;
 
-import com.fuelcoinj.core.*;
-import com.fuelcoinj.utils.Threading;
+import com.capricoinj.core.*;
+import com.capricoinj.utils.Threading;
 import com.google.common.annotations.VisibleForTesting;
 
 import net.jcip.annotations.GuardedBy;

@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.wallet;
+package com.capricoinj.wallet;
 
-import com.fuelcoinj.core.BloomFilter;
-import com.fuelcoinj.core.ECKey;
-import com.fuelcoinj.core.Utils;
-import com.fuelcoinj.crypto.*;
-import com.fuelcoinj.store.UnreadableWalletException;
-import com.fuelcoinj.utils.Threading;
+import com.capricoinj.core.BloomFilter;
+import com.capricoinj.core.ECKey;
+import com.capricoinj.core.Utils;
+import com.capricoinj.crypto.*;
+import com.capricoinj.store.UnreadableWalletException;
+import com.capricoinj.utils.Threading;
 import com.google.common.collect.ImmutableList;
 import com.google.protobuf.ByteString;
 
@@ -44,10 +44,10 @@ import static com.google.common.collect.Lists.newLinkedList;
 /**
  * <p>A deterministic key chain is a {@link KeyChain} that uses the
  * <a href="https://github.com/peercoin/bips/blob/master/bip-0032.mediawiki">BIP 32 standard</a>, as implemented by
- * {@link com.fuelcoinj.crypto.DeterministicHierarchy}, to derive all the keys in the keychain from a master seed.
+ * {@link com.capricoinj.crypto.DeterministicHierarchy}, to derive all the keys in the keychain from a master seed.
  * This type of wallet is extremely convenient and flexible. Although backing up full wallet files is always a good
  * idea, to recover money only the root seed needs to be preserved and that is a number small enough that it can be
- * written down on paper or, when represented using a BIP 39 {@link com.fuelcoinj.crypto.MnemonicCode},
+ * written down on paper or, when represented using a BIP 39 {@link com.capricoinj.crypto.MnemonicCode},
  * dictated over the phone (possibly even memorized).</p>
  *
  * <p>Deterministic key chains have other advantages: parts of the key tree can be selectively revealed to allow
@@ -57,14 +57,14 @@ import static com.google.common.collect.Lists.newLinkedList;
  * A watching wallet is not instantiated using the public part of the master key as you may imagine. Instead, you
  * need to take the account key (first child of the master key) and provide the public part of that to the watching
  * wallet instead. You can do this by calling {@link #getWatchingKey()} and then serializing it with
- * {@link com.fuelcoinj.crypto.DeterministicKey#serializePubB58()}. The resulting "xpub..." string encodes
+ * {@link com.capricoinj.crypto.DeterministicKey#serializePubB58()}. The resulting "xpub..." string encodes
  * sufficient information about the account key to create a watching chain via
- * {@link com.fuelcoinj.crypto.DeterministicKey#deserializeB58(com.fuelcoinj.crypto.DeterministicKey, String)}
+ * {@link com.capricoinj.crypto.DeterministicKey#deserializeB58(com.capricoinj.crypto.DeterministicKey, String)}
  * (with null as the first parameter) and then
- * {@link DeterministicKeyChain#DeterministicKeyChain(com.fuelcoinj.crypto.DeterministicKey)}.</p>
+ * {@link DeterministicKeyChain#DeterministicKeyChain(com.capricoinj.crypto.DeterministicKey)}.</p>
  *
- * <p>This class builds on {@link com.fuelcoinj.crypto.DeterministicHierarchy} and
- * {@link com.fuelcoinj.crypto.DeterministicKey} by adding support for serialization to and from protobufs,
+ * <p>This class builds on {@link com.capricoinj.crypto.DeterministicHierarchy} and
+ * {@link com.capricoinj.crypto.DeterministicKey} by adding support for serialization to and from protobufs,
  * and encryption of parts of the key tree. Internally it arranges itself as per the BIP 32 spec, with the seed being
  * used to derive a master key, which is then used to derive an account key, the account key is used to derive two
  * child keys called the <i>internal</i> and <i>external</i> keys (for change and handing out addresses respectively)
@@ -503,7 +503,7 @@ public class DeterministicKeyChain implements EncryptableKeyChain {
     /**
      * <p>An alias for <code>getKeyByPath(DeterministicKeyChain.ACCOUNT_ZERO_PATH).getPubOnly()</code>.
      * Use this when you would like to create a watching key chain that follows this one, but can't spend money from it.
-     * The returned key can be serialized and then passed into {@link #watch(com.fuelcoinj.crypto.DeterministicKey)}
+     * The returned key can be serialized and then passed into {@link #watch(com.capricoinj.crypto.DeterministicKey)}
      * on another system to watch the hierarchy.</p>
      */
     public DeterministicKey getWatchingKey() {

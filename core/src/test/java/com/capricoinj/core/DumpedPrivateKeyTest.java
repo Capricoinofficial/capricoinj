@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.core;
+package com.capricoinj.core;
 
 import static org.junit.Assert.assertEquals;
 
@@ -25,9 +25,9 @@ import java.io.ObjectOutputStream;
 
 import org.junit.Test;
 
-import com.fuelcoinj.core.DumpedPrivateKey;
-import com.fuelcoinj.core.ECKey;
-import com.fuelcoinj.params.MainNetParams;
+import com.capricoinj.core.DumpedPrivateKey;
+import com.capricoinj.core.ECKey;
+import com.capricoinj.params.MainNetParams;
 
 public class DumpedPrivateKeyTest {
     @Test

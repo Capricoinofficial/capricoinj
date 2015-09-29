@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.store;
+package com.capricoinj.store;
 
-import com.fuelcoinj.core.*;
+import com.capricoinj.core.*;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
- * Keeps {@link com.fuelcoinj.core.StoredBlock}s in memory. Used primarily for unit testing.
+ * Keeps {@link com.capricoinj.core.StoredBlock}s in memory. Used primarily for unit testing.
  */
 public class MemoryBlockStore implements BlockStore {
     private LinkedHashMap<Sha256Hash, StoredBlock> blockMap = new LinkedHashMap<Sha256Hash, StoredBlock>() {

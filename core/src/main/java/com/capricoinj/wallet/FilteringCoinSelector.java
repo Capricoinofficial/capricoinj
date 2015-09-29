@@ -15,9 +15,9 @@
  */
 
 
-package com.fuelcoinj.wallet;
+package com.capricoinj.wallet;
 
-import com.fuelcoinj.core.*;
+import com.capricoinj.core.*;
 
 import java.util.HashSet;
 import java.util.Iterator;

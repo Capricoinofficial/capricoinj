@@ -14,19 +14,19 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.testing;
+package com.capricoinj.testing;
 
-import com.fuelcoinj.core.*;
-import com.fuelcoinj.params.UnitTestParams;
-import com.fuelcoinj.store.BlockStore;
-import com.fuelcoinj.store.MemoryBlockStore;
-import com.fuelcoinj.store.ValidHashStore;
-import com.fuelcoinj.utils.BriefLogFormatter;
+import com.capricoinj.core.*;
+import com.capricoinj.params.UnitTestParams;
+import com.capricoinj.store.BlockStore;
+import com.capricoinj.store.MemoryBlockStore;
+import com.capricoinj.store.ValidHashStore;
+import com.capricoinj.utils.BriefLogFormatter;
 
 import javax.annotation.Nullable;
 
-import static com.fuelcoinj.testing.FakeTxBuilder.createFakeBlock;
-import static com.fuelcoinj.testing.FakeTxBuilder.createFakeTx;
+import static com.capricoinj.testing.FakeTxBuilder.createFakeBlock;
+import static com.capricoinj.testing.FakeTxBuilder.createFakeTx;
 
 // TODO: This needs to be somewhat rewritten - the "sendMoneyToWallet" methods aren't sending via the block chain object
 

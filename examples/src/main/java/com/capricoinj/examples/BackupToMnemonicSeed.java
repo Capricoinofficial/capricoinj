@@ -1,9 +1,9 @@
-package com.fuelcoin.examples;
+package com.capricoinj.examples;
 
-import com.fuelcoinj.core.NetworkParameters;
-import com.fuelcoinj.core.Wallet;
-import com.fuelcoinj.params.UnitTestParams;
-import com.fuelcoinj.wallet.DeterministicSeed;
+import com.capricoinj.core.NetworkParameters;
+import com.capricoinj.core.Wallet;
+import com.capricoinj.params.UnitTestParams;
+import com.capricoinj.wallet.DeterministicSeed;
 import com.google.common.base.Joiner;
 
 /**
@@ -14,7 +14,7 @@ import com.google.common.base.Joiner;
  * https://github.com/peercoin/bips/blob/master/bip-0039.mediawiki
  * https://github.com/peercoin/bips/blob/master/bip-0032.mediawiki
  */
-//WARNING THIS HAS NOT BEEN SETUP OR TESTED WITH FUELCOIN
+//WARNING THIS HAS NOT BEEN SETUP OR TESTED WITH CAPRICOIN
 public class BackupToMnemonicSeed {
 
     public static void main(String[] args) {

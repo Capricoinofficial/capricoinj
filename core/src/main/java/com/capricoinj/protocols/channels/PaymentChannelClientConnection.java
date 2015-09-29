@@ -14,17 +14,17 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.protocols.channels;
+package com.capricoinj.protocols.channels;
 
-import com.fuelcoinj.core.Coin;
-import com.fuelcoinj.core.ECKey;
-import com.fuelcoinj.core.InsufficientMoneyException;
-import com.fuelcoinj.core.Sha256Hash;
-import com.fuelcoinj.core.Utils;
-import com.fuelcoinj.core.Wallet;
-import com.fuelcoinj.net.NioClient;
-import com.fuelcoinj.net.ProtobufParser;
-import com.fuelcoinj.paymentchannel.Protos;
+import com.capricoinj.core.Coin;
+import com.capricoinj.core.ECKey;
+import com.capricoinj.core.InsufficientMoneyException;
+import com.capricoinj.core.Sha256Hash;
+import com.capricoinj.core.Utils;
+import com.capricoinj.core.Wallet;
+import com.capricoinj.net.NioClient;
+import com.capricoinj.net.ProtobufParser;
+import com.capricoinj.paymentchannel.Protos;
 import com.google.common.util.concurrent.ListenableFuture;
 import com.google.common.util.concurrent.SettableFuture;
 import com.google.protobuf.ByteString;
@@ -44,7 +44,7 @@ public class PaymentChannelClientConnection {
 
     /**
      * Attempts to open a new connection to and open a payment channel with the given host and port, blocking until the
-     * connection is open. The server is requested to keep the channel open for {@link com.fuelcoinj.protocols.channels.PaymentChannelClient#DEFAULT_TIME_WINDOW}
+     * connection is open. The server is requested to keep the channel open for {@link com.capricoinj.protocols.channels.PaymentChannelClient#DEFAULT_TIME_WINDOW}
      * seconds. If the server proposes a longer time the channel will be closed.
      *
      * @param server The host/port pair where the server is listening.

@@ -1,11 +1,11 @@
-package com.fuelcoinj.core;
+package com.capricoinj.core;
 
-import com.fuelcoinj.core.BloomFilter;
-import com.fuelcoinj.core.Message;
-import com.fuelcoinj.core.NetworkParameters;
-import com.fuelcoinj.core.Peer;
-import com.fuelcoinj.core.PeerSocketHandler;
-import com.fuelcoinj.core.Ping;
+import com.capricoinj.core.BloomFilter;
+import com.capricoinj.core.Message;
+import com.capricoinj.core.NetworkParameters;
+import com.capricoinj.core.Peer;
+import com.capricoinj.core.PeerSocketHandler;
+import com.capricoinj.core.Ping;
 import com.google.common.util.concurrent.SettableFuture;
 
 import java.net.InetSocketAddress;

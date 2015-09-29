@@ -15,30 +15,30 @@
  * limitations under the License.
  */
 
-package com.fuelcoin.examples;
+package com.capricoinj.examples;
 
 import java.io.File;
 import java.net.InetAddress;
 
-import com.fuelcoinj.core.AbstractWalletEventListener;
-import com.fuelcoinj.core.BlockChain;
-import com.fuelcoinj.core.Coin;
-import com.fuelcoinj.core.NetworkParameters;
-import com.fuelcoinj.core.PeerAddress;
-import com.fuelcoinj.core.PeerGroup;
-import com.fuelcoinj.core.Transaction;
-import com.fuelcoinj.core.Wallet;
-import com.fuelcoinj.net.discovery.DnsDiscovery;
-import com.fuelcoinj.params.MainNetParams;
-import com.fuelcoinj.params.UnitTestParams;
-import com.fuelcoinj.store.BlockStore;
-import com.fuelcoinj.store.MemoryBlockStore;
-import com.fuelcoinj.store.ValidHashStore;
+import com.capricoinj.core.AbstractWalletEventListener;
+import com.capricoinj.core.BlockChain;
+import com.capricoinj.core.Coin;
+import com.capricoinj.core.NetworkParameters;
+import com.capricoinj.core.PeerAddress;
+import com.capricoinj.core.PeerGroup;
+import com.capricoinj.core.Transaction;
+import com.capricoinj.core.Wallet;
+import com.capricoinj.net.discovery.DnsDiscovery;
+import com.capricoinj.params.MainNetParams;
+import com.capricoinj.params.UnitTestParams;
+import com.capricoinj.store.BlockStore;
+import com.capricoinj.store.MemoryBlockStore;
+import com.capricoinj.store.ValidHashStore;
 
 /**
  * RefreshWallet loads a wallet, then processes the block chain to update the transaction pools within it.
  */
-//WARNING THIS HAS NOT BEEN SETUP OR TESTED WITH FUELCOIN
+//WARNING THIS HAS NOT BEEN SETUP OR TESTED WITH CAPRICOIN
 public class RefreshWallet {
     public static void main(String[] args) throws Exception {
         File file = new File(args[0]);

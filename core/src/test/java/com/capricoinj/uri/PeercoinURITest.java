@@ -16,19 +16,19 @@
  * 
  */
 
-package com.fuelcoinj.uri;
+package com.capricoinj.uri;
 
-import com.fuelcoinj.core.Address;
-import com.fuelcoinj.params.MainNetParams;
-import com.fuelcoinj.uri.PeercoinURI;
-import com.fuelcoinj.uri.PeercoinURIParseException;
+import com.capricoinj.core.Address;
+import com.capricoinj.params.MainNetParams;
+import com.capricoinj.uri.PeercoinURI;
+import com.capricoinj.uri.PeercoinURIParseException;
 import com.google.common.collect.ImmutableList;
 
 import org.junit.Test;
 
 import java.io.UnsupportedEncodingException;
 
-import static com.fuelcoinj.core.Coin.*;
+import static com.capricoinj.core.Coin.*;
 import static org.junit.Assert.*;
 
 public class PeercoinURITest {

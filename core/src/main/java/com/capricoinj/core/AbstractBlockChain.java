@@ -15,13 +15,13 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.core;
+package com.capricoinj.core;
 
-import com.fuelcoinj.store.BlockStore;
-import com.fuelcoinj.store.BlockStoreException;
-import com.fuelcoinj.store.ValidHashStore;
-import com.fuelcoinj.utils.ListenerRegistration;
-import com.fuelcoinj.utils.Threading;
+import com.capricoinj.store.BlockStore;
+import com.capricoinj.store.BlockStoreException;
+import com.capricoinj.store.ValidHashStore;
+import com.capricoinj.utils.ListenerRegistration;
+import com.capricoinj.utils.Threading;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.Sets;
 import com.google.common.util.concurrent.ListenableFuture;
@@ -50,7 +50,7 @@ import static com.google.common.base.Preconditions.*;
  * <p>An AbstractBlockChain implementation must be connected to a {@link BlockStore} implementation. The chain object
  * by itself doesn't store any data, that's delegated to the store. Which store you use is a decision best made by
  * reading the getting started guide, but briefly, fully validating block chains need fully validating stores. In
- * the lightweight SPV mode, a {@link com.fuelcoinj.store.SPVBlockStore} is the right choice.</p>
+ * the lightweight SPV mode, a {@link com.capricoinj.store.SPVBlockStore} is the right choice.</p>
  *
  * <p>This class implements an abstract class which makes it simple to create a BlockChain that does/doesn't do full
  * verification.  It verifies headers and is implements most of what is required to implement SPV mode, but
@@ -59,7 +59,7 @@ import static com.google.common.base.Preconditions.*;
  * <p>There are two subclasses of AbstractBlockChain that are useful: {@link BlockChain}, which is the simplest
  * class and implements <i>simplified payment verification</i>. This is a lightweight and efficient mode that does
  * not verify the contents of blocks, just their headers. A {@link FullPrunedBlockChain} paired with a
- * {@link com.fuelcoinj.store.H2FullPrunedBlockStore} implements full verification, which is equivalent to the
+ * {@link com.capricoinj.store.H2FullPrunedBlockStore} implements full verification, which is equivalent to the
  * original Satoshi client. To learn more about the alternative security models, please consult the articles on the
  * website.</p>
  *
@@ -94,7 +94,7 @@ public abstract class AbstractBlockChain {
     /**
      * Tracks the top of the best known chain.<p>
      *
-     * Following this one down to the genesis block produces the story of the economy from the creation of fuelcoin
+     * Following this one down to the genesis block produces the story of the economy from the creation of capricoin
      * until the present day. The chain head can change if a new set of blocks is received that results in a chain of
      * greater work than the one obtained by following this one down. In that case a reorganize is triggered,
      * potentially invalidating transactions in our wallet.

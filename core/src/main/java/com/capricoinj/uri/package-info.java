@@ -1,5 +1,5 @@
 /**
  * Parsing and handling of bitcoin: textual URIs as found in qr codes and web links.
  */
-package com.fuelcoinj.uri;
+package com.capricoinj.uri;
 

@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.net;
+package com.capricoinj.net;
 
-import com.fuelcoinj.core.Utils;
-import com.fuelcoinj.utils.Threading;
+import com.capricoinj.core.Utils;
+import com.capricoinj.utils.Threading;
 import com.google.common.annotations.VisibleForTesting;
 import com.google.protobuf.ByteString;
 import com.google.protobuf.MessageLite;

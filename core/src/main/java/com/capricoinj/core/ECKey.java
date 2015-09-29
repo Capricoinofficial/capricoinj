@@ -15,10 +15,10 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.core;
+package com.capricoinj.core;
 
-import com.fuelcoinj.crypto.*;
-import com.fuelcoinj.wallet.Protos;
+import com.capricoinj.crypto.*;
+import com.capricoinj.wallet.Protos;
 import com.google.common.annotations.VisibleForTesting;
 import com.google.common.base.Objects;
 import com.google.common.base.Objects.ToStringHelper;
@@ -565,7 +565,7 @@ public class ECKey implements EncryptableItem, Serializable {
 
     /**
      * Signs the given hash and returns the R and S components as BigIntegers. In the Peercoin protocol, they are
-     * usually encoded using DER format, so you want {@link com.fuelcoinj.core.ECKey.ECDSASignature#toASN1()}
+     * usually encoded using DER format, so you want {@link com.capricoinj.core.ECKey.ECDSASignature#toASN1()}
      * instead. However sometimes the independent components can be useful, for instance, if you're doing to do
      * further EC maths on them.
      * @throws KeyCrypterException if this ECKey doesn't have a private part.
@@ -584,7 +584,7 @@ public class ECKey implements EncryptableItem, Serializable {
 
     /**
      * Signs the given hash and returns the R and S components as BigIntegers. In the Peercoin protocol, they are
-     * usually encoded using DER format, so you want {@link com.fuelcoinj.core.ECKey.ECDSASignature#encodeToDER()}
+     * usually encoded using DER format, so you want {@link com.capricoinj.core.ECKey.ECDSASignature#encodeToDER()}
      * instead. However sometimes the independent components can be useful, for instance, if you're doing to do further
      * EC maths on them.
      *
@@ -916,7 +916,7 @@ public class ECKey implements EncryptableItem, Serializable {
 
     /**
      * Exports the private key in the form used by the Satoshi client "dumpprivkey" and "importprivkey" commands. Use
-     * the {@link com.fuelcoinj.core.DumpedPrivateKey#toString()} method to get the string.
+     * the {@link com.capricoinj.core.DumpedPrivateKey#toString()} method to get the string.
      *
      * @param params The network this key is intended for use on.
      * @return Private key bytes as a {@link DumpedPrivateKey}.

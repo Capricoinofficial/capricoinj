@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.core;
+package com.capricoinj.core;
 
-import com.fuelcoinj.script.Script;
-import com.fuelcoinj.script.ScriptBuilder;
+import com.capricoinj.script.Script;
+import com.capricoinj.script.ScriptBuilder;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

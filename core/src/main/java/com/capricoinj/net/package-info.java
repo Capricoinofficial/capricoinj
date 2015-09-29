@@ -3,4 +3,4 @@
  * using SOCKS proxies, Tor, SSL etc). The code in this package implements a simple network abstraction a little like
  * what the Netty library provides, but with only what bitcoinj needs.
  */
-package com.fuelcoinj.net;
+package com.capricoinj.net;

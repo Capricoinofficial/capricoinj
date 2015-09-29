@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.protocols.channels;
+package com.capricoinj.protocols.channels;
 
-import com.fuelcoinj.core.*;
+import com.capricoinj.core.*;
 
 import javax.annotation.Nullable;
 
@@ -79,7 +79,7 @@ public class StoredServerChannel {
     }
 
     /**
-     * If a handler is connected, call its {@link com.fuelcoinj.protocols.channels.PaymentChannelServer#close()}
+     * If a handler is connected, call its {@link com.capricoinj.protocols.channels.PaymentChannelServer#close()}
      * method thus disconnecting the TCP connection.
      */
     synchronized void closeConnectedHandler() {

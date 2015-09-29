@@ -1,8 +1,8 @@
-package com.fuelcoinj.jni;
+package com.capricoinj.jni;
 
-import com.fuelcoinj.core.*;
-import com.fuelcoinj.protocols.channels.PaymentChannelCloseException;
-import com.fuelcoinj.protocols.channels.ServerConnectionEventHandler;
+import com.capricoinj.core.*;
+import com.capricoinj.protocols.channels.PaymentChannelCloseException;
+import com.capricoinj.protocols.channels.ServerConnectionEventHandler;
 import com.google.common.util.concurrent.ListenableFuture;
 import com.google.protobuf.ByteString;
 

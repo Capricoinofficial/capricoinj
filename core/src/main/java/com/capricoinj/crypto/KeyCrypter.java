@@ -13,11 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.fuelcoinj.crypto;
+package com.capricoinj.crypto;
 
 import java.io.Serializable;
 
-import com.fuelcoinj.wallet.Protos.Wallet.EncryptionType;
+import com.capricoinj.wallet.Protos.Wallet.EncryptionType;
 
 import org.spongycastle.crypto.params.KeyParameter;
 

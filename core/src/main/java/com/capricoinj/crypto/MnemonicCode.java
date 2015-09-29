@@ -15,10 +15,10 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.crypto;
+package com.capricoinj.crypto;
 
-import com.fuelcoinj.core.Sha256Hash;
-import com.fuelcoinj.core.Utils;
+import com.capricoinj.core.Sha256Hash;
+import com.capricoinj.core.Utils;
 import com.google.common.base.Joiner;
 
 import org.slf4j.Logger;
@@ -35,7 +35,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import static com.fuelcoinj.core.Utils.HEX;
+import static com.capricoinj.core.Utils.HEX;
 
 /**
  * A MnemonicCode object may be used to convert between binary seed values and

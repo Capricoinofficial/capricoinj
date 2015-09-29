@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.store;
+package com.capricoinj.store;
 
-import com.fuelcoinj.core.*;
+import com.capricoinj.core.*;
 import com.google.common.collect.Lists;
 
 import org.slf4j.Logger;

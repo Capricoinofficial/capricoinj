@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.core;
+package com.capricoinj.core;
 
 import com.google.common.base.Charsets;
 import com.google.common.base.Joiner;
@@ -57,8 +57,8 @@ public class Utils {
         }
     }
 
-    /** The string that prefixes all text messages signed using Fuelcoin keys. */
-    public static final String Peercoin_SIGNED_MESSAGE_HEADER = "Fuelcoin Signed Message:\n";
+    /** The string that prefixes all text messages signed using Capricoin keys. */
+    public static final String Peercoin_SIGNED_MESSAGE_HEADER = "Capricoin Signed Message:\n";
     public static final byte[] Peercoin_SIGNED_MESSAGE_HEADER_BYTES = Peercoin_SIGNED_MESSAGE_HEADER.getBytes(Charsets.UTF_8);
 
     private static BlockingQueue<Boolean> mockSleepQueue;

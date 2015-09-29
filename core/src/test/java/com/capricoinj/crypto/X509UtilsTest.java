@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.crypto;
+package com.capricoinj.crypto;
 
 import org.junit.Test;
 
-import com.fuelcoinj.crypto.X509Utils;
+import com.capricoinj.crypto.X509Utils;
 
 import java.security.cert.CertificateFactory;
 import java.security.cert.X509Certificate;

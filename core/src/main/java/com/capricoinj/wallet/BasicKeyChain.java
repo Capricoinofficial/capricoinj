@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.wallet;
+package com.capricoinj.wallet;
 
-import com.fuelcoinj.core.BloomFilter;
-import com.fuelcoinj.core.ECKey;
-import com.fuelcoinj.crypto.*;
-import com.fuelcoinj.store.UnreadableWalletException;
-import com.fuelcoinj.utils.ListenerRegistration;
-import com.fuelcoinj.utils.Threading;
+import com.capricoinj.core.BloomFilter;
+import com.capricoinj.core.ECKey;
+import com.capricoinj.crypto.*;
+import com.capricoinj.store.UnreadableWalletException;
+import com.capricoinj.utils.ListenerRegistration;
+import com.capricoinj.utils.Threading;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Lists;
 import com.google.protobuf.ByteString;
@@ -318,8 +318,8 @@ public class BasicKeyChain implements EncryptableKeyChain {
     /**
      * Returns a new BasicKeyChain that contains all basic, ORIGINAL type keys and also any encrypted keys extracted
      * from the list. Unrecognised key types are ignored.
-     * @throws com.fuelcoinj.store.UnreadableWalletException.BadPassword if the password doesn't seem to match
-     * @throws com.fuelcoinj.store.UnreadableWalletException if the data structures are corrupted/inconsistent
+     * @throws com.capricoinj.store.UnreadableWalletException.BadPassword if the password doesn't seem to match
+     * @throws com.capricoinj.store.UnreadableWalletException if the data structures are corrupted/inconsistent
      */
     public static BasicKeyChain fromProtobufEncrypted(List<Protos.Key> keys, KeyCrypter crypter) throws UnreadableWalletException {
         BasicKeyChain chain = new BasicKeyChain(checkNotNull(crypter));
@@ -403,7 +403,7 @@ public class BasicKeyChain implements EncryptableKeyChain {
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     /**
-     * Convenience wrapper around {@link #toEncrypted(com.fuelcoinj.crypto.KeyCrypter,
+     * Convenience wrapper around {@link #toEncrypted(com.capricoinj.crypto.KeyCrypter,
      * org.spongycastle.crypto.params.KeyParameter)} which uses the default Scrypt key derivation algorithm and
      * parameters, derives a key from the given password and returns the created key.
      */
@@ -418,7 +418,7 @@ public class BasicKeyChain implements EncryptableKeyChain {
 
     /**
      * Encrypt the wallet using the KeyCrypter and the AES key. A good default KeyCrypter to use is
-     * {@link com.fuelcoinj.crypto.KeyCrypterScrypt}.
+     * {@link com.capricoinj.crypto.KeyCrypterScrypt}.
      *
      * @param keyCrypter The KeyCrypter that specifies how to encrypt/ decrypt a key
      * @param aesKey AES key to use (normally created using KeyCrypter#deriveKey and cached as it is time consuming

@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.core;
+package com.capricoinj.core;
 
-import com.fuelcoinj.script.Script;
-import com.fuelcoinj.wallet.DefaultRiskAnalysis;
-import com.fuelcoinj.wallet.KeyBag;
-import com.fuelcoinj.wallet.RedeemData;
+import com.capricoinj.script.Script;
+import com.capricoinj.wallet.DefaultRiskAnalysis;
+import com.capricoinj.wallet.KeyBag;
+import com.capricoinj.wallet.RedeemData;
 
 import javax.annotation.Nullable;
 
@@ -308,7 +308,7 @@ public class TransactionInput extends ChildMessage implements Serializable {
 
     /**
      * Alias for getOutpoint().getConnectedRedeemData(keyBag)
-     * @see TransactionOutPoint#getConnectedRedeemData(com.fuelcoinj.wallet.KeyBag)
+     * @see TransactionOutPoint#getConnectedRedeemData(com.capricoinj.wallet.KeyBag)
      */
     @Nullable
     public RedeemData getConnectedRedeemData(KeyBag keyBag) throws ScriptException {

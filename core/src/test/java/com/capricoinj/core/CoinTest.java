@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.core;
+package com.capricoinj.core;
 
-import static com.fuelcoinj.core.Coin.*;
-import static com.fuelcoinj.core.NetworkParameters.MAX_MONEY;
+import static com.capricoinj.core.Coin.*;
+import static com.capricoinj.core.NetworkParameters.MAX_MONEY;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertFalse;
@@ -26,7 +26,7 @@ import static org.junit.Assert.fail;
 import org.junit.Assert;
 import org.junit.Test;
 
-import com.fuelcoinj.core.Coin;
+import com.capricoinj.core.Coin;
 
 public class CoinTest {
 

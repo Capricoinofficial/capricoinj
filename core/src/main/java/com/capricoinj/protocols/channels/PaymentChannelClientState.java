@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.protocols.channels;
+package com.capricoinj.protocols.channels;
 
-import com.fuelcoinj.core.*;
-import com.fuelcoinj.crypto.TransactionSignature;
-import com.fuelcoinj.script.Script;
-import com.fuelcoinj.script.ScriptBuilder;
-import com.fuelcoinj.utils.Threading;
-import com.fuelcoinj.wallet.AllowUnconfirmedCoinSelector;
+import com.capricoinj.core.*;
+import com.capricoinj.crypto.TransactionSignature;
+import com.capricoinj.script.Script;
+import com.capricoinj.script.ScriptBuilder;
+import com.capricoinj.utils.Threading;
+import com.capricoinj.wallet.AllowUnconfirmedCoinSelector;
 import com.google.common.annotations.VisibleForTesting;
 import com.google.common.base.Throwables;
 import com.google.common.collect.Lists;
@@ -230,7 +230,7 @@ public class PaymentChannelClientState {
      * Creates the initial multisig contract and incomplete refund transaction which can be requested at the appropriate
      * time using {@link PaymentChannelClientState#getIncompleteRefundTransaction} and
      * {@link PaymentChannelClientState#getMultisigContract()}. The way the contract is crafted can be adjusted by
-     * overriding {@link PaymentChannelClientState#editContractSendRequest(com.fuelcoinj.core.Wallet.SendRequest)}.
+     * overriding {@link PaymentChannelClientState#editContractSendRequest(com.capricoinj.core.Wallet.SendRequest)}.
      * By default unconfirmed coins are allowed to be used, as for micropayments the risk should be relatively low.
      *
      * @throws ValueOutOfRangeException if the value being used is too small to be accepted by the network

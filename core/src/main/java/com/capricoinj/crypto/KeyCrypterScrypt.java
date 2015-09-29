@@ -14,11 +14,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.fuelcoinj.crypto;
+package com.capricoinj.crypto;
 
-import com.fuelcoinj.wallet.Protos;
-import com.fuelcoinj.wallet.Protos.ScryptParameters;
-import com.fuelcoinj.wallet.Protos.Wallet.EncryptionType;
+import com.capricoinj.wallet.Protos;
+import com.capricoinj.wallet.Protos.ScryptParameters;
+import com.capricoinj.wallet.Protos.Wallet.EncryptionType;
 import com.google.common.base.Objects;
 import com.google.protobuf.ByteString;
 import com.lambdaworks.crypto.SCrypt;

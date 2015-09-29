@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.net;
+package com.capricoinj.net;
 
-import com.fuelcoinj.core.Message;
-import com.fuelcoinj.utils.Threading;
+import com.capricoinj.core.Message;
+import com.capricoinj.utils.Threading;
 import com.google.common.base.Throwables;
 
 import org.slf4j.LoggerFactory;

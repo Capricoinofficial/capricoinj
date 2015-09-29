@@ -1,19 +1,19 @@
-package com.fuelcoin.tools;
+package com.capricoinj.tools;
 
 import java.io.File;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.fuelcoinj.core.Address;
-import com.fuelcoinj.core.Coin;
-import com.fuelcoinj.core.InsufficientMoneyException;
-import com.fuelcoinj.core.Wallet;
-import com.fuelcoinj.kits.WalletAppKit;
-import com.fuelcoinj.params.MainNetParams;
-import com.fuelcoinj.utils.BriefLogFormatter;
+import com.capricoinj.core.Address;
+import com.capricoinj.core.Coin;
+import com.capricoinj.core.InsufficientMoneyException;
+import com.capricoinj.core.Wallet;
+import com.capricoinj.kits.WalletAppKit;
+import com.capricoinj.params.MainNetParams;
+import com.capricoinj.utils.BriefLogFormatter;
 
-//WARNING THIS HAS NOT BEEN SETUP OR TESTED WITH FUELCOIN
+//WARNING THIS HAS NOT BEEN SETUP OR TESTED WITH CAPRICOIN
 /**
  * A program that sends a transaction with the specified fee and measures how long it takes to confirm.
  */

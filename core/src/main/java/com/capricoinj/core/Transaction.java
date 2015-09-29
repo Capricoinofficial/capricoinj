@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.core;
+package com.capricoinj.core;
 
-import com.fuelcoinj.core.TransactionConfidence.ConfidenceType;
-import com.fuelcoinj.crypto.TransactionSignature;
-import com.fuelcoinj.script.Script;
-import com.fuelcoinj.script.ScriptBuilder;
-import com.fuelcoinj.script.ScriptOpCodes;
-import com.fuelcoinj.utils.ExchangeRate;
-import com.fuelcoinj.wallet.WalletTransaction.Pool;
+import com.capricoinj.core.TransactionConfidence.ConfidenceType;
+import com.capricoinj.crypto.TransactionSignature;
+import com.capricoinj.script.Script;
+import com.capricoinj.script.ScriptBuilder;
+import com.capricoinj.script.ScriptOpCodes;
+import com.capricoinj.utils.ExchangeRate;
+import com.capricoinj.wallet.WalletTransaction.Pool;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.primitives.Ints;
 import com.google.common.primitives.Longs;
@@ -37,7 +37,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
-import static com.fuelcoinj.core.Utils.*;
+import static com.capricoinj.core.Utils.*;
 import static com.google.common.base.Preconditions.checkState;
 
 /**
@@ -787,7 +787,7 @@ public class Transaction extends ChildMessage implements Serializable {
     }
 
     /**
-     * Same as {@link #addSignedInput(TransactionOutPoint, com.fuelcoinj.script.Script, ECKey, com.fuelcoinj.core.Transaction.SigHash, boolean)}
+     * Same as {@link #addSignedInput(TransactionOutPoint, com.capricoinj.script.Script, ECKey, com.capricoinj.core.Transaction.SigHash, boolean)}
      * but defaults to {@link SigHash#ALL} and "false" for the anyoneCanPay flag. This is normally what you want.
      */
     public TransactionInput addSignedInput(TransactionOutPoint prevOut, Script scriptPubKey, ECKey sigKey) throws ScriptException {
@@ -861,7 +861,7 @@ public class Transaction extends ChildMessage implements Serializable {
 
     /**
      * Calculates a signature that is valid for being inserted into the input at the given position. This is simply
-     * a wrapper around calling {@link Transaction#hashForSignature(int, byte[], com.fuelcoinj.core.Transaction.SigHash, boolean)}
+     * a wrapper around calling {@link Transaction#hashForSignature(int, byte[], com.capricoinj.core.Transaction.SigHash, boolean)}
      * followed by {@link ECKey#sign(Sha256Hash)} and then returning a new {@link TransactionSignature}. The key
      * must be usable for signing as-is: if the key is encrypted it must be decrypted first external to this method.
      *
@@ -881,7 +881,7 @@ public class Transaction extends ChildMessage implements Serializable {
 
     /**
      * Calculates a signature that is valid for being inserted into the input at the given position. This is simply
-     * a wrapper around calling {@link Transaction#hashForSignature(int, byte[], com.fuelcoinj.core.Transaction.SigHash, boolean)}
+     * a wrapper around calling {@link Transaction#hashForSignature(int, byte[], com.capricoinj.core.Transaction.SigHash, boolean)}
      * followed by {@link ECKey#sign(Sha256Hash)} and then returning a new {@link TransactionSignature}.
      *
      * @param inputIndex Which input to calculate the signature for, as an index.

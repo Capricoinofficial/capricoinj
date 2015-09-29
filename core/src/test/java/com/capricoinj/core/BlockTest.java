@@ -15,20 +15,20 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.core;
+package com.capricoinj.core;
 
-import com.fuelcoinj.core.Block;
-import com.fuelcoinj.core.Coin;
-import com.fuelcoinj.core.ECKey;
-import com.fuelcoinj.core.NetworkParameters;
-import com.fuelcoinj.core.Sha256Hash;
-import com.fuelcoinj.core.Transaction;
-import com.fuelcoinj.core.TransactionInput;
-import com.fuelcoinj.core.TransactionOutPoint;
-import com.fuelcoinj.core.TransactionOutput;
-import com.fuelcoinj.core.VerificationException;
-import com.fuelcoinj.params.UnitTestParams;
-import com.fuelcoinj.script.ScriptOpCodes;
+import com.capricoinj.core.Block;
+import com.capricoinj.core.Coin;
+import com.capricoinj.core.ECKey;
+import com.capricoinj.core.NetworkParameters;
+import com.capricoinj.core.Sha256Hash;
+import com.capricoinj.core.Transaction;
+import com.capricoinj.core.TransactionInput;
+import com.capricoinj.core.TransactionOutPoint;
+import com.capricoinj.core.TransactionOutput;
+import com.capricoinj.core.VerificationException;
+import com.capricoinj.params.UnitTestParams;
+import com.capricoinj.script.ScriptOpCodes;
 
 import org.junit.Test;
 
@@ -39,7 +39,7 @@ import java.io.ObjectOutputStream;
 import java.math.BigInteger;
 import java.util.Arrays;
 
-import static com.fuelcoinj.core.Utils.HEX;
+import static com.capricoinj.core.Utils.HEX;
 import static org.junit.Assert.*;
 
 public class BlockTest {

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.utils;
+package com.capricoinj.utils;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;

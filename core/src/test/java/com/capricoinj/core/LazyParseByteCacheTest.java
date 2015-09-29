@@ -15,22 +15,22 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.core;
+package com.capricoinj.core;
 
-import com.fuelcoinj.core.Block;
-import com.fuelcoinj.core.ECKey;
-import com.fuelcoinj.core.Message;
-import com.fuelcoinj.core.NetworkParameters;
-import com.fuelcoinj.core.PeercoinSerializer;
-import com.fuelcoinj.core.Transaction;
-import com.fuelcoinj.core.TransactionInput;
-import com.fuelcoinj.core.TransactionOutput;
-import com.fuelcoinj.core.Utils;
-import com.fuelcoinj.core.Wallet;
-import com.fuelcoinj.params.MainNetParams;
-import com.fuelcoinj.params.UnitTestParams;
-import com.fuelcoinj.store.BlockStore;
-import com.fuelcoinj.store.MemoryBlockStore;
+import com.capricoinj.core.Block;
+import com.capricoinj.core.ECKey;
+import com.capricoinj.core.Message;
+import com.capricoinj.core.NetworkParameters;
+import com.capricoinj.core.PeercoinSerializer;
+import com.capricoinj.core.Transaction;
+import com.capricoinj.core.TransactionInput;
+import com.capricoinj.core.TransactionOutput;
+import com.capricoinj.core.Utils;
+import com.capricoinj.core.Wallet;
+import com.capricoinj.params.MainNetParams;
+import com.capricoinj.params.UnitTestParams;
+import com.capricoinj.store.BlockStore;
+import com.capricoinj.store.MemoryBlockStore;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -39,10 +39,10 @@ import java.io.ByteArrayOutputStream;
 import java.nio.ByteBuffer;
 import java.util.Arrays;
 
-import static com.fuelcoinj.core.Coin.*;
-import static com.fuelcoinj.core.Utils.HEX;
-import static com.fuelcoinj.testing.FakeTxBuilder.createFakeBlock;
-import static com.fuelcoinj.testing.FakeTxBuilder.createFakeTx;
+import static com.capricoinj.core.Coin.*;
+import static com.capricoinj.core.Utils.HEX;
+import static com.capricoinj.testing.FakeTxBuilder.createFakeBlock;
+import static com.capricoinj.testing.FakeTxBuilder.createFakeTx;
 import static org.junit.Assert.*;
 
 public class LazyParseByteCacheTest {

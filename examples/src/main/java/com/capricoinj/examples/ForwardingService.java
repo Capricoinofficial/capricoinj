@@ -15,24 +15,24 @@
  * limitations under the License.
  */
 
-package com.fuelcoin.examples;
+package com.capricoinj.examples;
 
 import static com.google.common.base.Preconditions.checkNotNull;
 
 import java.io.File;
 import java.io.FileInputStream;
 
-import com.fuelcoinj.core.AbstractWalletEventListener;
-import com.fuelcoinj.core.Address;
-import com.fuelcoinj.core.Coin;
-import com.fuelcoinj.core.InsufficientMoneyException;
-import com.fuelcoinj.core.NetworkParameters;
-import com.fuelcoinj.core.Transaction;
-import com.fuelcoinj.core.Wallet;
-import com.fuelcoinj.crypto.KeyCrypterException;
-import com.fuelcoinj.kits.WalletAppKit;
-import com.fuelcoinj.params.MainNetParams;
-import com.fuelcoinj.utils.BriefLogFormatter;
+import com.capricoinj.core.AbstractWalletEventListener;
+import com.capricoinj.core.Address;
+import com.capricoinj.core.Coin;
+import com.capricoinj.core.InsufficientMoneyException;
+import com.capricoinj.core.NetworkParameters;
+import com.capricoinj.core.Transaction;
+import com.capricoinj.core.Wallet;
+import com.capricoinj.crypto.KeyCrypterException;
+import com.capricoinj.kits.WalletAppKit;
+import com.capricoinj.params.MainNetParams;
+import com.capricoinj.utils.BriefLogFormatter;
 import com.google.common.util.concurrent.FutureCallback;
 import com.google.common.util.concurrent.Futures;
 import com.google.common.util.concurrent.MoreExecutors;
@@ -45,7 +45,7 @@ public class ForwardingService {
     private static Address forwardingAddress;
     private static WalletAppKit kit;
 
-  //WARNING THIS IS ON THE MAINNET OF FUELCOIN USING A REAL ADDRESS
+  //WARNING THIS IS ON THE MAINNET OF CAPRICOIN USING A REAL ADDRESS
     public static void main(String[] args) throws Exception {
         // This line makes the log output more compact and easily read, especially when using the JDK log adapter.
         BriefLogFormatter.init();
@@ -55,7 +55,7 @@ public class ForwardingService {
         String filePrefix = "forwarding-service";
 //        }
         // Parse the address given as the first parameter.
-        forwardingAddress = new Address(params, "FBFn7VwHJvrPCi4pSYYVFoxiTHDjUvChkR");
+        forwardingAddress = new Address(params, "CanWcGBmTuWB8vBa2xjv4N2HNZ9h4rorNZ");
 
         // Start up a basic app using a class that automates some boilerplate.
         kit = new WalletAppKit(params, new File("."), filePrefix);

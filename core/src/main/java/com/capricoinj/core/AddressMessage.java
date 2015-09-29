@@ -1,4 +1,4 @@
-package com.fuelcoinj.core;
+package com.capricoinj.core;
 
 import java.io.IOException;
 import java.io.OutputStream;

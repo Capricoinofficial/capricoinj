@@ -14,20 +14,20 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.wallet;
+package com.capricoinj.wallet;
 
-import com.fuelcoinj.core.BloomFilter;
-import com.fuelcoinj.core.ECKey;
-import com.fuelcoinj.core.Utils;
-import com.fuelcoinj.crypto.KeyCrypter;
-import com.fuelcoinj.crypto.KeyCrypterException;
-import com.fuelcoinj.crypto.KeyCrypterScrypt;
-import com.fuelcoinj.store.UnreadableWalletException;
-import com.fuelcoinj.utils.Threading;
-import com.fuelcoinj.wallet.AbstractKeyChainEventListener;
-import com.fuelcoinj.wallet.BasicKeyChain;
-import com.fuelcoinj.wallet.KeyChain;
-import com.fuelcoinj.wallet.Protos;
+import com.capricoinj.core.BloomFilter;
+import com.capricoinj.core.ECKey;
+import com.capricoinj.core.Utils;
+import com.capricoinj.crypto.KeyCrypter;
+import com.capricoinj.crypto.KeyCrypterException;
+import com.capricoinj.crypto.KeyCrypterScrypt;
+import com.capricoinj.store.UnreadableWalletException;
+import com.capricoinj.utils.Threading;
+import com.capricoinj.wallet.AbstractKeyChainEventListener;
+import com.capricoinj.wallet.BasicKeyChain;
+import com.capricoinj.wallet.KeyChain;
+import com.capricoinj.wallet.Protos;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Lists;
 

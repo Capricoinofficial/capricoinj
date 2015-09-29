@@ -16,12 +16,12 @@
  * 
  */
 
-package com.fuelcoinj.uri;
+package com.capricoinj.uri;
 
-import com.fuelcoinj.core.Address;
-import com.fuelcoinj.core.AddressFormatException;
-import com.fuelcoinj.core.Coin;
-import com.fuelcoinj.core.NetworkParameters;
+import com.capricoinj.core.Address;
+import com.capricoinj.core.AddressFormatException;
+import com.capricoinj.core.Coin;
+import com.capricoinj.core.NetworkParameters;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -93,7 +93,7 @@ public class PeercoinURI {
     public static final String FIELD_ADDRESS = "address";
     public static final String FIELD_PAYMENT_REQUEST_URL = "r";
 
-    public static final String PEERCOIN_SCHEME = "Fuelcoin";
+    public static final String PEERCOIN_SCHEME = "Capricoin";
     private static final String ENCODED_SPACE_CHARACTER = "%20";
     private static final String AMPERSAND_SEPARATOR = "&";
     private static final String QUESTION_MARK_SEPARATOR = "?";
@@ -144,10 +144,10 @@ public class PeercoinURI {
         // the & (%26) in Tom and Jerry gets interpreted as a separator and the label then gets parsed
         // as 'Tom ' instead of 'Tom & Jerry')
         String schemeSpecificPart;
-        if (input.startsWith("Fuelcoin://")) {
-            schemeSpecificPart = input.substring("Fuelcoin://".length());
-        } else if (input.startsWith("Fuelcoin:")) {
-            schemeSpecificPart = input.substring("Fuelcoin:".length());
+        if (input.startsWith("Capricoin://")) {
+            schemeSpecificPart = input.substring("Capricoin://".length());
+        } else if (input.startsWith("Capricoin:")) {
+            schemeSpecificPart = input.substring("Capricoin:".length());
         } else {
             throw new PeercoinURIParseException("Unsupported URI scheme: " + uri.getScheme());
         }
@@ -155,7 +155,7 @@ public class PeercoinURI {
         // Split off the address from the rest of the query parameters.
         String[] addressSplitTokens = schemeSpecificPart.split("\\?", 2);
         if (addressSplitTokens.length == 0)
-            throw new PeercoinURIParseException("No data found after the peercoin: prefix");
+            throw new PeercoinURIParseException("No data found after the Capricoin: prefix");
         String addressToken = addressSplitTokens[0];  // may be empty!
 
         String[] nameValuePairTokens;
@@ -263,7 +263,7 @@ public class PeercoinURI {
 
     /**
      * @return The amount name encoded using a pure integer value based at
-     *         10,000,000 units is 1 FC2. May be null if no amount is specified
+     *         10,000,000 units is 1 CPC. May be null if no amount is specified
      */
     public Coin getAmount() {
         return (Coin) parameterMap.get(FIELD_AMOUNT);

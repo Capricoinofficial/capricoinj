@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.params;
+package com.capricoinj.params;
 
 import static com.google.common.base.Preconditions.checkState;
 
-import com.fuelcoinj.core.NetworkParameters;
-import com.fuelcoinj.core.Sha256Hash;
-import com.fuelcoinj.core.Utils;
+import com.capricoinj.core.NetworkParameters;
+import com.capricoinj.core.Sha256Hash;
+import com.capricoinj.core.Utils;
 
 /**
  * Parameters for the main production network on which people trade goods and services.
@@ -42,7 +42,7 @@ public class MainNetParams extends NetworkParameters {
         packetMagic= 2711659171L;  // 
        // genesisBlock = createGenesis(this);
         genesisBlock.setDifficultyTarget(504365055L);
-        genesisBlock.setTime(1435945406);
+        genesisBlock.setTime(1435945406); 
         genesisBlock.setNonce(303451);
         id = ID_MAINNET;
         spendableCoinbaseDepth = 6;
@@ -54,14 +54,13 @@ public class MainNetParams extends NetworkParameters {
         checkState(genesisHash.equals("00000d23fa0fc52c90893adb1181c9ddffb6c797a3e41864b9a23aa2f2981fe3"), genesisHash);
         
         dnsSeeds = new String[] {
-        		"105.225.7.163",
-        		"137.135.57.119",
-        		"188.165.2.147",
-        		"76.14.221.195",
-        		"76.90.105.71",
-        		"80.244.63.36",
-        		"87.98.131.82",
-        		"5.196.10.57"
+        		"95.85.49.153",
+        		"95.85.60.40",
+        		"149.202.137.169",
+        		"45.55.58.160",
+        		"159.203.85.176",
+        		"128.199.211.65",
+        		"128.199.242.30"
         };
     }
 

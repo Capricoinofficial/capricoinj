@@ -14,23 +14,23 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.core;
+package com.capricoinj.core;
 
-import com.fuelcoinj.core.ECKey;
-import com.fuelcoinj.core.MemoryPool;
-import com.fuelcoinj.core.NetworkParameters;
-import com.fuelcoinj.core.PeerAddress;
-import com.fuelcoinj.core.Transaction;
-import com.fuelcoinj.params.UnitTestParams;
-import com.fuelcoinj.testing.FakeTxBuilder;
-import com.fuelcoinj.utils.BriefLogFormatter;
+import com.capricoinj.core.ECKey;
+import com.capricoinj.core.MemoryPool;
+import com.capricoinj.core.NetworkParameters;
+import com.capricoinj.core.PeerAddress;
+import com.capricoinj.core.Transaction;
+import com.capricoinj.params.UnitTestParams;
+import com.capricoinj.testing.FakeTxBuilder;
+import com.capricoinj.utils.BriefLogFormatter;
 
 import org.junit.Before;
 import org.junit.Test;
 
 import java.net.InetAddress;
 
-import static com.fuelcoinj.core.Coin.COIN;
+import static com.capricoinj.core.Coin.COIN;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 

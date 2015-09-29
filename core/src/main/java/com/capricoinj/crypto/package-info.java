@@ -5,5 +5,5 @@
  * on strong crypto. This is legal because Oracle got permission to ship strong AES to everyone years ago but hasn't
  * bothered to actually remove the logic barriers.
  */
-package com.fuelcoinj.crypto;
+package com.capricoinj.crypto;
 

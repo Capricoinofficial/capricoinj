@@ -15,10 +15,10 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.crypto;
+package com.capricoinj.crypto;
 
-import com.fuelcoinj.crypto.MnemonicCode;
-import com.fuelcoinj.crypto.MnemonicException;
+import com.capricoinj.crypto.MnemonicCode;
+import com.capricoinj.crypto.MnemonicException;
 import com.google.common.base.Joiner;
 import com.google.common.collect.Lists;
 
@@ -30,7 +30,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import static com.fuelcoinj.core.Utils.HEX;
+import static com.capricoinj.core.Utils.HEX;
 import static org.junit.Assert.assertEquals;
 
 public class MnemonicCodeTest {

@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.core;
+package com.capricoinj.core;
 
 
 import org.slf4j.Logger;
@@ -29,7 +29,7 @@ import java.nio.ByteBuffer;
 import java.util.HashMap;
 import java.util.Map;
 
-import static com.fuelcoinj.core.Utils.*;
+import static com.capricoinj.core.Utils.*;
 
 /**
  * <p>Methods to serialize and de-serialize messages to the Peercoin network format as defined in
@@ -125,7 +125,7 @@ public class PeercoinSerializer {
     public void serialize(Message message, OutputStream out) throws IOException {
         String name = names.get(message.getClass());
         if (name == null) {
-            throw new Error("FuelcoinSerializer doesn't currently know how to serialize " + message.getClass());
+            throw new Error("CapricoinSerializer doesn't currently know how to serialize " + message.getClass());
         }
         serialize(name, message.peercoinSerialize(), out);
     }
@@ -134,7 +134,7 @@ public class PeercoinSerializer {
      * Reads a message from the given ByteBuffer and returns it.
      */
     public Message deserialize(ByteBuffer in) throws ProtocolException, IOException {
-        // A Fuelcoin protocol message has the following format.
+        // A Capricoin protocol message has the following format.
         //
         //   - 4 byte magic number: 0xfabfb5da for the testnet or
         //                          0xf9beb4d9 for production

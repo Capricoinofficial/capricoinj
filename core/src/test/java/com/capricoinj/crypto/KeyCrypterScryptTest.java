@@ -14,15 +14,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.fuelcoinj.crypto;
+package com.capricoinj.crypto;
 
-import com.fuelcoinj.core.Utils;
-import com.fuelcoinj.crypto.EncryptedData;
-import com.fuelcoinj.crypto.KeyCrypterException;
-import com.fuelcoinj.crypto.KeyCrypterScrypt;
-import com.fuelcoinj.utils.BriefLogFormatter;
-import com.fuelcoinj.wallet.Protos;
-import com.fuelcoinj.wallet.Protos.ScryptParameters;
+import com.capricoinj.core.Utils;
+import com.capricoinj.crypto.EncryptedData;
+import com.capricoinj.crypto.KeyCrypterException;
+import com.capricoinj.crypto.KeyCrypterScrypt;
+import com.capricoinj.utils.BriefLogFormatter;
+import com.capricoinj.wallet.Protos;
+import com.capricoinj.wallet.Protos.ScryptParameters;
 import com.google.protobuf.ByteString;
 
 import org.junit.Before;

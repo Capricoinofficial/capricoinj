@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.core;
+package com.capricoinj.core;
 
 import javax.annotation.Nullable;
 import java.io.IOException;
@@ -73,9 +73,9 @@ public class VersionMessage extends Message {
     public boolean relayTxesBeforeFilter;
 
     /** The version of this library release, as a string. */
-    public static final String FUELCOINJ_VERSION = "0.12.3";
+    public static final String CAPRICOINJ_VERSION = "0.12.3";
     /** The value that is prepended to the subVer field of this application. */
-    public static final String LIBRARY_SUBVER = "/FuelcoinJ:" + FUELCOINJ_VERSION + "/";
+    public static final String LIBRARY_SUBVER = "/CapricoinJ:" + CAPRICOINJ_VERSION + "/";
 
     public VersionMessage(NetworkParameters params, byte[] payload) throws ProtocolException {
         super(params, payload, 0);

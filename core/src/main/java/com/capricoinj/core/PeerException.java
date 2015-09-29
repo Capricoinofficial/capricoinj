@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.core;
+package com.capricoinj.core;
 
 /**
  * Thrown when a problem occurs in communicating with a peer, and we should

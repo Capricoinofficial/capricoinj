@@ -15,12 +15,12 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.protocols.payments;
+package com.capricoinj.protocols.payments;
 
-import com.fuelcoinj.core.*;
-import com.fuelcoinj.crypto.X509Utils;
-import com.fuelcoinj.protocols.payments.Protos;
-import com.fuelcoinj.script.ScriptBuilder;
+import com.capricoinj.core.*;
+import com.capricoinj.crypto.X509Utils;
+import com.capricoinj.protocols.payments.Protos;
+import com.capricoinj.script.ScriptBuilder;
 import com.google.common.base.Objects;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Lists;

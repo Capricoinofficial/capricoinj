@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.core;
+package com.capricoinj.core;
 
 import javax.annotation.Nullable;
 import java.util.List;
@@ -70,7 +70,7 @@ public interface PeerEventListener {
      * callback is passed as "m" to the next, forming a chain.</p>
      *
      * <p>Note that this will never be called if registered with any executor other than
-     * {@link com.fuelcoinj.utils.Threading#SAME_THREAD}</p>
+     * {@link com.capricoinj.utils.Threading#SAME_THREAD}</p>
      */
     public Message onPreMessageReceived(Peer peer, Message m);
 
@@ -84,7 +84,7 @@ public interface PeerEventListener {
      * items as possible which appear in the {@link GetDataMessage}, or null if you're not interested in responding.</p>
      *
      * <p>Note that this will never be called if registered with any executor other than
-     * {@link com.fuelcoinj.utils.Threading#SAME_THREAD}</p>
+     * {@link com.capricoinj.utils.Threading#SAME_THREAD}</p>
      */
     @Nullable
     public List<Message> getData(Peer peer, GetDataMessage m);

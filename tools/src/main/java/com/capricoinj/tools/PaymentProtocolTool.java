@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.fuelcoin.tools;
+package com.capricoinj.tools;
 
 import static java.lang.String.format;
 
@@ -28,15 +28,15 @@ import java.security.cert.X509Certificate;
 import java.util.Date;
 import java.util.concurrent.ExecutionException;
 
-import com.fuelcoinj.crypto.TrustStoreLoader;
-import com.fuelcoinj.paymentchannel.Protos;
-import com.fuelcoinj.protocols.payments.PaymentProtocol;
-import com.fuelcoinj.protocols.payments.PaymentProtocolException;
-import com.fuelcoinj.protocols.payments.PaymentSession;
-import com.fuelcoinj.uri.PeercoinURI;
-import com.fuelcoinj.uri.PeercoinURIParseException;
+import com.capricoinj.crypto.TrustStoreLoader;
+import com.capricoinj.paymentchannel.Protos;
+import com.capricoinj.protocols.payments.PaymentProtocol;
+import com.capricoinj.protocols.payments.PaymentProtocolException;
+import com.capricoinj.protocols.payments.PaymentSession;
+import com.capricoinj.uri.PeercoinURI;
+import com.capricoinj.uri.PeercoinURIParseException;
 
-//WARNING THIS HAS NOT BEEN SETUP OR TESTED WITH FUELCOIN
+//WARNING THIS HAS NOT BEEN SETUP OR TESTED WITH CAPRICOIN
 /** Takes a URL or peercoin URI and prints information about the payment request. */
 public class PaymentProtocolTool {
 //    public static void main(String[] args) {

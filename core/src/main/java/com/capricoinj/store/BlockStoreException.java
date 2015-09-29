@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.store;
+package com.capricoinj.store;
 
 /**
  * Thrown when something goes wrong with storing a block. Examples: out of disk space.

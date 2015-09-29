@@ -13,21 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.fuelcoinj.signers;
+package com.capricoinj.signers;
 
-import com.fuelcoinj.core.ECKey;
-import com.fuelcoinj.core.TransactionInput;
-import com.fuelcoinj.core.Wallet;
-import com.fuelcoinj.crypto.TransactionSignature;
-import com.fuelcoinj.script.Script;
-import com.fuelcoinj.script.ScriptChunk;
-import com.fuelcoinj.wallet.KeyBag;
+import com.capricoinj.core.ECKey;
+import com.capricoinj.core.TransactionInput;
+import com.capricoinj.core.Wallet;
+import com.capricoinj.crypto.TransactionSignature;
+import com.capricoinj.script.Script;
+import com.capricoinj.script.ScriptChunk;
+import com.capricoinj.wallet.KeyBag;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * This transaction signer resolves missing signatures in accordance with the given {@link com.fuelcoinj.core.Wallet.MissingSigsMode}.
+ * This transaction signer resolves missing signatures in accordance with the given {@link com.capricoinj.core.Wallet.MissingSigsMode}.
  * If missingSigsMode is USE_OP_ZERO this signer does nothing assuming missing signatures are already presented in
  * scriptSigs as OP_0.
  * In MissingSigsMode.THROW mode this signer will throw an exception. It would be MissingSignatureException

@@ -12,15 +12,15 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.protocols.payments;
+package com.capricoinj.protocols.payments;
 
-import com.fuelcoinj.core.*;
-import com.fuelcoinj.crypto.TrustStoreLoader;
-import com.fuelcoinj.params.MainNetParams;
-import com.fuelcoinj.protocols.payments.Protos;
-import com.fuelcoinj.protocols.payments.PaymentProtocol.PkiVerificationData;
-import com.fuelcoinj.uri.PeercoinURI;
-import com.fuelcoinj.utils.Threading;
+import com.capricoinj.core.*;
+import com.capricoinj.crypto.TrustStoreLoader;
+import com.capricoinj.params.MainNetParams;
+import com.capricoinj.protocols.payments.Protos;
+import com.capricoinj.protocols.payments.PaymentProtocol.PkiVerificationData;
+import com.capricoinj.uri.PeercoinURI;
+import com.capricoinj.utils.Threading;
 import com.google.common.annotations.VisibleForTesting;
 import com.google.common.util.concurrent.ListenableFuture;
 import com.google.common.util.concurrent.ListeningExecutorService;

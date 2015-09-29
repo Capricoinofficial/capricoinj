@@ -13,10 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.fuelcoinj.net.discovery;
+package com.capricoinj.net.discovery;
 
-import com.fuelcoinj.net.discovery.SeedPeers;
-import com.fuelcoinj.params.MainNetParams;
+import com.capricoinj.net.discovery.SeedPeers;
+import com.capricoinj.params.MainNetParams;
 
 import org.junit.Test;
 

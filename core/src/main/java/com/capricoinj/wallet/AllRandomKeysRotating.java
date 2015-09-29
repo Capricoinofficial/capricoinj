@@ -1,4 +1,4 @@
-package com.fuelcoinj.wallet;
+package com.capricoinj.wallet;
 
 /**
  * Indicates that an attempt was made to upgrade a random wallet to deterministic, but there were no non-rotating

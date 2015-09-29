@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.core;
+package com.capricoinj.core;
 
 import com.google.common.util.concurrent.ListenableFuture;
 
 /**
  * A general interface which declares the ability to broadcast transactions. This is implemented
- * by {@link com.fuelcoinj.core.PeerGroup}.
+ * by {@link com.capricoinj.core.PeerGroup}.
  */
 public interface TransactionBroadcaster {
     /** Broadcast the given transaction on the network */

@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.utils;
+package com.capricoinj.utils;
 
-import com.fuelcoinj.core.Coin;
-import com.fuelcoinj.utils.PpcAutoFormat.Style;
+import com.capricoinj.core.Coin;
+import com.capricoinj.utils.PpcAutoFormat.Style;
 import com.google.common.collect.ImmutableList;
 
-import static com.fuelcoinj.utils.PpcAutoFormat.Style.*;
+import static com.capricoinj.utils.PpcAutoFormat.Style.*;
 import static com.google.common.base.Preconditions.checkArgument;
 
 import com.google.common.base.Strings;
@@ -259,7 +259,7 @@ import java.util.regex.Pattern;
  * <h3>Formatting</h3>
  *
  * <p>You format a Peercoin monetary value by passing it to the {@link PpcFormat#format(Object)}
- * method.  This argument can be either a {@link com.fuelcoinj.core.Coin}-type object or a
+ * method.  This argument can be either a {@link com.capricoinj.core.Coin}-type object or a
  * numerical object such as {@link java.lang.Long} or {@link java.math.BigDecimal}.
  * Integer-based types such as {@link java.math.BigInteger} are interpreted as representing a
  * number of satoshis, while a {@link java.math.BigDecimal} is interpreted as representing a
@@ -462,7 +462,7 @@ import java.util.regex.Pattern;
  * @see          java.text.DecimalFormat
  * @see          java.text.DecimalFormatSymbols
  * @see          java.text.FieldPosition
- * @see          com.fuelcoinj.core.Coin
+ * @see          com.capricoinj.core.Coin
  */
 
 public abstract class PpcFormat extends Format {
@@ -1299,7 +1299,7 @@ public abstract class PpcFormat extends Format {
 
     /**
       * Parse a <code>String</code> representation of a Peercoin monetary value.  Returns a
-      * {@link com.fuelcoinj.core.Coin} object that represents the parsed value.
+      * {@link com.capricoinj.core.Coin} object that represents the parsed value.
       * @see java.text.NumberFormat */
     @Override
     public final Object parseObject(String source, ParsePosition pos) { return parse(source, pos); }

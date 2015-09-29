@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.utils;
+package com.capricoinj.utils;
 
-import com.fuelcoinj.core.Utils;
+import com.capricoinj.core.Utils;
 
 import static com.google.common.base.Preconditions.checkArgument;
 

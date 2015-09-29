@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.wallet;
+package com.capricoinj.wallet;
 
-import com.fuelcoinj.core.*;
-import com.fuelcoinj.script.Script;
+import com.capricoinj.core.*;
+import com.capricoinj.script.Script;
 import com.google.common.collect.Lists;
 
 import org.slf4j.Logger;
@@ -35,7 +35,7 @@ import static com.google.common.base.Preconditions.checkNotNull;
 public class KeyTimeCoinSelector implements CoinSelector {
     private static final Logger log = LoggerFactory.getLogger(KeyTimeCoinSelector.class);
 
-    /** A number of inputs chosen to avoid hitting {@link com.fuelcoinj.core.Transaction.MAX_STANDARD_TX_SIZE} */
+    /** A number of inputs chosen to avoid hitting {@link com.capricoinj.core.Transaction.MAX_STANDARD_TX_SIZE} */
     public static final int MAX_SIMULTANEOUS_INPUTS = 600;
 
     private final long unixTimeSeconds;

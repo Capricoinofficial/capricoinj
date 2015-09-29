@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.core;
+package com.capricoinj.core;
 
 import java.math.BigInteger;
 
 import org.junit.Test;
 
-import com.fuelcoinj.core.Utils;
+import com.capricoinj.core.Utils;
 
 import static org.junit.Assert.*;
 

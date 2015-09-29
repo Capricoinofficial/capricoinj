@@ -13,13 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.fuelcoinj.testing;
+package com.capricoinj.testing;
 
-import com.fuelcoinj.core.Sha256Hash;
-import com.fuelcoinj.crypto.ChildNumber;
-import com.fuelcoinj.crypto.DeterministicKey;
-import com.fuelcoinj.signers.CustomTransactionSigner;
-import com.fuelcoinj.wallet.DeterministicKeyChain;
+import com.capricoinj.core.Sha256Hash;
+import com.capricoinj.crypto.ChildNumber;
+import com.capricoinj.crypto.DeterministicKey;
+import com.capricoinj.signers.CustomTransactionSigner;
+import com.capricoinj.wallet.DeterministicKeyChain;
 import com.google.common.collect.ImmutableList;
 
 import java.util.List;

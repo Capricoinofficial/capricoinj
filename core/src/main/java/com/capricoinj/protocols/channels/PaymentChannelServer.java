@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.protocols.channels;
+package com.capricoinj.protocols.channels;
 
-import com.fuelcoinj.core.*;
-import com.fuelcoinj.paymentchannel.Protos;
-import com.fuelcoinj.protocols.channels.PaymentChannelCloseException.CloseReason;
-import com.fuelcoinj.utils.Threading;
+import com.capricoinj.core.*;
+import com.capricoinj.paymentchannel.Protos;
+import com.capricoinj.protocols.channels.PaymentChannelCloseException.CloseReason;
+import com.capricoinj.utils.Threading;
 import com.google.common.util.concurrent.FutureCallback;
 import com.google.common.util.concurrent.Futures;
 import com.google.common.util.concurrent.ListenableFuture;

@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.utils;
+package com.capricoinj.utils;
 
-import com.fuelcoinj.core.Block;
-import com.fuelcoinj.core.NetworkParameters;
-import com.fuelcoinj.core.ProtocolException;
-import com.fuelcoinj.core.Utils;
+import com.capricoinj.core.Block;
+import com.capricoinj.core.NetworkParameters;
+import com.capricoinj.core.ProtocolException;
+import com.capricoinj.core.Utils;
 
 import java.io.File;
 import java.io.FileInputStream;

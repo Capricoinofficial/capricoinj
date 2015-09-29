@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.utils;
+package com.capricoinj.utils;
 
-import com.fuelcoinj.core.Utils;
-import com.fuelcoinj.utils.ExponentialBackoff;
+import com.capricoinj.core.Utils;
+import com.capricoinj.utils.ExponentialBackoff;
 
 import org.junit.Before;
 import org.junit.Test;

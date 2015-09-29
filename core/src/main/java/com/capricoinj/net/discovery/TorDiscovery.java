@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.net.discovery;
+package com.capricoinj.net.discovery;
 
 import static com.google.common.base.Preconditions.checkArgument;
 
-import com.fuelcoinj.core.NetworkParameters;
+import com.capricoinj.core.NetworkParameters;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import com.google.common.collect.Sets;

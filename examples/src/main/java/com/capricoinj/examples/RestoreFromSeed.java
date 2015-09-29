@@ -1,23 +1,23 @@
-package com.fuelcoin.examples;
+package com.capricoinj.examples;
 
 import java.io.File;
 
-import com.fuelcoinj.core.BlockChain;
-import com.fuelcoinj.core.DownloadListener;
-import com.fuelcoinj.core.NetworkParameters;
-import com.fuelcoinj.core.PeerGroup;
-import com.fuelcoinj.core.Wallet;
-import com.fuelcoinj.net.discovery.DnsDiscovery;
-import com.fuelcoinj.params.UnitTestParams;
-import com.fuelcoinj.store.SPVBlockStore;
-import com.fuelcoinj.store.ValidHashStore;
-import com.fuelcoinj.wallet.DeterministicSeed;
+import com.capricoinj.core.BlockChain;
+import com.capricoinj.core.DownloadListener;
+import com.capricoinj.core.NetworkParameters;
+import com.capricoinj.core.PeerGroup;
+import com.capricoinj.core.Wallet;
+import com.capricoinj.net.discovery.DnsDiscovery;
+import com.capricoinj.params.UnitTestParams;
+import com.capricoinj.store.SPVBlockStore;
+import com.capricoinj.store.ValidHashStore;
+import com.capricoinj.wallet.DeterministicSeed;
 
 /**
  * The following example shows you how to restore a HD wallet from a previously generated deterministic seed.
  * In this example we manually setup the blockchain, peer group, etc. You can also use the WalletAppKit which provides a restoreWalletFromSeed function to load a wallet from a deterministic seed.
  */
-//WARNING THIS HAS NOT BEEN SETUP OR TESTED WITH FUELCOIN
+//WARNING THIS HAS NOT BEEN SETUP OR TESTED WITH CAPRICOIN
 public class RestoreFromSeed {
 
     public static void main(String[] args) throws Exception {

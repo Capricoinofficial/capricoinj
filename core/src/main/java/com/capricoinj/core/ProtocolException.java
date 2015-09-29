@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.core;
+package com.capricoinj.core;
 
 @SuppressWarnings("serial")
 public class ProtocolException extends VerificationException {

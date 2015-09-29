@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.utils;
+package com.capricoinj.utils;
 
-import static com.fuelcoinj.core.Coin.SMALLEST_UNIT_EXPONENT;
+import static com.capricoinj.core.Coin.SMALLEST_UNIT_EXPONENT;
 import static com.google.common.base.Preconditions.checkArgument;
 
 import java.math.BigInteger;
@@ -42,7 +42,7 @@ import java.util.List;
  * @see          java.text.Format
  * @see          java.text.NumberFormat
  * @see          java.text.DecimalFormat
- * @see          com.fuelcoinj.core.Coin
+ * @see          com.capricoinj.core.Coin
  */
 
 public final class PpcFixedFormat extends PpcFormat {

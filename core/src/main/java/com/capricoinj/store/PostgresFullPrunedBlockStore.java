@@ -15,10 +15,10 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.store;
+package com.capricoinj.store;
 
-import com.fuelcoinj.core.*;
-import com.fuelcoinj.script.Script;
+import com.capricoinj.core.*;
+import com.capricoinj.script.Script;
 import com.google.common.collect.Lists;
 
 import org.slf4j.Logger;
@@ -37,7 +37,7 @@ import java.util.Properties;
 
 /**
  * <p>A full pruned block store using the Postgres database engine. As an added bonus an address index is calculated,
- * so you can use {@link #calculateBalanceForAddress(com.fuelcoinj.core.Address)} to quickly look up
+ * so you can use {@link #calculateBalanceForAddress(com.capricoinj.core.Address)} to quickly look up
  * the quantity of peercoins controlled by that address.</p>
  */
 public class PostgresFullPrunedBlockStore implements FullPrunedBlockStore {

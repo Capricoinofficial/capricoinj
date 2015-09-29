@@ -1,6 +1,6 @@
-package com.fuelcoinj.wallet;
+package com.capricoinj.wallet;
 
-import com.fuelcoinj.core.ECKey;
+import com.capricoinj.core.ECKey;
 
 import java.util.List;
 

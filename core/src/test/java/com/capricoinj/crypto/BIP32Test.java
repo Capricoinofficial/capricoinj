@@ -15,14 +15,14 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.crypto;
+package com.capricoinj.crypto;
 
-import com.fuelcoinj.core.AddressFormatException;
-import com.fuelcoinj.core.Base58;
-import com.fuelcoinj.crypto.ChildNumber;
-import com.fuelcoinj.crypto.DeterministicHierarchy;
-import com.fuelcoinj.crypto.DeterministicKey;
-import com.fuelcoinj.crypto.HDKeyDerivation;
+import com.capricoinj.core.AddressFormatException;
+import com.capricoinj.core.Base58;
+import com.capricoinj.crypto.ChildNumber;
+import com.capricoinj.crypto.DeterministicHierarchy;
+import com.capricoinj.crypto.DeterministicKey;
+import com.capricoinj.crypto.HDKeyDerivation;
 import com.google.common.base.Functions;
 import com.google.common.base.Joiner;
 import com.google.common.collect.Iterables;
@@ -34,7 +34,7 @@ import org.slf4j.LoggerFactory;
 import java.util.Arrays;
 import java.util.List;
 
-import static com.fuelcoinj.core.Utils.HEX;
+import static com.capricoinj.core.Utils.HEX;
 import static org.junit.Assert.assertEquals;
 /**
  * A test with test vectors as per BIP 32 spec: https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki#Test_Vectors

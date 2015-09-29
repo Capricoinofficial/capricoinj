@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.core;
+package com.capricoinj.core;
 
-import com.fuelcoinj.utils.ListenerRegistration;
-import com.fuelcoinj.utils.Threading;
+import com.capricoinj.utils.ListenerRegistration;
+import com.capricoinj.utils.Threading;
 import com.google.common.util.concurrent.ListenableFuture;
 import com.google.common.util.concurrent.SettableFuture;
 
@@ -55,9 +55,9 @@ import static com.google.common.base.Preconditions.*;
  * <p>Alternatively, you may know that the transaction is "dead", that is, one or more of its inputs have
  * been double spent and will never confirm unless there is another re-org.</p>
  *
- * <p>TransactionConfidence is updated via the {@link com.fuelcoinj.core.TransactionConfidence#notifyWorkDone(Block)}
+ * <p>TransactionConfidence is updated via the {@link com.capricoinj.core.TransactionConfidence#notifyWorkDone(Block)}
  * method to ensure the block depth and work done are up to date.</p>
- * To make a copy that won't be changed, use {@link com.fuelcoinj.core.TransactionConfidence#duplicate()}.
+ * To make a copy that won't be changed, use {@link com.capricoinj.core.TransactionConfidence#duplicate()}.
  */
 public class TransactionConfidence implements Serializable {
     private static final long serialVersionUID = 4577920141400556444L;
@@ -411,7 +411,7 @@ public class TransactionConfidence implements Serializable {
     /**
      * The source of a transaction tries to identify where it came from originally. For instance, did we download it
      * from the peer to peer network, or make it ourselves, or receive it via Bluetooth, or import it from another app,
-     * and so on. This information is useful for {@link com.fuelcoinj.wallet.CoinSelector} implementations to risk analyze
+     * and so on. This information is useful for {@link com.capricoinj.wallet.CoinSelector} implementations to risk analyze
      * transactions and decide when to spend them.
      */
     public synchronized Source getSource() {
@@ -421,7 +421,7 @@ public class TransactionConfidence implements Serializable {
     /**
      * The source of a transaction tries to identify where it came from originally. For instance, did we download it
      * from the peer to peer network, or make it ourselves, or receive it via Bluetooth, or import it from another app,
-     * and so on. This information is useful for {@link com.fuelcoinj.wallet.CoinSelector} implementations to risk analyze
+     * and so on. This information is useful for {@link com.capricoinj.wallet.CoinSelector} implementations to risk analyze
      * transactions and decide when to spend them.
      */
     public synchronized void setSource(Source source) {

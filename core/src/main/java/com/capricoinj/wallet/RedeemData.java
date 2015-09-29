@@ -13,10 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.fuelcoinj.wallet;
+package com.capricoinj.wallet;
 
-import com.fuelcoinj.core.ECKey;
-import com.fuelcoinj.script.Script;
+import com.capricoinj.core.ECKey;
+import com.capricoinj.script.Script;
 
 import java.util.ArrayList;
 import java.util.Arrays;

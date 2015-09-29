@@ -1,6 +1,6 @@
-package com.fuelcoinj.utils;
+package com.capricoinj.utils;
 
-import com.fuelcoinj.utils.BaseTaggableObject;
+import com.capricoinj.utils.BaseTaggableObject;
 import com.google.protobuf.ByteString;
 
 import org.junit.Before;

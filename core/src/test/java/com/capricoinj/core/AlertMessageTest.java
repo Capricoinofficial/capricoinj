@@ -14,17 +14,17 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.core;
+package com.capricoinj.core;
 
-import com.fuelcoinj.core.AlertMessage;
-import com.fuelcoinj.core.ECKey;
-import com.fuelcoinj.core.NetworkParameters;
-import com.fuelcoinj.params.UnitTestParams;
+import com.capricoinj.core.AlertMessage;
+import com.capricoinj.core.ECKey;
+import com.capricoinj.core.NetworkParameters;
+import com.capricoinj.params.UnitTestParams;
 
 import org.junit.Before;
 import org.junit.Test;
 
-import static com.fuelcoinj.core.Utils.HEX;
+import static com.capricoinj.core.Utils.HEX;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 

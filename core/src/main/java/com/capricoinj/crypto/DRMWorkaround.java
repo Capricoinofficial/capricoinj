@@ -1,6 +1,6 @@
-package com.fuelcoinj.crypto;
+package com.capricoinj.crypto;
 
-import com.fuelcoinj.core.Utils;
+import com.capricoinj.core.Utils;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

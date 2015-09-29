@@ -15,22 +15,22 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.wallet;
+package com.capricoinj.wallet;
 
-import com.fuelcoinj.core.*;
-import com.fuelcoinj.params.MainNetParams;
-import com.fuelcoinj.script.ScriptBuilder;
-import com.fuelcoinj.script.ScriptChunk;
-import com.fuelcoinj.wallet.DefaultRiskAnalysis;
-import com.fuelcoinj.wallet.RiskAnalysis;
+import com.capricoinj.core.*;
+import com.capricoinj.params.MainNetParams;
+import com.capricoinj.script.ScriptBuilder;
+import com.capricoinj.script.ScriptChunk;
+import com.capricoinj.wallet.DefaultRiskAnalysis;
+import com.capricoinj.wallet.RiskAnalysis;
 import com.google.common.collect.Lists;
 import com.google.common.collect.ImmutableList;
 
 import org.junit.Before;
 import org.junit.Test;
 
-import static com.fuelcoinj.core.Coin.COIN;
-import static com.fuelcoinj.script.ScriptOpCodes.OP_PUSHDATA1;
+import static com.capricoinj.core.Coin.COIN;
+import static com.capricoinj.script.ScriptOpCodes.OP_PUSHDATA1;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.fail;

@@ -1,17 +1,17 @@
-package com.fuelcoin.examples;
+package com.capricoinj.examples;
 
 import java.io.File;
 
-import com.fuelcoinj.core.Address;
-import com.fuelcoinj.core.Coin;
-import com.fuelcoinj.core.InsufficientMoneyException;
-import com.fuelcoinj.core.NetworkParameters;
-import com.fuelcoinj.core.Transaction;
-import com.fuelcoinj.core.Wallet;
-import com.fuelcoinj.core.Wallet.BalanceType;
-import com.fuelcoinj.kits.WalletAppKit;
-import com.fuelcoinj.params.MainNetParams;
-import com.fuelcoinj.params.UnitTestParams;
+import com.capricoinj.core.Address;
+import com.capricoinj.core.Coin;
+import com.capricoinj.core.InsufficientMoneyException;
+import com.capricoinj.core.NetworkParameters;
+import com.capricoinj.core.Transaction;
+import com.capricoinj.core.Wallet;
+import com.capricoinj.core.Wallet.BalanceType;
+import com.capricoinj.kits.WalletAppKit;
+import com.capricoinj.params.MainNetParams;
+import com.capricoinj.params.UnitTestParams;
 import com.google.common.util.concurrent.FutureCallback;
 import com.google.common.util.concurrent.Futures;
 import com.google.common.util.concurrent.ListenableFuture;
@@ -19,7 +19,7 @@ import com.google.common.util.concurrent.ListenableFuture;
 /**
  * The following example shows you how to create a SendRequest to send coins from a wallet to a given address.
  */
-//WARNING THIS HAS NOT BEEN SETUP OR TESTED WITH FUELCOIN
+//WARNING THIS HAS NOT BEEN SETUP OR TESTED WITH CAPRICOIN
 public class SendRequest {
 
     public static void main(String[] args) throws Exception {

@@ -15,20 +15,20 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.net;
+package com.capricoinj.net;
 
-import com.fuelcoinj.core.Utils;
-import com.fuelcoinj.net.BlockingClient;
-import com.fuelcoinj.net.BlockingClientManager;
-import com.fuelcoinj.net.ClientConnectionManager;
-import com.fuelcoinj.net.MessageWriteTarget;
-import com.fuelcoinj.net.NioClient;
-import com.fuelcoinj.net.NioClientManager;
-import com.fuelcoinj.net.NioServer;
-import com.fuelcoinj.net.ProtobufParser;
-import com.fuelcoinj.net.StreamParserFactory;
-import com.fuelcoinj.paymentchannel.Protos;
-import com.fuelcoinj.paymentchannel.Protos.TwoWayChannelMessage;
+import com.capricoinj.core.Utils;
+import com.capricoinj.net.BlockingClient;
+import com.capricoinj.net.BlockingClientManager;
+import com.capricoinj.net.ClientConnectionManager;
+import com.capricoinj.net.MessageWriteTarget;
+import com.capricoinj.net.NioClient;
+import com.capricoinj.net.NioClientManager;
+import com.capricoinj.net.NioServer;
+import com.capricoinj.net.ProtobufParser;
+import com.capricoinj.net.StreamParserFactory;
+import com.capricoinj.paymentchannel.Protos;
+import com.capricoinj.paymentchannel.Protos.TwoWayChannelMessage;
 import com.google.common.util.concurrent.SettableFuture;
 import com.google.protobuf.ByteString;
 

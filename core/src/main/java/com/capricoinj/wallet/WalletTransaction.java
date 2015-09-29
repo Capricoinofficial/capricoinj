@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.wallet;
+package com.capricoinj.wallet;
 
-import com.fuelcoinj.core.Transaction;
+import com.capricoinj.core.Transaction;
 
 import static com.google.common.base.Preconditions.checkNotNull;
 
 /**
- * Stores data about a transaction that is only relevant to the {@link com.fuelcoinj.core.Wallet} class.
+ * Stores data about a transaction that is only relevant to the {@link com.capricoinj.core.Wallet} class.
  */
 public class WalletTransaction {
     public enum Pool {

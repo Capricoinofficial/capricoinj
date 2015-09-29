@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.core;
+package com.capricoinj.core;
 
 // TODO: Rename PrunedException to something like RequiredDataWasPrunedException
 

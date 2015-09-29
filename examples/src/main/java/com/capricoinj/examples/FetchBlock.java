@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.fuelcoin.examples;
+package com.capricoinj.examples;
 
 import java.io.File;
 import java.net.InetAddress;
@@ -23,24 +23,24 @@ import java.util.concurrent.Future;
 
 import org.spongycastle.util.encoders.Hex;
 
-import com.fuelcoinj.core.Block;
-import com.fuelcoinj.core.BlockChain;
-import com.fuelcoinj.core.NetworkParameters;
-import com.fuelcoinj.core.Peer;
-import com.fuelcoinj.core.PeerAddress;
-import com.fuelcoinj.core.PeerGroup;
-import com.fuelcoinj.core.Sha256Hash;
-import com.fuelcoinj.net.discovery.DnsDiscovery;
-import com.fuelcoinj.params.MainNetParams;
-import com.fuelcoinj.store.BlockStore;
-import com.fuelcoinj.store.MemoryBlockStore;
-import com.fuelcoinj.store.ValidHashStore;
-import com.fuelcoinj.utils.BriefLogFormatter;
+import com.capricoinj.core.Block;
+import com.capricoinj.core.BlockChain;
+import com.capricoinj.core.NetworkParameters;
+import com.capricoinj.core.Peer;
+import com.capricoinj.core.PeerAddress;
+import com.capricoinj.core.PeerGroup;
+import com.capricoinj.core.Sha256Hash;
+import com.capricoinj.net.discovery.DnsDiscovery;
+import com.capricoinj.params.MainNetParams;
+import com.capricoinj.store.BlockStore;
+import com.capricoinj.store.MemoryBlockStore;
+import com.capricoinj.store.ValidHashStore;
+import com.capricoinj.utils.BriefLogFormatter;
 
 /**
  * Downloads the block given a block hash from the localhost node and prints it out.
  */
-//WARNING THIS IS ON THE MAINNET OF FUELCOIN
+//WARNING THIS IS ON THE MAINNET OF CAPRICOIN
 public class FetchBlock {
     public static void main(String[] args) throws Exception {   	
     	

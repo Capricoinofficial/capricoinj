@@ -1,4 +1,4 @@
-package com.fuelcoinj.crypto;
+package com.capricoinj.crypto;
 
 /**
  * <p>Exception to provide the following to {@link EncrypterDecrypterOpenSSL}:</p>

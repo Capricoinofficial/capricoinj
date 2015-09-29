@@ -16,10 +16,10 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.script;
+package com.capricoinj.script;
 
-import com.fuelcoinj.core.*;
-import com.fuelcoinj.crypto.TransactionSignature;
+import com.capricoinj.core.*;
+import com.capricoinj.crypto.TransactionSignature;
 import com.google.common.collect.Lists;
 
 import org.slf4j.Logger;
@@ -37,7 +37,7 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.*;
 
-import static com.fuelcoinj.script.ScriptOpCodes.*;
+import static com.capricoinj.script.ScriptOpCodes.*;
 import static com.google.common.base.Preconditions.*;
 
 /**
@@ -733,8 +733,8 @@ public class Script {
 
     /**
      * Exposes the script interpreter. Normally you should not use this directly, instead use
-     * {@link com.fuelcoinj.core.TransactionInput#verify(com.fuelcoinj.core.TransactionOutput)} or
-     * {@link com.fuelcoinj.script.Script#correctlySpends(com.fuelcoinj.core.Transaction, long, Script)}. This method
+     * {@link com.capricoinj.core.TransactionInput#verify(com.capricoinj.core.TransactionOutput)} or
+     * {@link com.capricoinj.script.Script#correctlySpends(com.capricoinj.core.Transaction, long, Script)}. This method
      * is useful if you need more precise control or access to the final state of the stack. This interface is very
      * likely to change in future.
      */

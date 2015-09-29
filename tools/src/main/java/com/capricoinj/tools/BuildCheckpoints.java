@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.fuelcoin.tools;
+package com.capricoinj.tools;
 
 import static com.google.common.base.Preconditions.checkState;
 
@@ -33,28 +33,28 @@ import java.security.MessageDigest;
 import java.util.Date;
 import java.util.TreeMap;
 
-import com.fuelcoinj.core.AbstractBlockChainListener;
-import com.fuelcoinj.core.BlockChain;
-import com.fuelcoinj.core.CheckpointManager;
-import com.fuelcoinj.core.NetworkParameters;
-import com.fuelcoinj.core.PeerGroup;
-import com.fuelcoinj.core.Sha256Hash;
-import com.fuelcoinj.core.StoredBlock;
-import com.fuelcoinj.core.VerificationException;
-import com.fuelcoinj.net.discovery.DnsDiscovery;
-import com.fuelcoinj.params.MainNetParams;
-import com.fuelcoinj.store.BlockStore;
-import com.fuelcoinj.store.MemoryBlockStore;
-import com.fuelcoinj.store.ValidHashStore;
-import com.fuelcoinj.utils.BriefLogFormatter;
-import com.fuelcoinj.utils.Threading;
+import com.capricoinj.core.AbstractBlockChainListener;
+import com.capricoinj.core.BlockChain;
+import com.capricoinj.core.CheckpointManager;
+import com.capricoinj.core.NetworkParameters;
+import com.capricoinj.core.PeerGroup;
+import com.capricoinj.core.Sha256Hash;
+import com.capricoinj.core.StoredBlock;
+import com.capricoinj.core.VerificationException;
+import com.capricoinj.net.discovery.DnsDiscovery;
+import com.capricoinj.params.MainNetParams;
+import com.capricoinj.store.BlockStore;
+import com.capricoinj.store.MemoryBlockStore;
+import com.capricoinj.store.ValidHashStore;
+import com.capricoinj.utils.BriefLogFormatter;
+import com.capricoinj.utils.Threading;
 import com.google.common.base.Charsets;
 
 /**
  * Downloads and verifies a full chain from your local peer, emitting checkpoints at each difficulty transition period
  * to a file which is then signed with your key.
  */
-//WARNING THIS HAS NOT BEEN SETUP OR TESTED WITH FUELCOIN
+//WARNING THIS HAS NOT BEEN SETUP OR TESTED WITH CAPRICOIN
 public class BuildCheckpoints {
 
     private static final NetworkParameters PARAMS = MainNetParams.get();
@@ -78,13 +78,13 @@ public class BuildCheckpoints {
         long now = new Date().getTime() / 1000;
         peerGroup.setFastCatchupTimeSecs(now);
 
-        final long oneMonthAgo = now - (86400 * 30);
+        final long oneWeekAgo = now - (86400 * 7);
 
         chain.addListener(new AbstractBlockChainListener() {
             @Override
             public void notifyNewBestBlock(StoredBlock block) throws VerificationException {
                 int height = block.getHeight();
-                if (height % PARAMS.getInterval() == 0 && block.getHeader().getTimeSeconds() <= oneMonthAgo) {
+                if (height % PARAMS.getInterval() == 0 && block.getHeader().getTimeSeconds() <= oneWeekAgo) {
                     System.out.println(String.format("Checkpointing block %s at height %d",
                             block.getHeader().getHash(), block.getHeight()));
                     checkpoints.put(height, block);
@@ -155,10 +155,10 @@ public class BuildCheckpoints {
         checkState(manager.numCheckpoints() == expectedSize);
 
         if (PARAMS.getId().equals(NetworkParameters.ID_MAINNET)) {
-            StoredBlock test = manager.getCheckpointBefore(1390500000); // Thu Jan 23 19:00:00 CET 2014
-            checkState(test.getHeight() == 280224);
+            StoredBlock test = manager.getCheckpointBefore(1438391471); // 1st August 1:11:11 BST 2015   
+            checkState(test.getHeight() == 31060);
             checkState(test.getHeader().getHashAsString()
-                    .equals("00000000000000000b5d59a15f831e1c45cb688a4db6b0a60054d49a9997fa34"));
+                    .equals("a260b8662986173e51841fc5f591755bbec1dc6879ab3f7bf7f91a6f6ed8723e"));
         } else if (PARAMS.getId().equals(NetworkParameters.ID_UNITTESTNET)) {
             StoredBlock test = manager.getCheckpointBefore(1390500000); // Thu Jan 23 19:00:00 CET 2014
             checkState(test.getHeight() == 167328);

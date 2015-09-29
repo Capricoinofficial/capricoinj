@@ -15,17 +15,17 @@
  * limitations under the License.
  */
 
-package com.fuelcoin.tools;
+package com.capricoinj.tools;
 
-import com.fuelcoinj.core.*;
-import com.fuelcoinj.net.discovery.DnsDiscovery;
-import com.fuelcoinj.params.MainNetParams;
-import com.fuelcoinj.utils.BriefLogFormatter;
+import com.capricoinj.core.*;
+import com.capricoinj.net.discovery.DnsDiscovery;
+import com.capricoinj.params.MainNetParams;
+import com.capricoinj.utils.BriefLogFormatter;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-//WARNING THIS HAS NOT BEEN SETUP OR TESTED WITH FUELCOIN
+//WARNING THIS HAS NOT BEEN SETUP OR TESTED WITH CAPRICOIN
 public class WatchMempool {
     private static Logger log = LoggerFactory.getLogger(WatchMempool.class);
 

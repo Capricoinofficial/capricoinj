@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.protocols.channels;
+package com.capricoinj.protocols.channels;
 
-import com.fuelcoinj.core.*;
-import com.fuelcoinj.paymentchannel.Protos;
-import com.fuelcoinj.protocols.channels.PaymentChannelCloseException.CloseReason;
-import com.fuelcoinj.utils.Threading;
+import com.capricoinj.core.*;
+import com.capricoinj.paymentchannel.Protos;
+import com.capricoinj.protocols.channels.PaymentChannelCloseException.CloseReason;
+import com.capricoinj.utils.Threading;
 import com.google.common.annotations.VisibleForTesting;
 import com.google.common.util.concurrent.ListenableFuture;
 import com.google.common.util.concurrent.MoreExecutors;
@@ -150,7 +150,7 @@ public class PaymentChannelClient implements IPaymentChannelClient {
      *                 attempt will be made to resume that channel.
      * @param timeWindow The time in seconds, relative to now, on how long this channel should be kept open. Note that is is
      *                   a proposal to the server. The server may in turn propose something different.
-     *                   See {@link com.fuelcoinj.protocols.channels.IPaymentChannelClient.ClientConnection#acceptExpireTime(long)}
+     *                   See {@link com.capricoinj.protocols.channels.IPaymentChannelClient.ClientConnection#acceptExpireTime(long)}
      * @param conn A callback listener which represents the connection to the server (forwards messages we generate to
      *             the server)
      */
@@ -393,7 +393,7 @@ public class PaymentChannelClient implements IPaymentChannelClient {
      * intending to reopen the channel later. There is likely little reason to use this in a stateless protocol.</p>
      *
      * <p>Note that this <b>MUST</b> still be called even after either
-     * {@link ClientConnection#destroyConnection(com.fuelcoinj.protocols.channels.PaymentChannelCloseException.CloseReason)} or
+     * {@link ClientConnection#destroyConnection(com.capricoinj.protocols.channels.PaymentChannelCloseException.CloseReason)} or
      * {@link PaymentChannelClient#settle()} is called, to actually handle the connection close logic.</p>
      */
     @Override

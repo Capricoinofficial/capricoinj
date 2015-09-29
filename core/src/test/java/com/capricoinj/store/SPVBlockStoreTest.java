@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.store;
+package com.capricoinj.store;
 
-import com.fuelcoinj.core.Address;
-import com.fuelcoinj.core.ECKey;
-import com.fuelcoinj.core.NetworkParameters;
-import com.fuelcoinj.core.StoredBlock;
-import com.fuelcoinj.params.UnitTestParams;
-import com.fuelcoinj.store.SPVBlockStore;
+import com.capricoinj.core.Address;
+import com.capricoinj.core.ECKey;
+import com.capricoinj.core.NetworkParameters;
+import com.capricoinj.core.StoredBlock;
+import com.capricoinj.params.UnitTestParams;
+import com.capricoinj.store.SPVBlockStore;
 
 import org.junit.Test;
 

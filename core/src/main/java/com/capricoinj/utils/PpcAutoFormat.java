@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.utils;
+package com.capricoinj.utils;
 
-import static com.fuelcoinj.core.Coin.SMALLEST_UNIT_EXPONENT;
+import static com.capricoinj.core.Coin.SMALLEST_UNIT_EXPONENT;
 
 import com.google.common.collect.ImmutableList;
 
@@ -57,7 +57,7 @@ import java.util.Locale;
  * @see          java.text.NumberFormat
  * @see          java.text.DecimalFormat
  * @see          DecimalFormatSymbols
- * @see          com.fuelcoinj.core.Coin
+ * @see          com.capricoinj.core.Coin
  */
 
 public final class PpcAutoFormat extends PpcFormat {
@@ -81,7 +81,7 @@ public final class PpcAutoFormat extends PpcFormat {
          * These patterns are explained in the documentation for java.text.DecimalFormat.
          */
 
-        /** Constant for the formatting style that uses a currency code, e.g., "FC2". */
+        /** Constant for the formatting style that uses a currency code, e.g., "CPC". */
         CODE {
             @Override void apply(DecimalFormat decimalFormat) {
                 /* To switch to using codes from symbols, we replace each single occurrence of the

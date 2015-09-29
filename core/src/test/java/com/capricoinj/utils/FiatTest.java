@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.utils;
+package com.capricoinj.utils;
 
-import static com.fuelcoinj.utils.Fiat.parseFiat;
+import static com.capricoinj.utils.Fiat.parseFiat;
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-import com.fuelcoinj.utils.Fiat;
+import com.capricoinj.utils.Fiat;
 
 public class FiatTest {
 

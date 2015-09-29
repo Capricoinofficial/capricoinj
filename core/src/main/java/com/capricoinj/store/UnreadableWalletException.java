@@ -1,4 +1,4 @@
-package com.fuelcoinj.store;
+package com.capricoinj.store;
 
 /**
  * Thrown by the {@link WalletProtobufSerializer} when the serialized protocol buffer is either corrupted,

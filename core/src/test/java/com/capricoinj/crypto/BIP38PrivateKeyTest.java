@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.crypto;
+package com.capricoinj.crypto;
 
-import com.fuelcoinj.core.ECKey;
-import com.fuelcoinj.crypto.BIP38PrivateKey;
-import com.fuelcoinj.crypto.BIP38PrivateKey.BadPassphraseException;
-import com.fuelcoinj.params.MainNetParams;
+import com.capricoinj.core.ECKey;
+import com.capricoinj.crypto.BIP38PrivateKey;
+import com.capricoinj.crypto.BIP38PrivateKey.BadPassphraseException;
+import com.capricoinj.params.MainNetParams;
 
 import org.junit.Test;
 

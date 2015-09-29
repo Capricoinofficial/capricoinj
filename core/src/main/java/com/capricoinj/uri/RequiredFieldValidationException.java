@@ -1,4 +1,4 @@
-package com.fuelcoinj.uri;
+package com.capricoinj.uri;
 
 /**
  * <p>Exception to provide the following to {@link PeercoinURI}:</p>

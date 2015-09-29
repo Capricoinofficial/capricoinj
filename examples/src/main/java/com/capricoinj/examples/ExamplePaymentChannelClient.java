@@ -15,9 +15,9 @@
  * limitations under the License.
  */
 
-package com.fuelcoin.examples;
+package com.capricoinj.examples;
 
-import static com.fuelcoinj.core.Coin.CENT;
+import static com.capricoinj.core.Coin.CENT;
 
 import java.io.File;
 import java.io.IOException;
@@ -28,18 +28,18 @@ import java.util.concurrent.ExecutionException;
 
 import org.slf4j.LoggerFactory;
 
-import com.fuelcoinj.core.Coin;
-import com.fuelcoinj.core.ECKey;
-import com.fuelcoinj.core.NetworkParameters;
-import com.fuelcoinj.core.Wallet;
-import com.fuelcoinj.core.WalletExtension;
-import com.fuelcoinj.kits.WalletAppKit;
-import com.fuelcoinj.params.UnitTestParams;
-import com.fuelcoinj.protocols.channels.PaymentChannelClientConnection;
-import com.fuelcoinj.protocols.channels.StoredPaymentChannelClientStates;
-import com.fuelcoinj.protocols.channels.ValueOutOfRangeException;
-import com.fuelcoinj.utils.BriefLogFormatter;
-import com.fuelcoinj.utils.Threading;
+import com.capricoinj.core.Coin;
+import com.capricoinj.core.ECKey;
+import com.capricoinj.core.NetworkParameters;
+import com.capricoinj.core.Wallet;
+import com.capricoinj.core.WalletExtension;
+import com.capricoinj.kits.WalletAppKit;
+import com.capricoinj.params.UnitTestParams;
+import com.capricoinj.protocols.channels.PaymentChannelClientConnection;
+import com.capricoinj.protocols.channels.StoredPaymentChannelClientStates;
+import com.capricoinj.protocols.channels.ValueOutOfRangeException;
+import com.capricoinj.utils.BriefLogFormatter;
+import com.capricoinj.utils.Threading;
 import com.google.common.collect.ImmutableList;
 import com.google.common.util.concurrent.FutureCallback;
 import com.google.common.util.concurrent.Futures;
@@ -49,7 +49,7 @@ import com.google.common.util.concurrent.Uninterruptibles;
 /**
  * Simple client that connects to the given host, opens a channel, and pays one cent.
  */
-//WARNING THIS HAS NOT BEEN SETUP OR TESTED WITH FUELCOIN
+//WARNING THIS HAS NOT BEEN SETUP OR TESTED WITH CAPRICOIN
 public class ExamplePaymentChannelClient {
     private static final org.slf4j.Logger log = LoggerFactory.getLogger(ExamplePaymentChannelClient.class);
     private WalletAppKit appKit;

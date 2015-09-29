@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.net.discovery;
+package com.capricoinj.net.discovery;
 
-import com.fuelcoinj.core.AddressFormatException;
-import com.fuelcoinj.core.Base58;
-import com.fuelcoinj.core.Utils;
+import com.capricoinj.core.AddressFormatException;
+import com.capricoinj.core.Base58;
+import com.capricoinj.core.Utils;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

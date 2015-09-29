@@ -15,21 +15,21 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.store;
+package com.capricoinj.store;
 
-import com.fuelcoinj.core.*;
-import com.fuelcoinj.core.TransactionConfidence.ConfidenceType;
-import com.fuelcoinj.crypto.KeyCrypter;
-import com.fuelcoinj.crypto.KeyCrypterScrypt;
-import com.fuelcoinj.script.Script;
-import com.fuelcoinj.signers.LocalTransactionSigner;
-import com.fuelcoinj.signers.TransactionSigner;
-import com.fuelcoinj.utils.ExchangeRate;
-import com.fuelcoinj.utils.Fiat;
-import com.fuelcoinj.wallet.KeyChainGroup;
-import com.fuelcoinj.wallet.Protos;
-import com.fuelcoinj.wallet.WalletTransaction;
-import com.fuelcoinj.wallet.Protos.Wallet.EncryptionType;
+import com.capricoinj.core.*;
+import com.capricoinj.core.TransactionConfidence.ConfidenceType;
+import com.capricoinj.crypto.KeyCrypter;
+import com.capricoinj.crypto.KeyCrypterScrypt;
+import com.capricoinj.script.Script;
+import com.capricoinj.signers.LocalTransactionSigner;
+import com.capricoinj.signers.TransactionSigner;
+import com.capricoinj.utils.ExchangeRate;
+import com.capricoinj.utils.Fiat;
+import com.capricoinj.wallet.KeyChainGroup;
+import com.capricoinj.wallet.Protos;
+import com.capricoinj.wallet.WalletTransaction;
+import com.capricoinj.wallet.Protos.Wallet.EncryptionType;
 import com.google.common.collect.Lists;
 import com.google.protobuf.ByteString;
 import com.google.protobuf.CodedInputStream;
@@ -618,7 +618,7 @@ public class WalletProtobufSerializer {
         txMap.put(txProto.getHash(), tx);
     }
 
-    private WalletTransaction connectTransactionOutputs(com.fuelcoinj.wallet.Protos.Transaction txProto) throws UnreadableWalletException {
+    private WalletTransaction connectTransactionOutputs(com.capricoinj.wallet.Protos.Transaction txProto) throws UnreadableWalletException {
         Transaction tx = txMap.get(txProto.getHash());
         final WalletTransaction.Pool pool;
         switch (txProto.getPool()) {

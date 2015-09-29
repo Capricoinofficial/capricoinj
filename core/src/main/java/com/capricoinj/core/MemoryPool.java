@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.core;
+package com.capricoinj.core;
 
-import com.fuelcoinj.utils.Threading;
+import com.capricoinj.utils.Threading;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

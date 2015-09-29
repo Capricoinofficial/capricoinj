@@ -1,7 +1,7 @@
-package com.fuelcoinj.wallet;
+package com.capricoinj.wallet;
 
-import com.fuelcoinj.core.Coin;
-import com.fuelcoinj.core.TransactionOutput;
+import com.capricoinj.core.Coin;
+import com.capricoinj.core.TransactionOutput;
 
 import java.util.List;
 

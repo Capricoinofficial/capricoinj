@@ -15,10 +15,10 @@
  * limitations under the License.
  */
 
-package com.fuelcoinj.wallet;
+package com.capricoinj.wallet;
 
-import com.fuelcoinj.core.Wallet;
-import com.fuelcoinj.utils.Threading;
+import com.capricoinj.core.Wallet;
+import com.capricoinj.utils.Threading;
 import com.google.common.util.concurrent.ThreadFactoryBuilder;
 
 import org.slf4j.Logger;
